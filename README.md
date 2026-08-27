@@ -4,4 +4,4 @@ This repository contains supplementary code and data for multiple papers. Each p
 
 ## Papers
 
-- [Variational quantum simulation of many-body dissipative dynamics on a superconducting quantum processor](vqlchs/)
+- [Liu, Huan-Yu, et al. "Variational quantum simulation of many-body dissipative dynamics on a superconducting quantum processor." arXiv preprint arXiv:2510.20118 (2025).](vqlchs/)
