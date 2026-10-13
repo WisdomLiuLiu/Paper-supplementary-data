@@ -1,0 +1,14 @@
+{
+  "candidate_count": 100,
+  "selected_row_zero_based": 11,
+  "selected_seed": 1225499654,
+  "selection_metric": "predicted compiled-circuit full-time RMSE to Kraus",
+  "dt": 0.1,
+  "gamma": 0.06,
+  "trajectories_per_time": 128,
+  "selected_exact_sample_rmse": 0.012767602908524536,
+  "compiled_circuit_rmse": 0.014853737103235783,
+  "compiled_circuit_mae": 0.011807164534377431,
+  "compiled_circuit_max_abs_error": 0.038537653543625906,
+  "paired_random_stream": true
+}

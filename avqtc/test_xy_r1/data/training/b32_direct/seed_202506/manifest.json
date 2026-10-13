@@ -1,0 +1,3437 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "fingerprint": "d0a517bb90da40913e8e9e40f17a33d32b055f3d0844adc0d235a25c02ff3722",
+  "specification": {
+    "model": {
+      "n": 10,
+      "dt": 0.1,
+      "gamma": 0.06,
+      "total_time": 10.0
+    },
+    "training": {
+      "max_k": 20,
+      "seeds": [
+        202506,
+        202507,
+        202508
+      ],
+      "batch_size": 32,
+      "product_ensemble": "haar",
+      "validation_size": 256,
+      "test_size": 1024,
+      "iterations": 100,
+      "learning_rate": 0.02,
+      "adam_beta1": 0.9,
+      "adam_beta2": 0.999,
+      "adam_epsilon": 1e-08,
+      "lbfgs_ftol": 1e-12,
+      "lbfgs_gtol": 1e-08,
+      "lbfgs_maxls": 20,
+      "random_restarts": 1,
+      "jitter_scale": 0.02,
+      "direct_target_fidelity": 0.99,
+      "iterative_target_fidelity": 0.999,
+      "direct_extra_depth": 0,
+      "iterative_extra_depth": 3,
+      "validation_interval": 5,
+      "print_every": 5,
+      "backend": "auto",
+      "full_validation_chunk": 64
+    },
+    "resource_estimate": {
+      "shots_per_circuit": 4096,
+      "trotter_substeps": 1
+    },
+    "mode": "b32",
+    "route": "direct",
+    "seed": 202506,
+    "source_hashes": {
+      "training.py": "c1d8bee621f140aa9730bda43f8891a488d9ba3304880c325a61393b02ec3311",
+      "xy_core.py": "c64eb610b0a29bf8bdd51334fa7a297da1ed246a43ce5f49381b53803ca3c32b"
+    }
+  },
+  "environment": {
+    "python": "3.9.25 (main, Nov  3 2025, 22:44:01) [MSC v.1929 64 bit (AMD64)]",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "backend": "gpu",
+    "dtype": "complex128",
+    "actual_quantum_shots": 0,
+    "cupy": "13.6.0",
+    "gpu": "NVIDIA GeForce RTX 3060"
+  },
+  "created_at": "2026-10-08T08:19:49.204672+00:00",
+  "library": {
+    "1": {
+      "k": 1,
+      "params": [
+        [
+          0.0,
+          0.1017127001305239,
+          0.0,
+          0.10175931866809602,
+          0.0,
+          0.10099719661856797,
+          0.0,
+          0.102386261866994,
+          0.0
+        ],
+        [
+          0.10139147045126307,
+          0.0,
+          0.10115066599674062,
+          0.0,
+          0.10095780455350337,
+          0.0,
+          0.10138652836967509,
+          0.0,
+          0.10319408622183408
+        ]
+      ],
+      "pqc_steps": 1,
+      "pqc_layers": 2,
+      "selected_attempt": "attempts\\k01_d01_analytic.json",
+      "selection_fidelity": 0.998328389910935,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.998328389910935,
+          "depth": 1,
+          "attempt": "attempts\\k01_d01_analytic.json"
+        }
+      ],
+      "validation_seed": 3628694537,
+      "test_seed": 3531069165,
+      "teacher_validation_hs_fidelity": 0.9982474573266336,
+      "exact_power_validation_hs_fidelity": 0.9982474573266336,
+      "teacher_computational_basis_fidelity": 0.9982475331284851,
+      "exact_computational_basis_fidelity": 0.9982475331284851,
+      "teacher_test_product_fidelity": 0.9983143778000033,
+      "exact_test_product_fidelity": 0.9983143778000033,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9982246968203026,
+      "gate_resources": {
+        "parameters": 9,
+        "cnot": 18,
+        "single_qubit": 36,
+        "parity_layers": 2,
+        "primitive_depth_upper_bound": 12
+      },
+      "audit_wall_seconds": 0.16070760000000028,
+      "block_wall_seconds_this_session": 2.2183737,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 301989888,
+          "estimated_single_qubit_gate_executions_upper_bound": 939524096
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 458752,
+          "estimated_single_qubit_gate_executions_upper_bound": 753664
+        }
+      }
+    },
+    "2": {
+      "k": 2,
+      "params": [
+        [
+          0.0,
+          0.10615398652902197,
+          0.0,
+          0.10579943319750396,
+          0.0,
+          0.10569560721756137,
+          0.0,
+          0.10588409485216901,
+          0.0
+        ],
+        [
+          0.20490849748659506,
+          0.0,
+          0.20315473967705452,
+          0.0,
+          0.2031574750655417,
+          0.0,
+          0.20339566915860677,
+          0.0,
+          0.2049418098993509
+        ],
+        [
+          0.0,
+          0.10609698547361787,
+          0.0,
+          0.10567515996745044,
+          0.0,
+          0.10592633494271747,
+          0.0,
+          0.10594389818085413,
+          0.0
+        ]
+      ],
+      "pqc_steps": 2,
+      "pqc_layers": 3,
+      "selected_attempt": "attempts\\k02_d02_analytic.json",
+      "selection_fidelity": 0.9996808613327615,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.9762775979162007,
+          "depth": 1,
+          "attempt": "attempts\\k02_d01_k_warm.json"
+        },
+        {
+          "fidelity": 0.9996808613327615,
+          "depth": 2,
+          "attempt": "attempts\\k02_d02_analytic.json"
+        }
+      ],
+      "validation_seed": 3569707388,
+      "test_seed": 477275794,
+      "teacher_validation_hs_fidelity": 0.9996735303003356,
+      "exact_power_validation_hs_fidelity": 0.9996735303003356,
+      "teacher_computational_basis_fidelity": 0.9996735335203142,
+      "exact_computational_basis_fidelity": 0.9996735335203142,
+      "teacher_test_product_fidelity": 0.999679060110635,
+      "exact_test_product_fidelity": 0.999679060110635,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9993798376638419,
+      "gate_resources": {
+        "parameters": 13,
+        "cnot": 26,
+        "single_qubit": 52,
+        "parity_layers": 3,
+        "primitive_depth_upper_bound": 18
+      },
+      "audit_wall_seconds": 0.17468150000000016,
+      "block_wall_seconds_this_session": 8.471119,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 436207616,
+          "estimated_single_qubit_gate_executions_upper_bound": 1207959552
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 589824,
+          "estimated_single_qubit_gate_executions_upper_bound": 1015808
+        }
+      }
+    },
+    "3": {
+      "k": 3,
+      "params": [
+        [
+          0.0,
+          0.16446532961808336,
+          0.0,
+          0.1640773381585463,
+          0.0,
+          0.1634248389879795,
+          0.0,
+          0.16443607808413502,
+          0.0
+        ],
+        [
+          0.3033467852806821,
+          0.0,
+          0.29841178264848633,
+          0.0,
+          0.29779928371532544,
+          0.0,
+          0.2969637565352177,
+          0.0,
+          0.30484216259984503
+        ],
+        [
+          0.0,
+          0.1619708929171465,
+          0.0,
+          0.16140991428406531,
+          0.0,
+          0.16269415932022127,
+          0.0,
+          0.16289530475969266,
+          0.0
+        ]
+      ],
+      "pqc_steps": 2,
+      "pqc_layers": 3,
+      "selected_attempt": "attempts\\k03_d02_analytic.json",
+      "selection_fidelity": 0.9963463120198788,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.9004638134025108,
+          "depth": 1,
+          "attempt": "attempts\\k03_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.9963463120198788,
+          "depth": 2,
+          "attempt": "attempts\\k03_d02_analytic.json"
+        }
+      ],
+      "validation_seed": 76965016,
+      "test_seed": 179866554,
+      "teacher_validation_hs_fidelity": 0.9963120487799578,
+      "exact_power_validation_hs_fidelity": 0.9963120487799578,
+      "teacher_computational_basis_fidelity": 0.996312296831564,
+      "exact_computational_basis_fidelity": 0.996312296831564,
+      "teacher_test_product_fidelity": 0.9964170125034251,
+      "exact_test_product_fidelity": 0.9964170125034251,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9989435210758183,
+      "gate_resources": {
+        "parameters": 13,
+        "cnot": 26,
+        "single_qubit": 52,
+        "parity_layers": 3,
+        "primitive_depth_upper_bound": 18
+      },
+      "audit_wall_seconds": 0.18936709999999835,
+      "block_wall_seconds_this_session": 7.636887100000001,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 520093696,
+          "estimated_single_qubit_gate_executions_upper_bound": 1375731712
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 671744,
+          "estimated_single_qubit_gate_executions_upper_bound": 1179648
+        }
+      }
+    },
+    "4": {
+      "k": 4,
+      "params": [
+        [
+          0.0,
+          0.1258012440386564,
+          0.0,
+          0.12927201117453907,
+          0.0,
+          0.12891950999658974,
+          0.0,
+          0.1259985244573412,
+          0.0
+        ],
+        [
+          0.28611436145656843,
+          0.0,
+          0.2853594900838721,
+          0.0,
+          0.28614190818154656,
+          0.0,
+          0.2846360716315911,
+          0.0,
+          0.2855714028638803
+        ],
+        [
+          0.0,
+          0.29023075991840386,
+          0.0,
+          0.2882388535102184,
+          0.0,
+          0.2883003598107075,
+          0.0,
+          0.2909042613574061,
+          0.0
+        ],
+        [
+          0.1297019782340872,
+          0.0,
+          0.1334360202537006,
+          0.0,
+          0.13231435038969575,
+          0.0,
+          0.13402652373245866,
+          0.0,
+          0.1302632188709065
+        ]
+      ],
+      "pqc_steps": 3,
+      "pqc_layers": 4,
+      "selected_attempt": "attempts\\k04_d03_analytic.json",
+      "selection_fidelity": 0.9992471331453486,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.7543943953661678,
+          "depth": 1,
+          "attempt": "attempts\\k04_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.9806301992211525,
+          "depth": 2,
+          "attempt": "attempts\\k04_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.9992471331453486,
+          "depth": 3,
+          "attempt": "attempts\\k04_d03_analytic.json"
+        }
+      ],
+      "validation_seed": 2985199176,
+      "test_seed": 1931823616,
+      "teacher_validation_hs_fidelity": 0.9992522605193465,
+      "exact_power_validation_hs_fidelity": 0.9992522605193465,
+      "teacher_computational_basis_fidelity": 0.9992522734804552,
+      "exact_computational_basis_fidelity": 0.9992522734804552,
+      "teacher_test_product_fidelity": 0.9992640439061711,
+      "exact_test_product_fidelity": 0.9992640439061711,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.998240737562586,
+      "gate_resources": {
+        "parameters": 18,
+        "cnot": 36,
+        "single_qubit": 72,
+        "parity_layers": 4,
+        "primitive_depth_upper_bound": 24
+      },
+      "audit_wall_seconds": 0.37663080000000093,
+      "block_wall_seconds_this_session": 34.5064696,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 671088640,
+          "estimated_single_qubit_gate_executions_upper_bound": 1677721600
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 819200,
+          "estimated_single_qubit_gate_executions_upper_bound": 1474560
+        }
+      }
+    },
+    "5": {
+      "k": 5,
+      "params": [
+        [
+          0.0,
+          0.16281215227321613,
+          0.0,
+          0.17066797808942097,
+          0.0,
+          0.16967615856261986,
+          0.0,
+          0.1638166884785579,
+          0.0
+        ],
+        [
+          0.35505898419682425,
+          0.0,
+          0.35329509119503655,
+          0.0,
+          0.3534843292403746,
+          0.0,
+          0.35207731010198007,
+          0.0,
+          0.3552844342448359
+        ],
+        [
+          0.0,
+          0.35974264387557126,
+          0.0,
+          0.3538955722860419,
+          0.0,
+          0.35380916365542053,
+          0.0,
+          0.36052741122160736,
+          0.0
+        ],
+        [
+          0.16711502900042663,
+          0.0,
+          0.17510021578379592,
+          0.0,
+          0.1724185243855829,
+          0.0,
+          0.174011917067761,
+          0.0,
+          0.16807849624049306
+        ]
+      ],
+      "pqc_steps": 3,
+      "pqc_layers": 4,
+      "selected_attempt": "attempts\\k05_d03_k_warm.json",
+      "selection_fidelity": 0.9964900356755673,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.557893553122789,
+          "depth": 1,
+          "attempt": "attempts\\k05_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.9322333949338435,
+          "depth": 2,
+          "attempt": "attempts\\k05_d02_depth_warm.json"
+        },
+        {
+          "fidelity": 0.9964900356755673,
+          "depth": 3,
+          "attempt": "attempts\\k05_d03_k_warm.json"
+        }
+      ],
+      "validation_seed": 1971989777,
+      "test_seed": 4142041475,
+      "teacher_validation_hs_fidelity": 0.9964902590779253,
+      "exact_power_validation_hs_fidelity": 0.9964902590779253,
+      "teacher_computational_basis_fidelity": 0.9964905040070781,
+      "exact_computational_basis_fidelity": 0.9964905040070781,
+      "teacher_test_product_fidelity": 0.9965476768812729,
+      "exact_test_product_fidelity": 0.9965476768812729,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9992926312491054,
+      "gate_resources": {
+        "parameters": 18,
+        "cnot": 36,
+        "single_qubit": 72,
+        "parity_layers": 4,
+        "primitive_depth_upper_bound": 24
+      },
+      "audit_wall_seconds": 0.4044237000000095,
+      "block_wall_seconds_this_session": 33.250409,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 754974720,
+          "estimated_single_qubit_gate_executions_upper_bound": 1845493760
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 901120,
+          "estimated_single_qubit_gate_executions_upper_bound": 1638400
+        }
+      }
+    },
+    "6": {
+      "k": 6,
+      "params": [
+        [
+          0.0,
+          0.12595404087942896,
+          0.0,
+          0.1392646442560462,
+          0.0,
+          0.13795957261911296,
+          0.0,
+          0.12486610833985061,
+          0.0
+        ],
+        [
+          0.3136065522135036,
+          0.0,
+          0.31433736386962186,
+          0.0,
+          0.3112180512317006,
+          0.0,
+          0.3144222436103324,
+          0.0,
+          0.31237317144047644
+        ],
+        [
+          0.0,
+          0.37732094418237716,
+          0.0,
+          0.3595718383713984,
+          0.0,
+          0.3592287602901632,
+          0.0,
+          0.37845839893563477,
+          0.0
+        ],
+        [
+          0.3128688781906781,
+          0.0,
+          0.3126872690802743,
+          0.0,
+          0.31276831028164365,
+          0.0,
+          0.31516497288347056,
+          0.0,
+          0.31300662676402385
+        ],
+        [
+          0.0,
+          0.12554002850773546,
+          0.0,
+          0.1382389548562815,
+          0.0,
+          0.13782619322509243,
+          0.0,
+          0.12618550777259574,
+          0.0
+        ]
+      ],
+      "pqc_steps": 4,
+      "pqc_layers": 5,
+      "selected_attempt": "attempts\\k06_d04_analytic.json",
+      "selection_fidelity": 0.9978899446223211,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.36921821729425286,
+          "depth": 1,
+          "attempt": "attempts\\k06_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.8336628093217495,
+          "depth": 2,
+          "attempt": "attempts\\k06_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.9875104867348591,
+          "depth": 3,
+          "attempt": "attempts\\k06_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.9978899446223211,
+          "depth": 4,
+          "attempt": "attempts\\k06_d04_analytic.json"
+        }
+      ],
+      "validation_seed": 2253784516,
+      "test_seed": 2901936195,
+      "teacher_validation_hs_fidelity": 0.9978875523661166,
+      "exact_power_validation_hs_fidelity": 0.9978875523661166,
+      "teacher_computational_basis_fidelity": 0.9978876753615017,
+      "exact_computational_basis_fidelity": 0.9978876753615017,
+      "teacher_test_product_fidelity": 0.9979264726320828,
+      "exact_test_product_fidelity": 0.9979264726320828,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9977023440444207,
+      "gate_resources": {
+        "parameters": 22,
+        "cnot": 44,
+        "single_qubit": 88,
+        "parity_layers": 5,
+        "primitive_depth_upper_bound": 30
+      },
+      "audit_wall_seconds": 0.43759190000000103,
+      "block_wall_seconds_this_session": 53.65965890000001,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 889192448,
+          "estimated_single_qubit_gate_executions_upper_bound": 2113929216
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 1032192,
+          "estimated_single_qubit_gate_executions_upper_bound": 1900544
+        }
+      }
+    },
+    "7": {
+      "k": 7,
+      "params": [
+        [
+          0.0,
+          0.1520421196439827,
+          0.0,
+          0.16946117389136045,
+          0.0,
+          0.17051129502162526,
+          0.0,
+          0.15297030560542207,
+          0.0
+        ],
+        [
+          0.36614967854959746,
+          0.0,
+          0.3671718409361053,
+          0.0,
+          0.3638878127164212,
+          0.0,
+          0.367288983438394,
+          0.0,
+          0.36816644982728275
+        ],
+        [
+          0.0,
+          0.4351151488083858,
+          0.0,
+          0.4128331563444208,
+          0.0,
+          0.4127853762136658,
+          0.0,
+          0.43411808440317423,
+          0.0
+        ],
+        [
+          0.3643831732351513,
+          0.0,
+          0.36489191852679653,
+          0.0,
+          0.36379247247678925,
+          0.0,
+          0.3655766558089185,
+          0.0,
+          0.365858223963105
+        ],
+        [
+          0.0,
+          0.1512997237177258,
+          0.0,
+          0.169264356344463,
+          0.0,
+          0.16955784547749372,
+          0.0,
+          0.15190334386382517,
+          0.0
+        ]
+      ],
+      "pqc_steps": 4,
+      "pqc_layers": 5,
+      "selected_attempt": "attempts\\k07_d04_analytic.json",
+      "selection_fidelity": 0.9942733419092692,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.21213063919072672,
+          "depth": 1,
+          "attempt": "attempts\\k07_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.6755114275466426,
+          "depth": 2,
+          "attempt": "attempts\\k07_d02_jitter_0.json"
+        },
+        {
+          "fidelity": 0.9636032676492966,
+          "depth": 3,
+          "attempt": "attempts\\k07_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.9942733419092692,
+          "depth": 4,
+          "attempt": "attempts\\k07_d04_analytic.json"
+        }
+      ],
+      "validation_seed": 1926992651,
+      "test_seed": 70583566,
+      "teacher_validation_hs_fidelity": 0.9941627197883768,
+      "exact_power_validation_hs_fidelity": 0.9941627197883768,
+      "teacher_computational_basis_fidelity": 0.994163639173148,
+      "exact_computational_basis_fidelity": 0.994163639173148,
+      "teacher_test_product_fidelity": 0.9942582712684642,
+      "exact_test_product_fidelity": 0.9942582712684642,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9986678964809272,
+      "gate_resources": {
+        "parameters": 22,
+        "cnot": 44,
+        "single_qubit": 88,
+        "parity_layers": 5,
+        "primitive_depth_upper_bound": 30
+      },
+      "audit_wall_seconds": 0.5005150000000071,
+      "block_wall_seconds_this_session": 49.7564337,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 973078528,
+          "estimated_single_qubit_gate_executions_upper_bound": 2281701376
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 1114112,
+          "estimated_single_qubit_gate_executions_upper_bound": 2064384
+        }
+      }
+    },
+    "8": {
+      "k": 8,
+      "params": [
+        [
+          0.0,
+          0.14306060787742864,
+          0.0,
+          0.11902596713584968,
+          0.0,
+          0.12003604130209,
+          0.0,
+          0.14350602771849486,
+          0.0
+        ],
+        [
+          0.35267200818594535,
+          0.0,
+          0.3000160668161437,
+          0.0,
+          0.3129084313816594,
+          0.0,
+          0.3003431730053519,
+          0.0,
+          0.35218123144963714
+        ],
+        [
+          0.0,
+          0.36709325763636425,
+          0.0,
+          0.3986213330994692,
+          0.0,
+          0.3972875484818548,
+          0.0,
+          0.3676664332267206,
+          0.0
+        ],
+        [
+          0.31016983052137875,
+          0.0,
+          0.4045981220926261,
+          0.0,
+          0.3988692643086575,
+          0.0,
+          0.40446852087386626,
+          0.0,
+          0.31091678240693477
+        ],
+        [
+          0.0,
+          0.3214621684967242,
+          0.0,
+          0.32472578527672935,
+          0.0,
+          0.3249520598382089,
+          0.0,
+          0.3208947212537317,
+          0.0
+        ],
+        [
+          0.19109937983437003,
+          0.0,
+          0.12876412888490255,
+          0.0,
+          0.13748149159489817,
+          0.0,
+          0.13045078807785,
+          0.0,
+          0.18985889115193935
+        ]
+      ],
+      "pqc_steps": 5,
+      "pqc_layers": 6,
+      "selected_attempt": "attempts\\k08_d05_analytic.json",
+      "selection_fidelity": 0.9969327603314717,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.11651411054443259,
+          "depth": 1,
+          "attempt": "attempts\\k08_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.4891713180336205,
+          "depth": 2,
+          "attempt": "attempts\\k08_d02_jitter_0.json"
+        },
+        {
+          "fidelity": 0.9112679869748076,
+          "depth": 3,
+          "attempt": "attempts\\k08_d03_jitter_0.json"
+        },
+        {
+          "fidelity": 0.9857390523737626,
+          "depth": 4,
+          "attempt": "attempts\\k08_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.9969327603314717,
+          "depth": 5,
+          "attempt": "attempts\\k08_d05_analytic.json"
+        }
+      ],
+      "validation_seed": 2539890025,
+      "test_seed": 1076142287,
+      "teacher_validation_hs_fidelity": 0.9968659221923443,
+      "exact_power_validation_hs_fidelity": 0.9968659221923443,
+      "teacher_computational_basis_fidelity": 0.9968661280266068,
+      "exact_computational_basis_fidelity": 0.9968661280266068,
+      "teacher_test_product_fidelity": 0.9969197797798673,
+      "exact_test_product_fidelity": 0.9969197797798673,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9977712906496854,
+      "gate_resources": {
+        "parameters": 27,
+        "cnot": 54,
+        "single_qubit": 108,
+        "parity_layers": 6,
+        "primitive_depth_upper_bound": 36
+      },
+      "audit_wall_seconds": 0.2506101999999828,
+      "block_wall_seconds_this_session": 72.5062565,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 1124073472,
+          "estimated_single_qubit_gate_executions_upper_bound": 2583691264
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 1261568,
+          "estimated_single_qubit_gate_executions_upper_bound": 2359296
+        }
+      }
+    },
+    "9": {
+      "k": 9,
+      "params": [
+        [
+          0.0,
+          0.16410107311810493,
+          0.0,
+          0.1425108347871568,
+          0.0,
+          0.14315232529813854,
+          0.0,
+          0.1627771819543951,
+          0.0
+        ],
+        [
+          0.3959757413496085,
+          0.0,
+          0.3412850727929444,
+          0.0,
+          0.3574126148443774,
+          0.0,
+          0.3398629216303781,
+          0.0,
+          0.39569224251610363
+        ],
+        [
+          0.0,
+          0.41676691128525334,
+          0.0,
+          0.43933717286205637,
+          0.0,
+          0.44012469444521346,
+          0.0,
+          0.41580196088933064,
+          0.0
+        ],
+        [
+          0.3588124494964043,
+          0.0,
+          0.4515604459268305,
+          0.0,
+          0.4391494859558408,
+          0.0,
+          0.45113638869090755,
+          0.0,
+          0.35839477341733555
+        ],
+        [
+          0.0,
+          0.359623655748425,
+          0.0,
+          0.36852961455568156,
+          0.0,
+          0.3680720971178702,
+          0.0,
+          0.35869299803218835,
+          0.0
+        ],
+        [
+          0.21445070641014824,
+          0.0,
+          0.1505644964445857,
+          0.0,
+          0.165393403879528,
+          0.0,
+          0.15198621228266324,
+          0.0,
+          0.21367743481857396
+        ]
+      ],
+      "pqc_steps": 5,
+      "pqc_layers": 6,
+      "selected_attempt": "attempts\\k09_d05_k_warm.json",
+      "selection_fidelity": 0.9934280117241316,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.06074514231655303,
+          "depth": 1,
+          "attempt": "attempts\\k09_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.30799917197751897,
+          "depth": 2,
+          "attempt": "attempts\\k09_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.8173782116001346,
+          "depth": 3,
+          "attempt": "attempts\\k09_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.9672048951720489,
+          "depth": 4,
+          "attempt": "attempts\\k09_d04_jitter_0.json"
+        },
+        {
+          "fidelity": 0.9934280117241316,
+          "depth": 5,
+          "attempt": "attempts\\k09_d05_k_warm.json"
+        }
+      ],
+      "validation_seed": 3569713291,
+      "test_seed": 2201057451,
+      "teacher_validation_hs_fidelity": 0.9932123815819575,
+      "exact_power_validation_hs_fidelity": 0.9932123815819575,
+      "teacher_computational_basis_fidelity": 0.9932131187608318,
+      "exact_computational_basis_fidelity": 0.9932131187608318,
+      "teacher_test_product_fidelity": 0.9933925039412682,
+      "exact_test_product_fidelity": 0.9933925039412682,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9976776486455687,
+      "gate_resources": {
+        "parameters": 27,
+        "cnot": 54,
+        "single_qubit": 108,
+        "parity_layers": 6,
+        "primitive_depth_upper_bound": 36
+      },
+      "audit_wall_seconds": 0.25169180000000324,
+      "block_wall_seconds_this_session": 27.624255000000005,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 1207959552,
+          "estimated_single_qubit_gate_executions_upper_bound": 2751463424
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 1343488,
+          "estimated_single_qubit_gate_executions_upper_bound": 2523136
+        }
+      }
+    },
+    "10": {
+      "k": 10,
+      "params": [
+        [
+          0.0,
+          0.1786167135501259,
+          0.0,
+          0.10163138912664371,
+          0.0,
+          0.10398791379069702,
+          0.0,
+          0.19165280558893352,
+          0.0
+        ],
+        [
+          0.43934454686820607,
+          0.0,
+          0.305336297433477,
+          0.0,
+          0.29246979839783055,
+          0.0,
+          0.31172435731746634,
+          0.0,
+          0.4646288482972709
+        ],
+        [
+          0.0,
+          0.3590373132130566,
+          0.0,
+          0.4263346660337942,
+          0.0,
+          0.4212345699848325,
+          0.0,
+          0.3497200265203438,
+          0.0
+        ],
+        [
+          0.1984980804100071,
+          0.0,
+          0.4330617180926723,
+          0.0,
+          0.472166241026147,
+          0.0,
+          0.41957786442673817,
+          0.0,
+          0.1458284905764309
+        ],
+        [
+          0.0,
+          0.35440188057762706,
+          0.0,
+          0.4238927820554059,
+          0.0,
+          0.41930911449773983,
+          0.0,
+          0.3461448167409841,
+          0.0
+        ],
+        [
+          0.43897588600764426,
+          0.0,
+          0.30156047252098234,
+          0.0,
+          0.2869395929792991,
+          0.0,
+          0.307775120794955,
+          0.0,
+          0.463486074760737
+        ],
+        [
+          0.0,
+          0.17779366889758333,
+          0.0,
+          0.09518849567868456,
+          0.0,
+          0.10071787917078472,
+          0.0,
+          0.19201400875265753,
+          0.0
+        ]
+      ],
+      "pqc_steps": 6,
+      "pqc_layers": 7,
+      "selected_attempt": "attempts\\k10_d06_depth_warm.json",
+      "selection_fidelity": 0.9963515948491088,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.04131034638898023,
+          "depth": 1,
+          "attempt": "attempts\\k10_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.17403751757935193,
+          "depth": 2,
+          "attempt": "attempts\\k10_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.6803589803249314,
+          "depth": 3,
+          "attempt": "attempts\\k10_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.930363126706834,
+          "depth": 4,
+          "attempt": "attempts\\k10_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.9865380400488754,
+          "depth": 5,
+          "attempt": "attempts\\k10_d05_jitter_0.json"
+        },
+        {
+          "fidelity": 0.9963515948491088,
+          "depth": 6,
+          "attempt": "attempts\\k10_d06_depth_warm.json"
+        }
+      ],
+      "validation_seed": 1793841018,
+      "test_seed": 3999594431,
+      "teacher_validation_hs_fidelity": 0.9963106798601338,
+      "exact_power_validation_hs_fidelity": 0.9963106798601338,
+      "teacher_computational_basis_fidelity": 0.9963109683063371,
+      "exact_computational_basis_fidelity": 0.9963109683063371,
+      "teacher_test_product_fidelity": 0.996394685053751,
+      "exact_test_product_fidelity": 0.996394685053751,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9975878568822598,
+      "gate_resources": {
+        "parameters": 31,
+        "cnot": 62,
+        "single_qubit": 124,
+        "parity_layers": 7,
+        "primitive_depth_upper_bound": 42
+      },
+      "audit_wall_seconds": 0.2659810999999763,
+      "block_wall_seconds_this_session": 39.268389600000035,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 1342177280,
+          "estimated_single_qubit_gate_executions_upper_bound": 3019898880
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 1474560,
+          "estimated_single_qubit_gate_executions_upper_bound": 2785280
+        }
+      }
+    },
+    "11": {
+      "k": 11,
+      "params": [
+        [
+          0.0,
+          0.20960876088762662,
+          0.0,
+          0.11761887777061332,
+          0.0,
+          0.11847865008781998,
+          0.0,
+          0.2143792458008828,
+          0.0
+        ],
+        [
+          0.4883214413481417,
+          0.0,
+          0.3404349933672079,
+          0.0,
+          0.3318400993677794,
+          0.0,
+          0.33890485211194255,
+          0.0,
+          0.4971493418164897
+        ],
+        [
+          0.0,
+          0.38703202213454313,
+          0.0,
+          0.45919746135431044,
+          0.0,
+          0.45951595267541356,
+          0.0,
+          0.3855834127089449,
+          0.0
+        ],
+        [
+          0.21032289232713697,
+          0.0,
+          0.46668596242149746,
+          0.0,
+          0.5073042289905169,
+          0.0,
+          0.4658886229711676,
+          0.0,
+          0.19444531239573046
+        ],
+        [
+          0.0,
+          0.38752616143916496,
+          0.0,
+          0.4586468591161391,
+          0.0,
+          0.4590766315779084,
+          0.0,
+          0.38512640627497274,
+          0.0
+        ],
+        [
+          0.4884454014768853,
+          0.0,
+          0.3376079422815067,
+          0.0,
+          0.32893601550893115,
+          0.0,
+          0.33795575967268765,
+          0.0,
+          0.4976394507795673
+        ],
+        [
+          0.0,
+          0.2069912734724534,
+          0.0,
+          0.11702484170320777,
+          0.0,
+          0.11768715596805093,
+          0.0,
+          0.21235919620728239,
+          0.0
+        ]
+      ],
+      "pqc_steps": 6,
+      "pqc_layers": 7,
+      "selected_attempt": "attempts\\k11_d06_k_warm.json",
+      "selection_fidelity": 0.9920061122031518,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.031455291934653205,
+          "depth": 1,
+          "attempt": "attempts\\k11_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.09169155351472866,
+          "depth": 2,
+          "attempt": "attempts\\k11_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.5137542867759236,
+          "depth": 3,
+          "attempt": "attempts\\k11_d03_depth_warm.json"
+        },
+        {
+          "fidelity": 0.8636938246672757,
+          "depth": 4,
+          "attempt": "attempts\\k11_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.9740084351758052,
+          "depth": 5,
+          "attempt": "attempts\\k11_d05_analytic.json"
+        },
+        {
+          "fidelity": 0.9920061122031518,
+          "depth": 6,
+          "attempt": "attempts\\k11_d06_k_warm.json"
+        }
+      ],
+      "validation_seed": 2945543471,
+      "test_seed": 2936595522,
+      "teacher_validation_hs_fidelity": 0.9918888777410919,
+      "exact_power_validation_hs_fidelity": 0.9918888777410919,
+      "teacher_computational_basis_fidelity": 0.991890346746499,
+      "exact_computational_basis_fidelity": 0.991890346746499,
+      "teacher_test_product_fidelity": 0.9920295653974444,
+      "exact_test_product_fidelity": 0.9920295653974444,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9970656765801584,
+      "gate_resources": {
+        "parameters": 31,
+        "cnot": 62,
+        "single_qubit": 124,
+        "parity_layers": 7,
+        "primitive_depth_upper_bound": 42
+      },
+      "audit_wall_seconds": 0.28453049999995983,
+      "block_wall_seconds_this_session": 37.229818799999975,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 1426063360,
+          "estimated_single_qubit_gate_executions_upper_bound": 3187671040
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 1556480,
+          "estimated_single_qubit_gate_executions_upper_bound": 2949120
+        }
+      }
+    },
+    "12": {
+      "k": 12,
+      "params": [
+        [
+          0.0,
+          0.17799470934915132,
+          0.0,
+          0.0968274579605068,
+          0.0,
+          0.09692487161813644,
+          0.0,
+          0.18029589958613276,
+          0.0
+        ],
+        [
+          0.49128638786321804,
+          0.0,
+          0.32172857260675874,
+          0.0,
+          0.2646915566912993,
+          0.0,
+          0.3218551800032416,
+          0.0,
+          0.49495540407601024
+        ],
+        [
+          0.0,
+          0.44421627022682036,
+          0.0,
+          0.42256199204121014,
+          0.0,
+          0.42315780174153966,
+          0.0,
+          0.44337663902912144,
+          0.0
+        ],
+        [
+          0.20157169989263968,
+          0.0,
+          0.4793492432525745,
+          0.0,
+          0.5144091786210557,
+          0.0,
+          0.47923246928993324,
+          0.0,
+          0.1890734694104639
+        ],
+        [
+          0.0,
+          0.27490368541177307,
+          0.0,
+          0.5273892964505766,
+          0.0,
+          0.5265391454196313,
+          0.0,
+          0.27182080633809436,
+          0.0
+        ],
+        [
+          0.41841405138725596,
+          0.0,
+          0.3353677475697071,
+          0.0,
+          0.5027927261968005,
+          0.0,
+          0.33363990651140213,
+          0.0,
+          0.42773491135019703
+        ],
+        [
+          0.0,
+          0.38142063827197087,
+          0.0,
+          0.20801216728435312,
+          0.0,
+          0.20896954374976706,
+          0.0,
+          0.38490365296701,
+          0.0
+        ],
+        [
+          0.22039972165737098,
+          0.0,
+          0.14296109021882553,
+          0.0,
+          -0.05145942122047481,
+          0.0,
+          0.14495584824239324,
+          0.0,
+          0.219353142677137
+        ]
+      ],
+      "pqc_steps": 7,
+      "pqc_layers": 8,
+      "selected_attempt": "attempts\\k12_d07_k_warm.json",
+      "selection_fidelity": 0.9994079007450073,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.03159490785626183,
+          "depth": 1,
+          "attempt": "attempts\\k12_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.036171543899604974,
+          "depth": 2,
+          "attempt": "attempts\\k12_d02_depth_warm.json"
+        },
+        {
+          "fidelity": 0.3520397251918227,
+          "depth": 3,
+          "attempt": "attempts\\k12_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.758142355914311,
+          "depth": 4,
+          "attempt": "attempts\\k12_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.9527179320423839,
+          "depth": 5,
+          "attempt": "attempts\\k12_d05_depth_warm.json"
+        },
+        {
+          "fidelity": 0.9837494104873047,
+          "depth": 6,
+          "attempt": "attempts\\k12_d06_k_warm.json"
+        },
+        {
+          "fidelity": 0.9994079007450073,
+          "depth": 7,
+          "attempt": "attempts\\k12_d07_k_warm.json"
+        }
+      ],
+      "validation_seed": 468653013,
+      "test_seed": 2110807649,
+      "teacher_validation_hs_fidelity": 0.999407439246753,
+      "exact_power_validation_hs_fidelity": 0.999407439246753,
+      "teacher_computational_basis_fidelity": 0.9994074480808488,
+      "exact_computational_basis_fidelity": 0.9994074480808488,
+      "teacher_test_product_fidelity": 0.999407388449959,
+      "exact_test_product_fidelity": 0.999407388449959,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9968021706543612,
+      "gate_resources": {
+        "parameters": 36,
+        "cnot": 72,
+        "single_qubit": 144,
+        "parity_layers": 8,
+        "primitive_depth_upper_bound": 48
+      },
+      "audit_wall_seconds": 0.2886530000000107,
+      "block_wall_seconds_this_session": 48.90141560000001,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 1577058304,
+          "estimated_single_qubit_gate_executions_upper_bound": 3489660928
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 1703936,
+          "estimated_single_qubit_gate_executions_upper_bound": 3244032
+        }
+      }
+    },
+    "13": {
+      "k": 13,
+      "params": [
+        [
+          0.0,
+          0.19766768112835753,
+          0.0,
+          0.10493992910439068,
+          0.0,
+          0.10533619169184072,
+          0.0,
+          0.20505297162679878,
+          0.0
+        ],
+        [
+          0.5290639873912804,
+          0.0,
+          0.34636053349704504,
+          0.0,
+          0.28660329566636467,
+          0.0,
+          0.34743473763908406,
+          0.0,
+          0.5365452079789439
+        ],
+        [
+          0.0,
+          0.46777670960661066,
+          0.0,
+          0.4516391396031464,
+          0.0,
+          0.4545335863289704,
+          0.0,
+          0.4642420372141697,
+          0.0
+        ],
+        [
+          0.23278626382646922,
+          0.0,
+          0.5078340718334504,
+          0.0,
+          0.5445443243353186,
+          0.0,
+          0.5057050589538142,
+          0.0,
+          0.20315697391081416
+        ],
+        [
+          0.0,
+          0.3111882724074354,
+          0.0,
+          0.5560020974854023,
+          0.0,
+          0.5533876367590992,
+          0.0,
+          0.3055511123298908,
+          0.0
+        ],
+        [
+          0.45264687334831055,
+          0.0,
+          0.3762983819174775,
+          0.0,
+          0.5249443800630726,
+          0.0,
+          0.3723789232123645,
+          0.0,
+          0.4737882469261574
+        ],
+        [
+          0.0,
+          0.4122389100444871,
+          0.0,
+          0.2479780721618576,
+          0.0,
+          0.24853013779604288,
+          0.0,
+          0.42215066776309573,
+          0.0
+        ],
+        [
+          0.2447268420744707,
+          0.0,
+          0.16058127959505253,
+          0.0,
+          -0.02521969850021797,
+          0.0,
+          0.16797742975726884,
+          0.0,
+          0.24238745096489347
+        ]
+      ],
+      "pqc_steps": 7,
+      "pqc_layers": 8,
+      "selected_attempt": "attempts\\k13_d07_jitter_0.json",
+      "selection_fidelity": 0.9984936647636793,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.027797568659129194,
+          "depth": 1,
+          "attempt": "attempts\\k13_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.028400378674766802,
+          "depth": 2,
+          "attempt": "attempts\\k13_d02_jitter_0.json"
+        },
+        {
+          "fidelity": 0.21975536496068007,
+          "depth": 3,
+          "attempt": "attempts\\k13_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.6136470100678375,
+          "depth": 4,
+          "attempt": "attempts\\k13_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.9171395336995434,
+          "depth": 5,
+          "attempt": "attempts\\k13_d05_analytic.json"
+        },
+        {
+          "fidelity": 0.9696103199771694,
+          "depth": 6,
+          "attempt": "attempts\\k13_d06_analytic.json"
+        },
+        {
+          "fidelity": 0.9984936647636793,
+          "depth": 7,
+          "attempt": "attempts\\k13_d07_jitter_0.json"
+        }
+      ],
+      "validation_seed": 767543272,
+      "test_seed": 2400664638,
+      "teacher_validation_hs_fidelity": 0.9984713153573949,
+      "exact_power_validation_hs_fidelity": 0.9984713153573949,
+      "teacher_computational_basis_fidelity": 0.9984713620108076,
+      "exact_computational_basis_fidelity": 0.9984713620108076,
+      "teacher_test_product_fidelity": 0.9984827022091034,
+      "exact_test_product_fidelity": 0.9984827022091034,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9966874586637262,
+      "gate_resources": {
+        "parameters": 36,
+        "cnot": 72,
+        "single_qubit": 144,
+        "parity_layers": 8,
+        "primitive_depth_upper_bound": 48
+      },
+      "audit_wall_seconds": 0.3029616000000033,
+      "block_wall_seconds_this_session": 45.52795500000002,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 1660944384,
+          "estimated_single_qubit_gate_executions_upper_bound": 3657433088
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 1785856,
+          "estimated_single_qubit_gate_executions_upper_bound": 3407872
+        }
+      }
+    },
+    "14": {
+      "k": 14,
+      "params": [
+        [
+          0.0,
+          0.21953335782838543,
+          0.0,
+          0.10093297948382203,
+          0.0,
+          0.0987153252332839,
+          0.0,
+          0.22070753984088357,
+          0.0
+        ],
+        [
+          0.5594866796283964,
+          0.0,
+          0.3574965955506722,
+          0.0,
+          0.2926446401764393,
+          0.0,
+          0.35763713403003144,
+          0.0,
+          0.5626573853241865
+        ],
+        [
+          0.0,
+          0.4713693892575934,
+          0.0,
+          0.4773981150507677,
+          0.0,
+          0.477678372741834,
+          0.0,
+          0.4716731928909863,
+          0.0
+        ],
+        [
+          0.24658031677895018,
+          0.0,
+          0.5259554056007522,
+          0.0,
+          0.5748297321697617,
+          0.0,
+          0.5269616987858255,
+          0.0,
+          0.23873467809147514
+        ],
+        [
+          0.0,
+          0.35261743328385287,
+          0.0,
+          0.5792433025926433,
+          0.0,
+          0.5792123118823762,
+          0.0,
+          0.35344068614655727,
+          0.0
+        ],
+        [
+          0.5069821994986309,
+          0.0,
+          0.4299290401654387,
+          0.0,
+          0.5433219545690592,
+          0.0,
+          0.42782064736994935,
+          0.0,
+          0.5120328899825526
+        ],
+        [
+          0.0,
+          0.4568228919536227,
+          0.0,
+          0.30755192909544277,
+          0.0,
+          0.31009758101165397,
+          0.0,
+          0.45807082119084297,
+          0.0
+        ],
+        [
+          0.2777421758844197,
+          0.0,
+          0.18956365156503735,
+          0.0,
+          0.024686511303427226,
+          0.0,
+          0.18958572740264706,
+          0.0,
+          0.2762874013193904
+        ]
+      ],
+      "pqc_steps": 7,
+      "pqc_layers": 8,
+      "selected_attempt": "attempts\\k14_d07_analytic.json",
+      "selection_fidelity": 0.9964075355019791,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.028723112558809247,
+          "depth": 1,
+          "attempt": "attempts\\k14_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.028949673415112665,
+          "depth": 2,
+          "attempt": "attempts\\k14_d02_depth_warm.json"
+        },
+        {
+          "fidelity": 0.139539540626603,
+          "depth": 3,
+          "attempt": "attempts\\k14_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.45046808674241995,
+          "depth": 4,
+          "attempt": "attempts\\k14_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.856360279509349,
+          "depth": 5,
+          "attempt": "attempts\\k14_d05_jitter_0.json"
+        },
+        {
+          "fidelity": 0.9464125996185863,
+          "depth": 6,
+          "attempt": "attempts\\k14_d06_jitter_0.json"
+        },
+        {
+          "fidelity": 0.9964075355019791,
+          "depth": 7,
+          "attempt": "attempts\\k14_d07_analytic.json"
+        }
+      ],
+      "validation_seed": 1668791074,
+      "test_seed": 1991804690,
+      "teacher_validation_hs_fidelity": 0.9964079036962677,
+      "exact_power_validation_hs_fidelity": 0.9964079036962677,
+      "teacher_computational_basis_fidelity": 0.9964081373942579,
+      "exact_computational_basis_fidelity": 0.9964081373942579,
+      "teacher_test_product_fidelity": 0.9964287330867528,
+      "exact_test_product_fidelity": 0.9964287330867528,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9958870862272932,
+      "gate_resources": {
+        "parameters": 36,
+        "cnot": 72,
+        "single_qubit": 144,
+        "parity_layers": 8,
+        "primitive_depth_upper_bound": 48
+      },
+      "audit_wall_seconds": 0.29961940000004006,
+      "block_wall_seconds_this_session": 46.00588060000001,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 1728053248,
+          "estimated_single_qubit_gate_executions_upper_bound": 3791650816
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 1851392,
+          "estimated_single_qubit_gate_executions_upper_bound": 3538944
+        }
+      }
+    },
+    "15": {
+      "k": 15,
+      "params": [
+        [
+          0.0,
+          0.24278232503338415,
+          0.0,
+          0.11314126349772745,
+          0.0,
+          0.11005638313204716,
+          0.0,
+          0.24365693980464082,
+          0.0
+        ],
+        [
+          0.5987264255689906,
+          0.0,
+          0.3859923366184057,
+          0.0,
+          0.32379288442735793,
+          0.0,
+          0.3862179927682181,
+          0.0,
+          0.5995816366987974
+        ],
+        [
+          0.0,
+          0.5005886907158382,
+          0.0,
+          0.5103716013181828,
+          0.0,
+          0.5092466358165568,
+          0.0,
+          0.49795388591141393,
+          0.0
+        ],
+        [
+          0.2795834820148054,
+          0.0,
+          0.5570565101895586,
+          0.0,
+          0.6017381166970548,
+          0.0,
+          0.5563143226917305,
+          0.0,
+          0.27862423192904995
+        ],
+        [
+          0.0,
+          0.38359938331626275,
+          0.0,
+          0.6070723298454175,
+          0.0,
+          0.606156066029323,
+          0.0,
+          0.3856872507829945,
+          0.0
+        ],
+        [
+          0.5445183478615359,
+          0.0,
+          0.4622711125734069,
+          0.0,
+          0.5751118550601089,
+          0.0,
+          0.4623065345834659,
+          0.0,
+          0.5454853357163728
+        ],
+        [
+          0.0,
+          0.4861225137763325,
+          0.0,
+          0.3457105928759767,
+          0.0,
+          0.3449698459653026,
+          0.0,
+          0.4869936606516774,
+          0.0
+        ],
+        [
+          0.3062908646634245,
+          0.0,
+          0.2129533153828874,
+          0.0,
+          0.03772166084765464,
+          0.0,
+          0.21152386693669878,
+          0.0,
+          0.303105531342357
+        ]
+      ],
+      "pqc_steps": 7,
+      "pqc_layers": 8,
+      "selected_attempt": "attempts\\k15_d07_analytic.json",
+      "selection_fidelity": 0.9920323447378706,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.027102727419953496,
+          "depth": 1,
+          "attempt": "attempts\\k15_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.028468041234033268,
+          "depth": 2,
+          "attempt": "attempts\\k15_d02_depth_warm.json"
+        },
+        {
+          "fidelity": 0.09103622025401022,
+          "depth": 3,
+          "attempt": "attempts\\k15_d03_depth_warm.json"
+        },
+        {
+          "fidelity": 0.3011502820827944,
+          "depth": 4,
+          "attempt": "attempts\\k15_d04_jitter_0.json"
+        },
+        {
+          "fidelity": 0.7673598108195242,
+          "depth": 5,
+          "attempt": "attempts\\k15_d05_analytic.json"
+        },
+        {
+          "fidelity": 0.9113625416083834,
+          "depth": 6,
+          "attempt": "attempts\\k15_d06_analytic.json"
+        },
+        {
+          "fidelity": 0.9920323447378706,
+          "depth": 7,
+          "attempt": "attempts\\k15_d07_analytic.json"
+        }
+      ],
+      "validation_seed": 2994333442,
+      "test_seed": 1947745141,
+      "teacher_validation_hs_fidelity": 0.9919700387705067,
+      "exact_power_validation_hs_fidelity": 0.9919700387705067,
+      "teacher_computational_basis_fidelity": 0.9919711905642451,
+      "exact_computational_basis_fidelity": 0.9919711905642451,
+      "teacher_test_product_fidelity": 0.9920464224616046,
+      "exact_test_product_fidelity": 0.9920464224616046,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9960052471932381,
+      "gate_resources": {
+        "parameters": 36,
+        "cnot": 72,
+        "single_qubit": 144,
+        "parity_layers": 8,
+        "primitive_depth_upper_bound": 48
+      },
+      "audit_wall_seconds": 0.3000775000000431,
+      "block_wall_seconds_this_session": 44.93399969999996,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 1811939328,
+          "estimated_single_qubit_gate_executions_upper_bound": 3959422976
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 1933312,
+          "estimated_single_qubit_gate_executions_upper_bound": 3702784
+        }
+      }
+    },
+    "16": {
+      "k": 16,
+      "params": [
+        [
+          0.0,
+          0.2068836899879603,
+          0.0,
+          0.10045036682173548,
+          0.0,
+          0.10790305784442661,
+          0.0,
+          0.20205170172987014,
+          0.0
+        ],
+        [
+          0.5459802806318591,
+          0.0,
+          0.3602234677505958,
+          0.0,
+          0.2711727413148261,
+          0.0,
+          0.36515523857134746,
+          0.0,
+          0.5347709476144406
+        ],
+        [
+          0.0,
+          0.49088725449885956,
+          0.0,
+          0.4614630112300364,
+          0.0,
+          0.4531906539575838,
+          0.0,
+          0.4967978492025907,
+          0.0
+        ],
+        [
+          0.39789216516067716,
+          0.0,
+          0.5184677280535432,
+          0.0,
+          0.5727847485972342,
+          0.0,
+          0.5118850243561673,
+          0.0,
+          0.43017547745624624
+        ],
+        [
+          0.0,
+          0.3696036117056797,
+          0.0,
+          0.589274013553411,
+          0.0,
+          0.5895989776437662,
+          0.0,
+          0.3719004578980994,
+          0.0
+        ],
+        [
+          0.3768909487736506,
+          0.0,
+          0.489538522536001,
+          0.0,
+          0.5787308635793365,
+          0.0,
+          0.4980504250672827,
+          0.0,
+          0.34257153252168965
+        ],
+        [
+          0.0,
+          0.457874049780263,
+          0.0,
+          0.43665785919133904,
+          0.0,
+          0.44550522137883997,
+          0.0,
+          0.4492821766340439,
+          0.0
+        ],
+        [
+          0.5168224922400556,
+          0.0,
+          0.330962530867377,
+          0.0,
+          0.21713407921858224,
+          0.0,
+          0.3236274972761006,
+          0.0,
+          0.526278401039983
+        ],
+        [
+          0.0,
+          0.1948144431816517,
+          0.0,
+          0.07498426083579236,
+          0.0,
+          0.06319237374456729,
+          0.0,
+          0.19855092132806584,
+          0.0
+        ]
+      ],
+      "pqc_steps": 8,
+      "pqc_layers": 9,
+      "selected_attempt": "attempts\\k16_d08_jitter_0.json",
+      "selection_fidelity": 0.9970405133409408,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.025794159940147075,
+          "depth": 1,
+          "attempt": "attempts\\k16_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.03121199501881082,
+          "depth": 2,
+          "attempt": "attempts\\k16_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.06981344697558162,
+          "depth": 3,
+          "attempt": "attempts\\k16_d03_depth_warm.json"
+        },
+        {
+          "fidelity": 0.20147247750656155,
+          "depth": 4,
+          "attempt": "attempts\\k16_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.6516199671554146,
+          "depth": 5,
+          "attempt": "attempts\\k16_d05_analytic.json"
+        },
+        {
+          "fidelity": 0.8593723698433259,
+          "depth": 6,
+          "attempt": "attempts\\k16_d06_analytic.json"
+        },
+        {
+          "fidelity": 0.9834248836615572,
+          "depth": 7,
+          "attempt": "attempts\\k16_d07_analytic.json"
+        },
+        {
+          "fidelity": 0.9970405133409408,
+          "depth": 8,
+          "attempt": "attempts\\k16_d08_jitter_0.json"
+        }
+      ],
+      "validation_seed": 613382306,
+      "test_seed": 2699378013,
+      "teacher_validation_hs_fidelity": 0.9970259859655052,
+      "exact_power_validation_hs_fidelity": 0.9970259859655052,
+      "teacher_computational_basis_fidelity": 0.9970262302913139,
+      "exact_computational_basis_fidelity": 0.9970262302913139,
+      "teacher_test_product_fidelity": 0.997042958732534,
+      "exact_test_product_fidelity": 0.997042958732534,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9951868693146276,
+      "gate_resources": {
+        "parameters": 40,
+        "cnot": 80,
+        "single_qubit": 160,
+        "parity_layers": 9,
+        "primitive_depth_upper_bound": 54
+      },
+      "audit_wall_seconds": 0.31818169999996826,
+      "block_wall_seconds_this_session": 59.21652830000005,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 1946157056,
+          "estimated_single_qubit_gate_executions_upper_bound": 4227858432
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 2064384,
+          "estimated_single_qubit_gate_executions_upper_bound": 3964928
+        }
+      }
+    },
+    "17": {
+      "k": 17,
+      "params": [
+        [
+          0.0,
+          0.2243002517864119,
+          0.0,
+          0.1039144121057339,
+          0.0,
+          0.10694505323521565,
+          0.0,
+          0.22152640109470714,
+          0.0
+        ],
+        [
+          0.5775960041710887,
+          0.0,
+          0.38514387622513013,
+          0.0,
+          0.28397056868537984,
+          0.0,
+          0.38716985189340763,
+          0.0,
+          0.5700324438433868
+        ],
+        [
+          0.0,
+          0.514428242073345,
+          0.0,
+          0.48889848205038383,
+          0.0,
+          0.48614320910204173,
+          0.0,
+          0.5193087534259684,
+          0.0
+        ],
+        [
+          0.4392392510478687,
+          0.0,
+          0.5447732793259734,
+          0.0,
+          0.6039631280820229,
+          0.0,
+          0.5411704386928985,
+          0.0,
+          0.45928774109245274
+        ],
+        [
+          0.0,
+          0.3971816120566984,
+          0.0,
+          0.6207739512658593,
+          0.0,
+          0.6214883113878498,
+          0.0,
+          0.40140225867456014,
+          0.0
+        ],
+        [
+          0.4005338874952135,
+          0.0,
+          0.5283271172232287,
+          0.0,
+          0.6129563637365868,
+          0.0,
+          0.5324549741279857,
+          0.0,
+          0.38417682789679714
+        ],
+        [
+          0.0,
+          0.48493827893995023,
+          0.0,
+          0.4778215912259393,
+          0.0,
+          0.48411369885111083,
+          0.0,
+          0.4797055566910022,
+          0.0
+        ],
+        [
+          0.5596401341125326,
+          0.0,
+          0.3594612446442637,
+          0.0,
+          0.24086246407650844,
+          0.0,
+          0.3532111213892495,
+          0.0,
+          0.5654657281933672
+        ],
+        [
+          0.0,
+          0.21751046261372464,
+          0.0,
+          0.07704240079843475,
+          0.0,
+          0.06781851488940471,
+          0.0,
+          0.21930822735007643,
+          0.0
+        ]
+      ],
+      "pqc_steps": 8,
+      "pqc_layers": 9,
+      "selected_attempt": "attempts\\k17_d08_k_warm.json",
+      "selection_fidelity": 0.9936995732516234,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.022596171317131077,
+          "depth": 1,
+          "attempt": "attempts\\k17_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.03653245874302838,
+          "depth": 2,
+          "attempt": "attempts\\k17_d02_depth_warm.json"
+        },
+        {
+          "fidelity": 0.056159834777613396,
+          "depth": 3,
+          "attempt": "attempts\\k17_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.12799663597465824,
+          "depth": 4,
+          "attempt": "attempts\\k17_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.5099135427124679,
+          "depth": 5,
+          "attempt": "attempts\\k17_d05_analytic.json"
+        },
+        {
+          "fidelity": 0.7860687463761082,
+          "depth": 6,
+          "attempt": "attempts\\k17_d06_depth_warm.json"
+        },
+        {
+          "fidelity": 0.9683290339850393,
+          "depth": 7,
+          "attempt": "attempts\\k17_d07_analytic.json"
+        },
+        {
+          "fidelity": 0.9936995732516234,
+          "depth": 8,
+          "attempt": "attempts\\k17_d08_k_warm.json"
+        }
+      ],
+      "validation_seed": 563661336,
+      "test_seed": 2754711592,
+      "teacher_validation_hs_fidelity": 0.993690059514484,
+      "exact_power_validation_hs_fidelity": 0.993690059514484,
+      "teacher_computational_basis_fidelity": 0.9936911301551328,
+      "exact_computational_basis_fidelity": 0.9936911301551328,
+      "teacher_test_product_fidelity": 0.9937924795963091,
+      "exact_test_product_fidelity": 0.9937924795963091,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9950076966929801,
+      "gate_resources": {
+        "parameters": 40,
+        "cnot": 80,
+        "single_qubit": 160,
+        "parity_layers": 9,
+        "primitive_depth_upper_bound": 54
+      },
+      "audit_wall_seconds": 0.3264849999999342,
+      "block_wall_seconds_this_session": 55.793807000000015,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 2030043136,
+          "estimated_single_qubit_gate_executions_upper_bound": 4395630592
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 2146304,
+          "estimated_single_qubit_gate_executions_upper_bound": 4128768
+        }
+      }
+    },
+    "18": {
+      "k": 18,
+      "params": [
+        [
+          0.0,
+          0.17831237449917914,
+          0.0,
+          0.13516616915659702,
+          0.0,
+          0.1428572266664618,
+          0.0,
+          0.18165237120381075,
+          0.0
+        ],
+        [
+          0.5245752834396002,
+          0.0,
+          0.36169817477999033,
+          0.0,
+          0.3408398602847317,
+          0.0,
+          0.37096023566109076,
+          0.0,
+          0.5341181731663734
+        ],
+        [
+          0.0,
+          0.5183324806847626,
+          0.0,
+          0.46567899518849143,
+          0.0,
+          0.4612243082741751,
+          0.0,
+          0.5279640047545632,
+          0.0
+        ],
+        [
+          0.5120098655712314,
+          0.0,
+          0.5607773065952871,
+          0.0,
+          0.5245555087992354,
+          0.0,
+          0.5579434441351603,
+          0.0,
+          0.5198548819984462
+        ],
+        [
+          0.0,
+          0.4705659020475331,
+          0.0,
+          0.5824245137196676,
+          0.0,
+          0.5837835865516245,
+          0.0,
+          0.45345299853670845,
+          0.0
+        ],
+        [
+          0.48188579948997234,
+          0.0,
+          0.49229995905840435,
+          0.0,
+          0.6156684341258302,
+          0.0,
+          0.48339019359123336,
+          0.0,
+          0.431314813683418
+        ],
+        [
+          0.0,
+          0.4016141430468104,
+          0.0,
+          0.5220817600509152,
+          0.0,
+          0.5119591006716147,
+          0.0,
+          0.383107356416439,
+          0.0
+        ],
+        [
+          0.34488040555763416,
+          0.0,
+          0.42502869376050645,
+          0.0,
+          0.3416926693492877,
+          0.0,
+          0.41004983267213274,
+          0.0,
+          0.3802536634000498
+        ],
+        [
+          0.0,
+          0.3174458430460395,
+          0.0,
+          0.1698203526699313,
+          0.0,
+          0.17918158490619937,
+          0.0,
+          0.3396083011761597,
+          0.0
+        ],
+        [
+          0.2562818380381851,
+          0.0,
+          0.04770384173384695,
+          0.0,
+          0.034635072766536476,
+          0.0,
+          0.07261578658634596,
+          0.0,
+          0.25419622118637014
+        ]
+      ],
+      "pqc_steps": 9,
+      "pqc_layers": 10,
+      "selected_attempt": "attempts\\k18_d09_jitter_0.json",
+      "selection_fidelity": 0.9999187365647632,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.01801684022688753,
+          "depth": 1,
+          "attempt": "attempts\\k18_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.03654675123395415,
+          "depth": 2,
+          "attempt": "attempts\\k18_d02_depth_warm.json"
+        },
+        {
+          "fidelity": 0.05481321679517642,
+          "depth": 3,
+          "attempt": "attempts\\k18_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.08205389181921804,
+          "depth": 4,
+          "attempt": "attempts\\k18_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.3692719619188633,
+          "depth": 5,
+          "attempt": "attempts\\k18_d05_analytic.json"
+        },
+        {
+          "fidelity": 0.6870059923890073,
+          "depth": 6,
+          "attempt": "attempts\\k18_d06_jitter_0.json"
+        },
+        {
+          "fidelity": 0.9445952536795107,
+          "depth": 7,
+          "attempt": "attempts\\k18_d07_analytic.json"
+        },
+        {
+          "fidelity": 0.9871338692607284,
+          "depth": 8,
+          "attempt": "attempts\\k18_d08_k_warm.json"
+        },
+        {
+          "fidelity": 0.9999187365647632,
+          "depth": 9,
+          "attempt": "attempts\\k18_d09_jitter_0.json"
+        }
+      ],
+      "validation_seed": 351738581,
+      "test_seed": 3336182683,
+      "teacher_validation_hs_fidelity": 0.9999181911099496,
+      "exact_power_validation_hs_fidelity": 0.9999181911099496,
+      "teacher_computational_basis_fidelity": 0.9999181912581779,
+      "exact_computational_basis_fidelity": 0.9999181912581779,
+      "teacher_test_product_fidelity": 0.9999182207576741,
+      "exact_test_product_fidelity": 0.9999182207576741,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9944400094842316,
+      "gate_resources": {
+        "parameters": 45,
+        "cnot": 90,
+        "single_qubit": 180,
+        "parity_layers": 10,
+        "primitive_depth_upper_bound": 60
+      },
+      "audit_wall_seconds": 0.3348419000000149,
+      "block_wall_seconds_this_session": 76.43042590000005,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 2181038080,
+          "estimated_single_qubit_gate_executions_upper_bound": 4697620480
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 2293760,
+          "estimated_single_qubit_gate_executions_upper_bound": 4423680
+        }
+      }
+    },
+    "19": {
+      "k": 19,
+      "params": [
+        [
+          0.0,
+          0.19003737417368538,
+          0.0,
+          0.13727105833254383,
+          0.0,
+          0.13431310745955377,
+          0.0,
+          0.19272063043054496,
+          0.0
+        ],
+        [
+          0.5555819968651854,
+          0.0,
+          0.3719165388873448,
+          0.0,
+          0.3433321743517414,
+          0.0,
+          0.3688854197739439,
+          0.0,
+          0.5572213062597936
+        ],
+        [
+          0.0,
+          0.5317806283484184,
+          0.0,
+          0.4756839303540062,
+          0.0,
+          0.47834510446057127,
+          0.0,
+          0.5272327679923595,
+          0.0
+        ],
+        [
+          0.5164664390188726,
+          0.0,
+          0.575820971188029,
+          0.0,
+          0.54381249229805,
+          0.0,
+          0.5773030476860361,
+          0.0,
+          0.5053223416848126
+        ],
+        [
+          0.0,
+          0.47156183111979294,
+          0.0,
+          0.6044756268266571,
+          0.0,
+          0.6038001443927783,
+          0.0,
+          0.47372187686416867,
+          0.0
+        ],
+        [
+          0.5093476850833168,
+          0.0,
+          0.509441929503985,
+          0.0,
+          0.6379286495374333,
+          0.0,
+          0.5087977228551273,
+          0.0,
+          0.526965802795127
+        ],
+        [
+          0.0,
+          0.43673039050778384,
+          0.0,
+          0.5432308852295032,
+          0.0,
+          0.5438928086368282,
+          0.0,
+          0.44432266571906887,
+          0.0
+        ],
+        [
+          0.40924824096690027,
+          0.0,
+          0.4655588270842145,
+          0.0,
+          0.369809324736485,
+          0.0,
+          0.47188924107885694,
+          0.0,
+          0.40100941134825707
+        ],
+        [
+          0.0,
+          0.361465967004916,
+          0.0,
+          0.22259713592227248,
+          0.0,
+          0.22313664037442055,
+          0.0,
+          0.35547791344656937,
+          0.0
+        ],
+        [
+          0.2773990373904396,
+          0.0,
+          0.07300299599554627,
+          0.0,
+          0.0657534802340741,
+          0.0,
+          0.0659951181130178,
+          0.0,
+          0.27730611812259875
+        ]
+      ],
+      "pqc_steps": 9,
+      "pqc_layers": 10,
+      "selected_attempt": "attempts\\k19_d09_depth_warm.json",
+      "selection_fidelity": 0.9998583030436544,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.016326002166254645,
+          "depth": 1,
+          "attempt": "attempts\\k19_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.03922734292763783,
+          "depth": 2,
+          "attempt": "attempts\\k19_d02_jitter_0.json"
+        },
+        {
+          "fidelity": 0.058551967702851114,
+          "depth": 3,
+          "attempt": "attempts\\k19_d03_depth_warm.json"
+        },
+        {
+          "fidelity": 0.07377272318102543,
+          "depth": 4,
+          "attempt": "attempts\\k19_d04_depth_warm.json"
+        },
+        {
+          "fidelity": 0.26814990926083415,
+          "depth": 5,
+          "attempt": "attempts\\k19_d05_analytic.json"
+        },
+        {
+          "fidelity": 0.5616283710318553,
+          "depth": 6,
+          "attempt": "attempts\\k19_d06_analytic.json"
+        },
+        {
+          "fidelity": 0.9078762868229323,
+          "depth": 7,
+          "attempt": "attempts\\k19_d07_analytic.json"
+        },
+        {
+          "fidelity": 0.9751675014149938,
+          "depth": 8,
+          "attempt": "attempts\\k19_d08_analytic.json"
+        },
+        {
+          "fidelity": 0.9998583030436544,
+          "depth": 9,
+          "attempt": "attempts\\k19_d09_depth_warm.json"
+        }
+      ],
+      "validation_seed": 1492300790,
+      "test_seed": 2561611023,
+      "teacher_validation_hs_fidelity": 0.9998589472563827,
+      "exact_power_validation_hs_fidelity": 0.9998589472563827,
+      "teacher_computational_basis_fidelity": 0.9998589477420542,
+      "exact_computational_basis_fidelity": 0.9998589477420542,
+      "teacher_test_product_fidelity": 0.999860104021437,
+      "exact_test_product_fidelity": 0.999860104021437,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9940663672611747,
+      "gate_resources": {
+        "parameters": 45,
+        "cnot": 90,
+        "single_qubit": 180,
+        "parity_layers": 10,
+        "primitive_depth_upper_bound": 60
+      },
+      "audit_wall_seconds": 0.34863529999995535,
+      "block_wall_seconds_this_session": 69.7690202,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 2264924160,
+          "estimated_single_qubit_gate_executions_upper_bound": 4865392640
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 2375680,
+          "estimated_single_qubit_gate_executions_upper_bound": 4587520
+        }
+      }
+    },
+    "20": {
+      "k": 20,
+      "params": [
+        [
+          0.0,
+          0.19527857297327256,
+          0.0,
+          0.14206526513499013,
+          0.0,
+          0.14212855711995864,
+          0.0,
+          0.1956712968517074,
+          0.0
+        ],
+        [
+          0.5598685562722191,
+          0.0,
+          0.3733198801258997,
+          0.0,
+          0.3259620761620596,
+          0.0,
+          0.37355201950512057,
+          0.0,
+          0.5601260635807692
+        ],
+        [
+          0.0,
+          0.5264358710115327,
+          0.0,
+          0.4529846601098487,
+          0.0,
+          0.45253799746349327,
+          0.0,
+          0.5267299045628495,
+          0.0
+        ],
+        [
+          0.5047677624468093,
+          0.0,
+          0.5517617366968699,
+          0.0,
+          0.5305345136260834,
+          0.0,
+          0.5518381294634446,
+          0.0,
+          0.5049117317018844
+        ],
+        [
+          0.0,
+          0.43666033996593284,
+          0.0,
+          0.5949134781551351,
+          0.0,
+          0.5946711904154394,
+          0.0,
+          0.4363468856733168,
+          0.0
+        ],
+        [
+          0.4868786758797345,
+          0.0,
+          0.5127251753354994,
+          0.0,
+          0.6320528363431528,
+          0.0,
+          0.5123323985367879,
+          0.0,
+          0.48622109936793506
+        ],
+        [
+          0.0,
+          0.47530376754406173,
+          0.0,
+          0.5549712971391003,
+          0.0,
+          0.5539969385802572,
+          0.0,
+          0.47530728628037344,
+          0.0
+        ],
+        [
+          0.5371241823569284,
+          0.0,
+          0.514810531469337,
+          0.0,
+          0.43036717035636085,
+          0.0,
+          0.5149089252490673,
+          0.0,
+          0.5376937492993493
+        ],
+        [
+          0.0,
+          0.4521620963254519,
+          0.0,
+          0.33737794328085924,
+          0.0,
+          0.33743615354699363,
+          0.0,
+          0.4524192746973034,
+          0.0
+        ],
+        [
+          0.30561443415470113,
+          0.0,
+          0.1542560665400627,
+          0.0,
+          0.14191253918215035,
+          0.0,
+          0.15427544202414983,
+          0.0,
+          0.3061288662007192
+        ]
+      ],
+      "pqc_steps": 9,
+      "pqc_layers": 10,
+      "selected_attempt": "attempts\\k20_d09_analytic.json",
+      "selection_fidelity": 0.9998542232776967,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.012836631811467339,
+          "depth": 1,
+          "attempt": "attempts\\k20_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.03959753757705706,
+          "depth": 2,
+          "attempt": "attempts\\k20_d02_depth_warm.json"
+        },
+        {
+          "fidelity": 0.054395008490832786,
+          "depth": 3,
+          "attempt": "attempts\\k20_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.06257825126348038,
+          "depth": 4,
+          "attempt": "attempts\\k20_d04_jitter_0.json"
+        },
+        {
+          "fidelity": 0.2079442400312977,
+          "depth": 5,
+          "attempt": "attempts\\k20_d05_analytic.json"
+        },
+        {
+          "fidelity": 0.4240347485002237,
+          "depth": 6,
+          "attempt": "attempts\\k20_d06_depth_warm.json"
+        },
+        {
+          "fidelity": 0.8563003886731592,
+          "depth": 7,
+          "attempt": "attempts\\k20_d07_jitter_0.json"
+        },
+        {
+          "fidelity": 0.9541262959178194,
+          "depth": 8,
+          "attempt": "attempts\\k20_d08_analytic.json"
+        },
+        {
+          "fidelity": 0.9998542232776967,
+          "depth": 9,
+          "attempt": "attempts\\k20_d09_analytic.json"
+        }
+      ],
+      "validation_seed": 2119177091,
+      "test_seed": 2702058940,
+      "teacher_validation_hs_fidelity": 0.9998509835497954,
+      "exact_power_validation_hs_fidelity": 0.9998509835497954,
+      "teacher_computational_basis_fidelity": 0.9998509841196332,
+      "exact_computational_basis_fidelity": 0.9998509841196332,
+      "teacher_test_product_fidelity": 0.9998523337774263,
+      "exact_test_product_fidelity": 0.9998523337774263,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9933747348158983,
+      "gate_resources": {
+        "parameters": 45,
+        "cnot": 90,
+        "single_qubit": 180,
+        "parity_layers": 10,
+        "primitive_depth_upper_bound": 60
+      },
+      "audit_wall_seconds": 0.3478660000000673,
+      "block_wall_seconds_this_session": 67.29449749999992,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 3072,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 256,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 2332033024,
+          "estimated_single_qubit_gate_executions_upper_bound": 4999610368
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 2441216,
+          "estimated_single_qubit_gate_executions_upper_bound": 4718592
+        }
+      }
+    }
+  },
+  "setup_sessions": [
+    {
+      "time": "2026-10-08T08:19:49.204672+00:00",
+      "u0_setup_seconds": 0.3943093999999999,
+      "shared_across_seeds_in_invocation": true
+    }
+  ],
+  "target_definition": "exact U0=exp(-i H step); direct U0^k; iterative V_(k-1) @ U0",
+  "nc_reference": "https://doi.org/10.1038/s41467-023-39381-w",
+  "loss_definition": "1-mean_product_states(abs(overlap)^2)",
+  "reported_hs_fidelity": "abs(Tr(target^dagger V))^2/d^2; all d basis states, never a B32 trace estimate",
+  "selection": "held-out product mean fidelity",
+  "test_policy": "fresh independent product test set per k; diagnostics only, never depth/parameter selection",
+  "depth_policy": "scan 1..k+extra_depth; minimum passing selection threshold, otherwise best available",
+  "initialization_policy": "analytic, depth warm start with zero added angles, scaled previous-k warm start, Gaussian jitter restarts",
+  "resource_notes": {
+    "actual": "classical exact statevector/matrix simulation with analytic adjoint gradients; zero quantum shots",
+    "estimates": "hypothetical gate-wise parameter-shift plus echo (B32) or 2n-qubit HST (full); not measured runtime or shots",
+    "target_caveat": "exact dense U0 targets have no specified hardware synthesis; gate costs use a separate alternating-Trotter proxy, whose fidelity is audited per selected block",
+    "preparation": "B32 overhead <=4n single gates and depth<=4; conservative also for pauli6",
+    "excluded": "hardware mapping, error mitigation, readout/reset time, classical-to-quantum latency",
+    "resume": "complete attempts reused; incomplete attempts archived and counted, then restarted"
+  },
+  "completed_k": 20,
+  "training_and_selection_resources": {
+    "selection": {
+      "objective_evaluations": 7546,
+      "gradient_evaluations": 0,
+      "forward_state_vectors": 1931776,
+      "adjoint_state_vectors": 0,
+      "target_state_vector_applications": 0,
+      "estimated_circuit_settings": 1931776,
+      "estimated_shots": 7912554496,
+      "estimated_cnot_gate_executions": 1350993707008,
+      "estimated_single_qubit_gate_executions_upper_bound": 3018489593856
+    },
+    "training": {
+      "objective_evaluations": 34300,
+      "gradient_evaluations": 34300,
+      "forward_state_vectors": 1097600,
+      "adjoint_state_vectors": 1097600,
+      "target_state_vector_applications": 1097600,
+      "estimated_circuit_settings": 101436800,
+      "estimated_shots": 415485132800,
+      "estimated_cnot_gate_executions": 78433956659200,
+      "estimated_single_qubit_gate_executions_upper_bound": 173487318630400
+    }
+  },
+  "diagnostic_resource_estimates": {
+    "held_out_product_test": {
+      "objective_evaluations": 40,
+      "gradient_evaluations": 0,
+      "forward_state_vectors": 40960,
+      "adjoint_state_vectors": 0,
+      "target_state_vector_applications": 40960,
+      "estimated_circuit_settings": 40960,
+      "estimated_shots": 167772160,
+      "estimated_cnot_gate_executions": 27179089920,
+      "estimated_single_qubit_gate_executions_upper_bound": 61069066240
+    },
+    "full_hs_audit": {
+      "objective_evaluations": 40,
+      "gradient_evaluations": 0,
+      "forward_state_vectors": 40960,
+      "adjoint_state_vectors": 0,
+      "target_state_vector_applications": 0,
+      "estimated_circuit_settings": 40,
+      "estimated_shots": 163840,
+      "estimated_cnot_gate_executions": 29818880,
+      "estimated_single_qubit_gate_executions_upper_bound": 56360960
+    }
+  },
+  "actual_optimizer_iterations_all_attempts": 34300,
+  "actual_objective_evaluations_all_attempts": 34300,
+  "attempt_wall_seconds_including_interrupted": 873.1697012999996,
+  "attempt_count_including_interrupted": 343,
+  "completed_at": "2026-10-08T08:34:31.098728+00:00"
+}

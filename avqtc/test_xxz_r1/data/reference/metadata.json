@@ -1,0 +1,95 @@
+{
+  "specification": {
+    "model": {
+      "n": 8,
+      "jxy": 1.0,
+      "delta": 1.0,
+      "disorder_strength": 1.0,
+      "disorder_seed": 314159,
+      "fields": null,
+      "initial_state": "domain_wall",
+      "dt": 0.1,
+      "gamma": 0.06,
+      "total_time": 10.0
+    },
+    "sampling": {
+      "m_values": [
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "repeats": 100,
+      "master_seed": 202506,
+      "trajectory_m": 128,
+      "stream_seed": 1225499654,
+      "iterative_cutoffs": [
+        10,
+        15,
+        20
+      ]
+    },
+    "resolved_model": {
+      "model": {
+        "n": 8,
+        "jxy": 1.0,
+        "delta": 1.0,
+        "disorder_strength": 1.0,
+        "disorder_seed": 314159,
+        "fields": null,
+        "initial_state": "domain_wall",
+        "dt": 0.1,
+        "gamma": 0.06,
+        "total_time": 10.0
+      },
+      "fields": [
+        0.8231052238738392,
+        -0.37246239376188006,
+        0.30088112888277996,
+        0.625511043564017,
+        -0.7910716857334652,
+        0.019673822808932373,
+        -0.09016394973475306,
+        -0.7557052049113631
+      ],
+      "circuit": {
+        "ansatz": "nc_inspired_symmetric_xxz",
+        "baseline_trotter_substeps": 1
+      },
+      "hamiltonian": "Jxy*sum(XX+YY) + delta*sum(ZZ) + sum(h_i*Z_i); open boundaries",
+      "disorder_policy": "fixed realization; training seeds do not resample disorder",
+      "gamma_convention": "L_i=sqrt(gamma)*Z_i",
+      "pauli_convention": "Pauli eigenvalues +/-1; not spin operators sigma/2",
+      "parameter_order": "per slice: n Z, n-1 ZZ, n-1 XY angles",
+      "ansatz_reference": "NC 14, 3751 (2023), Eq. (13), adapted to XXZ with independent slices"
+    }
+  },
+  "generator_source_hashes": {
+    "xxz_core.py": "d95665026db62cf6bc051b6929c379df63439fc94de103b3225a89588d8e55a1",
+    "workflows.py": "a3da5354f3a15ddb3bc72f9eaaa86f6508824eed0d58c4b9336968c3043c6a53",
+    "checkpoint_io.py": "c67a217b89651766bc38fb1e382a46e5cda305791ae5811de5a89e536fe4e7f7",
+    "circuit_export.py": "e815cb943f9da363c08361f87b1d541ef164d95ca55b12982bcaefbf17a6febf"
+  },
+  "created_at": "2026-10-08T13:16:15.513970+00:00",
+  "wall_seconds_this_session": 2878.2211697,
+  "npz_sha256": "4f160f901de6ab1b58922e0ada874309a61f8482bb578efd2807a225193e7df2",
+  "origin": "generated for this XXZ disorder",
+  "observable": "domain wall: (sum_left Z-sum_right Z)/n; Neel: sum((-1)^j Z_j)/n, zero-based j",
+  "initial_imbalance": -1.0,
+  "environment": {
+    "python": "3.9.25 (main, Nov  3 2025, 22:44:01) [MSC v.1929 64 bit (AMD64)]",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "backend": "gpu",
+    "dtype": "complex128",
+    "actual_quantum_shots": 0,
+    "cupy": "13.6.0",
+    "gpu": "NVIDIA GeForce RTX 3060"
+  },
+  "qutip_version": "5.0.4",
+  "solver_rtol": 1e-09,
+  "solver_atol": 1e-11,
+  "trajectory_policy": "independent ensemble at each time; time-major, trajectory-minor RNG"
+}

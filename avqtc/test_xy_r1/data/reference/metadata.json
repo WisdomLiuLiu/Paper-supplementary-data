@@ -1,0 +1,86 @@
+{
+  "specification": {
+    "model": {
+      "n": 10,
+      "dt": 0.1,
+      "gamma": 0.06,
+      "total_time": 10.0
+    },
+    "sampling": {
+      "m_values": [
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "repeats": 100,
+      "master_seed": 202506,
+      "trajectory_m": 128,
+      "stream_seed": 1225499654,
+      "iterative_cutoffs": [
+        10,
+        15,
+        20
+      ]
+    }
+  },
+  "created_at": "2026-10-08T06:48:27.583626+00:00",
+  "gamma_convention": "L_i=sqrt(gamma)*Z_i; H=sum_j(XX+YY), open boundaries",
+  "initial_state": "|1>^(n/2)|0>^(n/2)",
+  "observable": "(sum_left Z - sum_right Z)/n",
+  "trajectory_policy": "independent ensemble at each time; time-major, trajectory-minor RNG stream",
+  "source_files": {
+    "exact": {
+      "file": "exact_dt0.1_gamma0.06.txt",
+      "sha256": "7742173e09dfc19e87dcb1b4fec84e80fb0599c71e8a4638516f1ebdc9a6970b"
+    },
+    "kraus": {
+      "file": "kraus_dt0.1_gamma0.06.txt",
+      "sha256": "f3ac25ab4a7357af3a1e7db6dfa33eda810824cfec2ccc0ff8c3eaf330cd07c2"
+    },
+    "sample_M32": {
+      "file": "sample_dt0.1_gamma0.06_M32.txt",
+      "sha256": "c4b12c75b5cd24404e4192daf24f18c2fb33eaa85dd3a023ccfdb9ae7f2fbce3"
+    },
+    "seeds_M32": {
+      "file": "sample_seed_dt0.1_gamma0.06_M32.txt",
+      "sha256": "227114d936c16956d9129cdc1e80ee0548f3123249e02edea12348e5f51614c4"
+    },
+    "sample_M64": {
+      "file": "sample_dt0.1_gamma0.06_M64.txt",
+      "sha256": "b9cce0c082bf37ac9af6bb5c2aa9137bb0cac54e0c550f34df26df1ce77d05d8"
+    },
+    "seeds_M64": {
+      "file": "sample_seed_dt0.1_gamma0.06_M64.txt",
+      "sha256": "227114d936c16956d9129cdc1e80ee0548f3123249e02edea12348e5f51614c4"
+    },
+    "sample_M128": {
+      "file": "sample_dt0.1_gamma0.06_M128.txt",
+      "sha256": "2e7767c38b5edfbf9eabab8f11539486eef1e330b33ea136baf4865edf8e9c80"
+    },
+    "seeds_M128": {
+      "file": "sample_seed_dt0.1_gamma0.06_M128.txt",
+      "sha256": "227114d936c16956d9129cdc1e80ee0548f3123249e02edea12348e5f51614c4"
+    },
+    "sample_M256": {
+      "file": "sample_dt0.1_gamma0.06_M256.txt",
+      "sha256": "5f56dbe352a5ec713006b01bbe86854330cbd324de9d5fc0b4898c8086908e5e"
+    },
+    "seeds_M256": {
+      "file": "sample_seed_dt0.1_gamma0.06_M256.txt",
+      "sha256": "227114d936c16956d9129cdc1e80ee0548f3123249e02edea12348e5f51614c4"
+    },
+    "sample_M512": {
+      "file": "sample_dt0.1_gamma0.06_M512.txt",
+      "sha256": "fc2fd4e6630ea0483e6b03fd59ec016cc6ed48dec389b27fe41953e4be420800"
+    },
+    "seeds_M512": {
+      "file": "sample_seed_dt0.1_gamma0.06_M512.txt",
+      "sha256": "227114d936c16956d9129cdc1e80ee0548f3123249e02edea12348e5f51614c4"
+    }
+  },
+  "selected_original_row_zero_based": 11,
+  "origin": "imported original reference; no seed reselection",
+  "npz_sha256": "6aa3a027cfd20a43b24cda58ab5b064e3674784e4d79ecb13686267dbca9dacb"
+}

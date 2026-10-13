@@ -1,0 +1,72 @@
+{
+  "model": {
+    "n": 8,
+    "jxy": 1.0,
+    "delta": 1.0,
+    "disorder_strength": 1.0,
+    "disorder_seed": 314159,
+    "fields": null,
+    "initial_state": "domain_wall",
+    "dt": 0.1,
+    "gamma": 0.06,
+    "total_time": 10.0
+  },
+  "circuit": {
+    "ansatz": "nc_inspired_symmetric_xxz",
+    "baseline_trotter_substeps": 1
+  },
+  "experiment": {
+    "repetitions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "seeds": [
+      202506
+    ],
+    "shots": [
+      0,
+      256,
+      1024,
+      4096,
+      16384
+    ],
+    "iterations": 100,
+    "learning_rate": 0.02,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "validation_interval": 1,
+    "print_every": 5,
+    "selection_shots_multiplier": 1,
+    "test_shots_multiplier": 16,
+    "success_fidelity": 0.99,
+    "backend": "auto",
+    "initialization": "analytic_trotter",
+    "jitter_scale": 0.02,
+    "teacher_mode": "exact",
+    "teacher_trotter_substeps": 1,
+    "min_depth": 1,
+    "max_depth": null,
+    "extra_depth": 0,
+    "depth_warm_start": true,
+    "random_restarts": 1
+  }
+}

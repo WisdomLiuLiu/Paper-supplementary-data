@@ -1,0 +1,151 @@
+{
+  "channel": "b32_iterative",
+  "training_seed": 202506,
+  "cutoff": 15,
+  "branch_signature": "6d7dcd365957134166259fc8d47cb50a99e25d8198f7bb095c885e6d548f9062",
+  "training_manifest_sha256": "b3e17c22f35351543a86f4cebe83580962e2d07fd607e10d39e0e907cc19bd42",
+  "generator_source_hashes": {
+    "xxz_core.py": "d95665026db62cf6bc051b6929c379df63439fc94de103b3225a89588d8e55a1",
+    "workflows.py": "a3da5354f3a15ddb3bc72f9eaaa86f6508824eed0d58c4b9336968c3043c6a53",
+    "checkpoint_io.py": "c67a217b89651766bc38fb1e382a46e5cda305791ae5811de5a89e536fe4e7f7",
+    "circuit_export.py": "e815cb943f9da363c08361f87b1d541ef164d95ca55b12982bcaefbf17a6febf"
+  },
+  "resolved_model": {
+    "model": {
+      "n": 8,
+      "jxy": 1.0,
+      "delta": 1.0,
+      "disorder_strength": 1.0,
+      "disorder_seed": 314159,
+      "fields": null,
+      "initial_state": "domain_wall",
+      "dt": 0.1,
+      "gamma": 0.06,
+      "total_time": 10.0
+    },
+    "fields": [
+      0.8231052238738392,
+      -0.37246239376188006,
+      0.30088112888277996,
+      0.625511043564017,
+      -0.7910716857334652,
+      0.019673822808932373,
+      -0.09016394973475306,
+      -0.7557052049113631
+    ],
+    "circuit": {
+      "ansatz": "nc_inspired_symmetric_xxz",
+      "baseline_trotter_substeps": 1
+    },
+    "hamiltonian": "Jxy*sum(XX+YY) + delta*sum(ZZ) + sum(h_i*Z_i); open boundaries",
+    "disorder_policy": "fixed realization; training seeds do not resample disorder",
+    "gamma_convention": "L_i=sqrt(gamma)*Z_i",
+    "pauli_convention": "Pauli eigenvalues +/-1; not spin operators sigma/2",
+    "parameter_order": "per slice: n Z, n-1 ZZ, n-1 XY angles",
+    "ansatz_reference": "NC 14, 3751 (2023), Eq. (13), adapted to XXZ with independent slices"
+  },
+  "files_sha256": {
+    "curves.npz": "037e87a5f86b5c499cf2e223d3c9b9aff0e6ae38b4122b6dbef003eefbb5bf22",
+    "resources.csv": "f021099a1e1e8f350dba2199382ce471796da059cd405a3442a46efdf310ea75"
+  },
+  "M": 128,
+  "wall_seconds": 897.0806850000008,
+  "error_definition": "reference minus approximation (signed)",
+  "accuracy_to_kraus": {
+    "rmse": 0.06307916316705947,
+    "mae": 0.05693755301431125,
+    "max_abs_error": 0.09541632931550409
+  },
+  "accuracy_to_exact": {
+    "rmse": 0.06775810018489893,
+    "mae": 0.061714248602773594,
+    "max_abs_error": 0.10181048734030354
+  },
+  "accuracy_to_baseline": {
+    "rmse": 0.057232515372400886,
+    "mae": 0.05217610097001357,
+    "max_abs_error": 0.08651382075747743
+  },
+  "accuracy_to_same_seed_exact": {
+    "rmse": 0.06292986489493038,
+    "mae": 0.05706583788904409,
+    "max_abs_error": 0.09497228456012352
+  },
+  "block_usage": {
+    "1": 4218,
+    "2": 3870,
+    "3": 3774,
+    "4": 3497,
+    "5": 3218,
+    "6": 3025,
+    "7": 2835,
+    "8": 2624,
+    "9": 2553,
+    "10": 2276,
+    "11": 2181,
+    "12": 1982,
+    "13": 1896,
+    "14": 1737,
+    "15": 24014
+  },
+  "gate_statistics": {
+    "all_times": {
+      "cnot": {
+        "original_mean": 1775.03203125,
+        "replaced_mean": 913.50625,
+        "original_std_ddof0": 1008.1057330329984,
+        "replaced_std_ddof0": 511.01875756760387,
+        "original_total": 22720410.0,
+        "replaced_total": 11692880.0,
+        "saving_fraction_ratio_of_totals": 0.48535787866504165
+      },
+      "single_qubit": {
+        "original_mean": 2885.852265625,
+        "replaced_mean": 1460.049765625,
+        "original_std_ddof0": 1643.3980245694981,
+        "replaced_std_ddof0": 818.6529752291307,
+        "original_total": 36938909.0,
+        "replaced_total": 18688637.0,
+        "saving_fraction_ratio_of_totals": 0.49406635155358813
+      },
+      "depth_upper_bound": {
+        "original_mean": 1226.312734375,
+        "replaced_mean": 623.282578125,
+        "original_std_ddof0": 697.9418123089387,
+        "replaced_std_ddof0": 349.3379565463482,
+        "original_total": 15696803.0,
+        "replaced_total": 7978017.0,
+        "saving_fraction_ratio_of_totals": 0.49174255420036805
+      }
+    },
+    "final_time": {
+      "cnot": {
+        "original_mean": 3496.453125,
+        "replaced_mean": 1784.0,
+        "original_std_ddof0": 51.570470501386495,
+        "replaced_std_ddof0": 56.39869236072766,
+        "original_total": 447546.0,
+        "replaced_total": 228352.0,
+        "saving_fraction_ratio_of_totals": 0.4897686494796065
+      },
+      "single_qubit": {
+        "original_mean": 5689.7890625,
+        "replaced_mean": 2854.65625,
+        "original_std_ddof0": 96.70175253257355,
+        "replaced_std_ddof0": 86.98099985593117,
+        "original_total": 728293.0,
+        "replaced_total": 365396.0,
+        "saving_fraction_ratio_of_totals": 0.49828434435041935
+      },
+      "depth_upper_bound": {
+        "original_mean": 2417.5703125,
+        "replaced_mean": 1218.5625,
+        "original_std_ddof0": 38.57048815029885,
+        "replaced_std_ddof0": 37.40106741458056,
+        "original_total": 309449.0,
+        "replaced_total": 155976.0,
+        "saving_fraction_ratio_of_totals": 0.49595571483507783
+      }
+    }
+  }
+}

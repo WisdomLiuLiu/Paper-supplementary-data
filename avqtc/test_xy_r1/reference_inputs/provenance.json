@@ -1,0 +1,72 @@
+{
+  "source_directory": "OQS 202506/test_xy_final/data",
+  "purpose": "Unchanged original physical references; no r1 training data",
+  "files": {
+    "exact_dt0.1_gamma0.06.txt": {
+      "sha256": "7742173e09dfc19e87dcb1b4fec84e80fb0599c71e8a4638516f1ebdc9a6970b",
+      "operation": "byte-for-byte copy"
+    },
+    "kraus_dt0.1_gamma0.06.txt": {
+      "sha256": "f3ac25ab4a7357af3a1e7db6dfa33eda810824cfec2ccc0ff8c3eaf330cd07c2",
+      "operation": "byte-for-byte copy"
+    },
+    "exact_same_seed_02a_dt0.1_gamma0.06_M128.txt": {
+      "sha256": "b80121d7bcce4a9075f36960385b14680b6e0237db4b0f96d7e1b23b2cb053b7",
+      "operation": "byte-for-byte copy"
+    },
+    "circuit_sample_dt0.1_gamma0.06_M128.txt": {
+      "sha256": "314536fdbcf87a7e06ff71dff33ad372eefd367eff76b4ca9b298a4f084b27f9",
+      "operation": "byte-for-byte copy"
+    },
+    "figure_02_03_seed.json": {
+      "sha256": "b5a5b497a6bdef2da9764a0eea233a8dc92b5350d9061507aa4b78601adf73b5",
+      "operation": "byte-for-byte copy"
+    },
+    "sample_dt0.1_gamma0.06_M32.txt": {
+      "sha256": "c4b12c75b5cd24404e4192daf24f18c2fb33eaa85dd3a023ccfdb9ae7f2fbce3",
+      "operation": "byte-for-byte copy"
+    },
+    "sample_seed_dt0.1_gamma0.06_M32.txt": {
+      "sha256": "227114d936c16956d9129cdc1e80ee0548f3123249e02edea12348e5f51614c4",
+      "operation": "byte-for-byte copy"
+    },
+    "sample_dt0.1_gamma0.06_M64.txt": {
+      "sha256": "b9cce0c082bf37ac9af6bb5c2aa9137bb0cac54e0c550f34df26df1ce77d05d8",
+      "operation": "byte-for-byte copy"
+    },
+    "sample_seed_dt0.1_gamma0.06_M64.txt": {
+      "sha256": "227114d936c16956d9129cdc1e80ee0548f3123249e02edea12348e5f51614c4",
+      "operation": "byte-for-byte copy"
+    },
+    "sample_dt0.1_gamma0.06_M128.txt": {
+      "sha256": "2e7767c38b5edfbf9eabab8f11539486eef1e330b33ea136baf4865edf8e9c80",
+      "operation": "byte-for-byte copy"
+    },
+    "sample_seed_dt0.1_gamma0.06_M128.txt": {
+      "sha256": "227114d936c16956d9129cdc1e80ee0548f3123249e02edea12348e5f51614c4",
+      "operation": "byte-for-byte copy"
+    },
+    "sample_dt0.1_gamma0.06_M256.txt": {
+      "sha256": "5f56dbe352a5ec713006b01bbe86854330cbd324de9d5fc0b4898c8086908e5e",
+      "operation": "byte-for-byte copy"
+    },
+    "sample_seed_dt0.1_gamma0.06_M256.txt": {
+      "sha256": "227114d936c16956d9129cdc1e80ee0548f3123249e02edea12348e5f51614c4",
+      "operation": "byte-for-byte copy"
+    },
+    "sample_dt0.1_gamma0.06_M512.txt": {
+      "sha256": "fc2fd4e6630ea0483e6b03fd59ec016cc6ed48dec389b27fe41953e4be420800",
+      "operation": "byte-for-byte copy"
+    },
+    "sample_seed_dt0.1_gamma0.06_M512.txt": {
+      "sha256": "227114d936c16956d9129cdc1e80ee0548f3123249e02edea12348e5f51614c4",
+      "operation": "byte-for-byte copy"
+    },
+    "original_paired_resources.csv": {
+      "sha256": "b3801b79c76761e757b49bba1be874000cf9b4cd68a41b9b14d5b688026af014",
+      "source_file": "replace_resource_direct_full_dt0.1_gamma0.06_M128.csv",
+      "source_sha256": "7e6073d0c039f0f7a17edb1ede9570976748cbf60360ba1479168e56166b9204",
+      "operation": "extract only paired original trajectory IDs/seeds/gate counts; excludes replaced imbalance"
+    }
+  }
+}

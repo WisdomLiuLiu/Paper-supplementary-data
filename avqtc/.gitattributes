@@ -1,0 +1,2 @@
+# Preserve numerical-data and source checksums on every platform.
+* -text whitespace=cr-at-eol

@@ -1,0 +1,26 @@
+{
+  "signature": "307e149d257cdf3ff478ee1297e427da0cb80b5b75be40cbda84c738eadad70e",
+  "model": {
+    "n": 10,
+    "dt": 0.1,
+    "gamma": 0.06,
+    "total_time": 10.0
+  },
+  "created_at": "2026-10-08T06:48:28.904014+00:00",
+  "origin": "bundled same-seed compiled ensemble curve + extracted paired original counts",
+  "source_files": {
+    "circuit_sample_dt0.1_gamma0.06_M128.txt": {
+      "sha256": "314536fdbcf87a7e06ff71dff33ad372eefd367eff76b4ca9b298a4f084b27f9",
+      "operation": "byte-for-byte copy"
+    },
+    "original_paired_resources.csv": {
+      "sha256": "b3801b79c76761e757b49bba1be874000cf9b4cd68a41b9b14d5b688026af014",
+      "source_file": "replace_resource_direct_full_dt0.1_gamma0.06_M128.csv",
+      "source_sha256": "7e6073d0c039f0f7a17edb1ede9570976748cbf60360ba1479168e56166b9204",
+      "operation": "extract only paired original trajectory IDs/seeds/gate counts; excludes replaced imbalance"
+    }
+  },
+  "per_trajectory_imbalance": "not present in imported source; only ensemble curve is available; use --recompute in a new output directory to generate individual values",
+  "gate_count_scope": "evolution only; initial state preparation/readout excluded",
+  "verified_paired_trajectories": 12800
+}

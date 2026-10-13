@@ -1,0 +1,925 @@
+{
+  "fingerprint": "576ad4a47aa4c0f3cb6dfb63c130e52673380dcb5767b5bd332506ade116791c",
+  "specification": {
+    "config": {
+      "model": {
+        "n": 8,
+        "jxy": 1.0,
+        "delta": 1.0,
+        "disorder_strength": 1.0,
+        "disorder_seed": 314159,
+        "fields": null,
+        "initial_state": "domain_wall",
+        "dt": 0.1,
+        "gamma": 0.06,
+        "total_time": 10.0
+      },
+      "circuit": {
+        "ansatz": "nc_inspired_symmetric_xxz",
+        "baseline_trotter_substeps": 1
+      },
+      "experiment": {
+        "repetitions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "seeds": [
+          202506
+        ],
+        "shots": [
+          0,
+          256,
+          1024,
+          4096,
+          16384
+        ],
+        "iterations": 100,
+        "learning_rate": 0.02,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "validation_interval": 1,
+        "print_every": 5,
+        "selection_shots_multiplier": 1,
+        "test_shots_multiplier": 16,
+        "success_fidelity": 0.99,
+        "backend": "auto",
+        "initialization": "analytic_trotter",
+        "jitter_scale": 0.02,
+        "teacher_mode": "exact",
+        "teacher_trotter_substeps": 1,
+        "min_depth": 1,
+        "max_depth": null,
+        "extra_depth": 0,
+        "depth_warm_start": true,
+        "random_restarts": 1
+      }
+    },
+    "model_record": {
+      "model": {
+        "n": 8,
+        "jxy": 1.0,
+        "delta": 1.0,
+        "disorder_strength": 1.0,
+        "disorder_seed": 314159,
+        "fields": null,
+        "initial_state": "domain_wall",
+        "dt": 0.1,
+        "gamma": 0.06,
+        "total_time": 10.0
+      },
+      "fields": [
+        0.8231052238738392,
+        -0.37246239376188006,
+        0.30088112888277996,
+        0.625511043564017,
+        -0.7910716857334652,
+        0.019673822808932373,
+        -0.09016394973475306,
+        -0.7557052049113631
+      ],
+      "circuit": {
+        "ansatz": "nc_inspired_symmetric_xxz",
+        "baseline_trotter_substeps": 1
+      },
+      "hamiltonian": "Jxy*sum(XX+YY) + delta*sum(ZZ) + sum(h_i*Z_i); open boundaries",
+      "disorder_policy": "fixed realization; training seeds do not resample disorder",
+      "gamma_convention": "L_i=sqrt(gamma)*Z_i",
+      "pauli_convention": "Pauli eigenvalues +/-1; not spin operators sigma/2",
+      "parameter_order": "per slice: n Z, n-1 ZZ, n-1 XY angles",
+      "ansatz_reference": "NC 14, 3751 (2023), Eq. (13), adapted to XXZ with independent slices"
+    },
+    "jobs": [
+      {
+        "seed": 202506,
+        "k": 1,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 1,
+        "name": "seed_202506/s01/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 1,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 1,
+        "name": "seed_202506/s01/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 1,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 1,
+        "name": "seed_202506/s01/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 1,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 1,
+        "name": "seed_202506/s01/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 1,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 1,
+        "name": "seed_202506/s01/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 2,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 2,
+        "name": "seed_202506/s02/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 2,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 2,
+        "name": "seed_202506/s02/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 2,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 2,
+        "name": "seed_202506/s02/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 2,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 2,
+        "name": "seed_202506/s02/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 2,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 2,
+        "name": "seed_202506/s02/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 3,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 3,
+        "name": "seed_202506/s03/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 3,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 3,
+        "name": "seed_202506/s03/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 3,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 3,
+        "name": "seed_202506/s03/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 3,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 3,
+        "name": "seed_202506/s03/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 3,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 3,
+        "name": "seed_202506/s03/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 4,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 4,
+        "name": "seed_202506/s04/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 4,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 4,
+        "name": "seed_202506/s04/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 4,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 4,
+        "name": "seed_202506/s04/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 4,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 4,
+        "name": "seed_202506/s04/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 4,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 4,
+        "name": "seed_202506/s04/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 5,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 5,
+        "name": "seed_202506/s05/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 5,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 5,
+        "name": "seed_202506/s05/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 5,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 5,
+        "name": "seed_202506/s05/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 5,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 5,
+        "name": "seed_202506/s05/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 5,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 5,
+        "name": "seed_202506/s05/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 6,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 6,
+        "name": "seed_202506/s06/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 6,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 6,
+        "name": "seed_202506/s06/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 6,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 6,
+        "name": "seed_202506/s06/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 6,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 6,
+        "name": "seed_202506/s06/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 6,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 6,
+        "name": "seed_202506/s06/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 7,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 7,
+        "name": "seed_202506/s07/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 7,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 7,
+        "name": "seed_202506/s07/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 7,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 7,
+        "name": "seed_202506/s07/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 7,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 7,
+        "name": "seed_202506/s07/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 7,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 7,
+        "name": "seed_202506/s07/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 8,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 8,
+        "name": "seed_202506/s08/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 8,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 8,
+        "name": "seed_202506/s08/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 8,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 8,
+        "name": "seed_202506/s08/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 8,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 8,
+        "name": "seed_202506/s08/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 8,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 8,
+        "name": "seed_202506/s08/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 9,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 9,
+        "name": "seed_202506/s09/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 9,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 9,
+        "name": "seed_202506/s09/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 9,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 9,
+        "name": "seed_202506/s09/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 9,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 9,
+        "name": "seed_202506/s09/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 9,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 9,
+        "name": "seed_202506/s09/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 10,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 10,
+        "name": "seed_202506/s10/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 10,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 10,
+        "name": "seed_202506/s10/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 10,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 10,
+        "name": "seed_202506/s10/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 10,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 10,
+        "name": "seed_202506/s10/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 10,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 10,
+        "name": "seed_202506/s10/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 11,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 11,
+        "name": "seed_202506/s11/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 11,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 11,
+        "name": "seed_202506/s11/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 11,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 11,
+        "name": "seed_202506/s11/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 11,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 11,
+        "name": "seed_202506/s11/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 11,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 11,
+        "name": "seed_202506/s11/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 12,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 12,
+        "name": "seed_202506/s12/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 12,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 12,
+        "name": "seed_202506/s12/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 12,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 12,
+        "name": "seed_202506/s12/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 12,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 12,
+        "name": "seed_202506/s12/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 12,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 12,
+        "name": "seed_202506/s12/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 13,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 13,
+        "name": "seed_202506/s13/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 13,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 13,
+        "name": "seed_202506/s13/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 13,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 13,
+        "name": "seed_202506/s13/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 13,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 13,
+        "name": "seed_202506/s13/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 13,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 13,
+        "name": "seed_202506/s13/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 14,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 14,
+        "name": "seed_202506/s14/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 14,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 14,
+        "name": "seed_202506/s14/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 14,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 14,
+        "name": "seed_202506/s14/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 14,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 14,
+        "name": "seed_202506/s14/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 14,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 14,
+        "name": "seed_202506/s14/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 15,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 15,
+        "name": "seed_202506/s15/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 15,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 15,
+        "name": "seed_202506/s15/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 15,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 15,
+        "name": "seed_202506/s15/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 15,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 15,
+        "name": "seed_202506/s15/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 15,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 15,
+        "name": "seed_202506/s15/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 16,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 16,
+        "name": "seed_202506/s16/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 16,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 16,
+        "name": "seed_202506/s16/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 16,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 16,
+        "name": "seed_202506/s16/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 16,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 16,
+        "name": "seed_202506/s16/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 16,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 16,
+        "name": "seed_202506/s16/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 17,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 17,
+        "name": "seed_202506/s17/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 17,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 17,
+        "name": "seed_202506/s17/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 17,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 17,
+        "name": "seed_202506/s17/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 17,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 17,
+        "name": "seed_202506/s17/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 17,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 17,
+        "name": "seed_202506/s17/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 18,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 18,
+        "name": "seed_202506/s18/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 18,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 18,
+        "name": "seed_202506/s18/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 18,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 18,
+        "name": "seed_202506/s18/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 18,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 18,
+        "name": "seed_202506/s18/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 18,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 18,
+        "name": "seed_202506/s18/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 19,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 19,
+        "name": "seed_202506/s19/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 19,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 19,
+        "name": "seed_202506/s19/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 19,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 19,
+        "name": "seed_202506/s19/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 19,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 19,
+        "name": "seed_202506/s19/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 19,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 19,
+        "name": "seed_202506/s19/shots_16384"
+      },
+      {
+        "seed": 202506,
+        "k": 20,
+        "shots": 0,
+        "min_depth": 1,
+        "max_depth": 20,
+        "name": "seed_202506/s20/shots_infinite"
+      },
+      {
+        "seed": 202506,
+        "k": 20,
+        "shots": 256,
+        "min_depth": 1,
+        "max_depth": 20,
+        "name": "seed_202506/s20/shots_256"
+      },
+      {
+        "seed": 202506,
+        "k": 20,
+        "shots": 1024,
+        "min_depth": 1,
+        "max_depth": 20,
+        "name": "seed_202506/s20/shots_1024"
+      },
+      {
+        "seed": 202506,
+        "k": 20,
+        "shots": 4096,
+        "min_depth": 1,
+        "max_depth": 20,
+        "name": "seed_202506/s20/shots_4096"
+      },
+      {
+        "seed": 202506,
+        "k": 20,
+        "shots": 16384,
+        "min_depth": 1,
+        "max_depth": 20,
+        "name": "seed_202506/s20/shots_16384"
+      }
+    ],
+    "source_sha256": {
+      "experiment.py": "a80664f08187366c8a3a8297fa2482dec51585ca6355a15c8e2b0c29c3e95f69",
+      "shot_engine.py": "c706cbf55fd8abaa87496c40e4746f5c29f2ae09bb618efe34753c1c375bcea7",
+      "xxz_core.py": "d95665026db62cf6bc051b6929c379df63439fc94de103b3225a89588d8e55a1",
+      "checkpoint_io.py": "c67a217b89651766bc38fb1e382a46e5cda305791ae5811de5a89e536fe4e7f7",
+      "circuit_export.py": "e815cb943f9da363c08361f87b1d541ef164d95ca55b12982bcaefbf17a6febf",
+      "architecture_search.py": "df50eea660c30ecc0d8ea4ea41d1eaa70a49d76ae57eb4d82271a7000fa53b9a",
+      "post_audit.py": "a22d99656bc7303f1485be24d87cad29ca1cb80323586dd4de003a868f362be3"
+    }
+  },
+  "created_at": "2026-10-09T11:12:12.339720+00:00",
+  "actual_hardware_shots": 0,
+  "measurement_simulation": "binomial Born counts"
+}
