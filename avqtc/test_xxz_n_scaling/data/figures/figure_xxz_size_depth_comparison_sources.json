@@ -1,0 +1,71 @@
+{
+  "training": "Full-space direct training, maxiter=100, seed=202506",
+  "panel_a": "Selected depth versus s for n=6,8,10,12",
+  "panel_b": "Best recorded HSF across tested initializations at fixed s=20 and depths 9,10",
+  "missing": "n=6, depth=10 was not tested and is left blank",
+  "interpretation": "Finite-budget achieved fidelities; not proven globally optimal fidelities",
+  "sources": [
+    {
+      "n": 6,
+      "manifest": "../n06/training/full_direct/seed_202506/manifest.json",
+      "manifest_sha256": "6204b53454bb9d940b58f33d01782702be7fea6743d16958a2fb1cf74a16cc5a"
+    },
+    {
+      "n": 6,
+      "depth": 9,
+      "attempt": "../n06/training/full_direct/seed_202506/attempts/k20_d09_k_warm.json",
+      "attempt_sha256": "58fd5659235aa89bd890c8b31ba375ae8e03d48afbe823c6c99b6a91433b049e"
+    },
+    {
+      "n": 8,
+      "manifest": "../../../test_xxz_r1/data/training/full_direct/seed_202506/manifest.json",
+      "manifest_sha256": "8024f1df6efee36ca50c4f555f513d54930012cf23de1d37f085ac212bb7a8dc"
+    },
+    {
+      "n": 8,
+      "depth": 9,
+      "attempt": "../n08/attempts/k20_d09_k_warm.json",
+      "attempt_sha256": "28bc5ff7fe2ebd7014f6ad727a06f7550be3d0903ffcf9b6fdd87dac29dd2f2b"
+    },
+    {
+      "n": 8,
+      "depth": 10,
+      "attempt": "../n08/attempts/k20_d10_depth_warm.json",
+      "attempt_sha256": "0b78752914935312bb940a10f76857f80a57a7e369ac1e68d9f55c2dba213820"
+    },
+    {
+      "n": 10,
+      "manifest": "../n10/training/full_direct/seed_202506/manifest.json",
+      "manifest_sha256": "615a9d43722fa2716e9d2b81f458f1dfa026e697bd3b3a20f7b916f5fd654a1a"
+    },
+    {
+      "n": 10,
+      "depth": 9,
+      "attempt": "../n10/training/full_direct/seed_202506/attempts/k20_d09_analytic.json",
+      "attempt_sha256": "c4a988019552a121efe19e6754d785705f4c7511f5c75e6f1ceded7e9f93afea"
+    },
+    {
+      "n": 10,
+      "depth": 10,
+      "attempt": "../n10/training/full_direct/seed_202506/attempts/k20_d10_k_warm.json",
+      "attempt_sha256": "075923d3d801cc6556a1b67727c38628fab61af224bd2e3adc6cdbc8ca1338e1"
+    },
+    {
+      "n": 12,
+      "manifest": "../sector_gpu/n12/manifest.json",
+      "manifest_sha256": "c1730b914e81e981b1e803dc028cf1820fb5e774250ce5a5dc729f94d2b61de8"
+    },
+    {
+      "n": 12,
+      "depth": 9,
+      "attempt": "../sector_gpu/n12/attempts/k20_d09_analytic.json",
+      "attempt_sha256": "d15ba4806ee19a5164ecde7abe6e6e1f613300eabf6c9ad84a0f191b410d8156"
+    },
+    {
+      "n": 12,
+      "depth": 10,
+      "attempt": "../sector_gpu/n12/attempts/k20_d10_k_warm.json",
+      "attempt_sha256": "04a5aa3b6aba1fe1050d67927c7f7411279f4de51fc47e69279a4a0ebab93fa3"
+    }
+  ]
+}

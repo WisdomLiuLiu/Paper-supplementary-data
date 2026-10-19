@@ -1,0 +1,81 @@
+{
+  "status": "completed",
+  "trajectories": 12800,
+  "model": {
+    "n": 10,
+    "dt": 0.1,
+    "gamma": 0.06,
+    "total_time": 10.0
+  },
+  "M": 128,
+  "stream_seed": 1225499654,
+  "error_convention": "Kraus imbalance minus trajectory-ensemble imbalance; signed, as original figure 3(d)",
+  "compression_scope": "maximal consecutive U0 segments only; every Z jump is kept",
+  "gate_count_scope": "evolution only; 4 single-qubit rotations and 2 CNOTs per XY block; each Z jump adds 1 single-qubit gate",
+  "simulation": "Exact number-conserving occupied-orbital propagation, with independent full-state primitive-circuit audits",
+  "baseline_curve_max_error": 6.661338147750939e-16,
+  "trajectory_compression_max_error": 2.4424906541753444e-15,
+  "error_curve_max_difference": 7.216449660063518e-16,
+  "full_state_audits": [
+    {
+      "time_index": 1,
+      "trajectory_index": 0,
+      "full_state_error": 0.0
+    },
+    {
+      "time_index": 1,
+      "trajectory_index": 127,
+      "full_state_error": 1.2212453270876722e-15
+    },
+    {
+      "time_index": 25,
+      "trajectory_index": 0,
+      "full_state_error": 9.298117831235686e-16
+    },
+    {
+      "time_index": 25,
+      "trajectory_index": 127,
+      "full_state_error": 4.191091917959966e-15
+    },
+    {
+      "time_index": 50,
+      "trajectory_index": 0,
+      "full_state_error": 1.429412144204889e-15
+    },
+    {
+      "time_index": 50,
+      "trajectory_index": 127,
+      "full_state_error": 4.093947403305265e-15
+    },
+    {
+      "time_index": 75,
+      "trajectory_index": 0,
+      "full_state_error": 1.582067810090848e-15
+    },
+    {
+      "time_index": 75,
+      "trajectory_index": 127,
+      "full_state_error": 7.382983113757291e-15
+    },
+    {
+      "time_index": 100,
+      "trajectory_index": 0,
+      "full_state_error": 5.9396931817445875e-15
+    },
+    {
+      "time_index": 100,
+      "trajectory_index": 127,
+      "full_state_error": 2.6922908347160046e-15
+    }
+  ],
+  "final_mean_counts": {
+    "original_single_qubit": 1808.671875,
+    "compressed_single_qubit": 949.046875,
+    "original_cnot": 901.234375,
+    "compressed_cnot": 471.421875
+  },
+  "source_sha256": {
+    "algebraic.py": "796b8028da22de3468c16e9252e9ea578948bd4249eedafef19a4c88f1b74559",
+    "xy_core.py": "c64eb610b0a29bf8bdd51334fa7a297da1ed246a43ce5f49381b53803ca3c32b"
+  }
+}

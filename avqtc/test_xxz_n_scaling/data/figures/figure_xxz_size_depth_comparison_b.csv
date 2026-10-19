@@ -1,0 +1,9 @@
+n,s,pqc_depth,best_hsf,status,selected_attempt,optimizer_iterations,attempts
+6,20,9,0.9919117885745086,completed,../n06/training/full_direct/seed_202506/attempts/k20_d09_k_warm.json,100,4
+6,20,10,,not_tested,,,0
+8,20,9,0.9883424719041242,completed,../n08/attempts/k20_d09_k_warm.json,100,4
+8,20,10,0.9926099513442874,completed,../n08/attempts/k20_d10_depth_warm.json,100,4
+10,20,9,0.9841319974173294,completed,../n10/training/full_direct/seed_202506/attempts/k20_d09_analytic.json,100,3
+10,20,10,0.9902264784832192,completed,../n10/training/full_direct/seed_202506/attempts/k20_d10_k_warm.json,100,4
+12,20,9,0.9795007517279852,completed,../sector_gpu/n12/attempts/k20_d09_analytic.json,100,3
+12,20,10,0.9874130074555398,completed,../sector_gpu/n12/attempts/k20_d10_k_warm.json,100,4

@@ -1,0 +1,4052 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "fingerprint": "455f30dc681038a931e5203c9984dbc19cc411b12c7399fa8d87c2da92801dd6",
+  "specification": {
+    "model": {
+      "n": 6,
+      "jxy": 1.0,
+      "delta": 1.0,
+      "disorder_strength": 1.0,
+      "disorder_seed": 314159,
+      "fields": null,
+      "initial_state": "domain_wall",
+      "dt": 0.1,
+      "gamma": 0.06,
+      "total_time": 10.0
+    },
+    "training": {
+      "max_k": 20,
+      "seeds": [
+        202506
+      ],
+      "batch_size": 32,
+      "product_ensemble": "haar",
+      "validation_size": 256,
+      "test_size": 1024,
+      "iterations": 100,
+      "learning_rate": 0.02,
+      "adam_beta1": 0.9,
+      "adam_beta2": 0.999,
+      "adam_epsilon": 1e-08,
+      "lbfgs_ftol": 1e-12,
+      "lbfgs_gtol": 1e-08,
+      "lbfgs_maxls": 20,
+      "random_restarts": 1,
+      "jitter_scale": 0.02,
+      "direct_target_fidelity": 0.99,
+      "iterative_target_fidelity": 0.999,
+      "direct_extra_depth": 0,
+      "iterative_extra_depth": 3,
+      "validation_interval": 5,
+      "print_every": 5,
+      "backend": "cpu",
+      "full_validation_chunk": 64
+    },
+    "resource_estimate": {
+      "shots_per_circuit": 4096,
+      "trotter_substeps": 1
+    },
+    "circuit": {
+      "ansatz": "nc_inspired_symmetric_xxz",
+      "baseline_trotter_substeps": 1
+    },
+    "resolved_model": {
+      "model": {
+        "n": 6,
+        "jxy": 1.0,
+        "delta": 1.0,
+        "disorder_strength": 1.0,
+        "disorder_seed": 314159,
+        "fields": null,
+        "initial_state": "domain_wall",
+        "dt": 0.1,
+        "gamma": 0.06,
+        "total_time": 10.0
+      },
+      "fields": [
+        0.8231052238738392,
+        -0.37246239376188006,
+        0.30088112888277996,
+        0.625511043564017,
+        -0.7910716857334652,
+        0.019673822808932373
+      ],
+      "circuit": {
+        "ansatz": "nc_inspired_symmetric_xxz",
+        "baseline_trotter_substeps": 1
+      },
+      "hamiltonian": "Jxy*sum(XX+YY) + delta*sum(ZZ) + sum(h_i*Z_i); open boundaries",
+      "disorder_policy": "fixed realization; training seeds do not resample disorder",
+      "gamma_convention": "L_i=sqrt(gamma)*Z_i",
+      "pauli_convention": "Pauli eigenvalues +/-1; not spin operators sigma/2",
+      "parameter_order": "per slice: n Z, n-1 ZZ, n-1 XY angles",
+      "ansatz_reference": "NC 14, 3751 (2023), Eq. (13), adapted to XXZ with independent slices"
+    },
+    "mode": "full",
+    "route": "direct",
+    "seed": 202506,
+    "source_hashes": {
+      "training.py": "c1668fd963ec53dbea25deb4408045afcb27da67e2ca73de90caf4d705ccdf07",
+      "xxz_core.py": "d95665026db62cf6bc051b6929c379df63439fc94de103b3225a89588d8e55a1",
+      "checkpoint_io.py": "c67a217b89651766bc38fb1e382a46e5cda305791ae5811de5a89e536fe4e7f7",
+      "circuit_export.py": "e815cb943f9da363c08361f87b1d541ef164d95ca55b12982bcaefbf17a6febf"
+    }
+  },
+  "environment": {
+    "python": "3.9.25 (main, Nov  3 2025, 22:44:01) [MSC v.1929 64 bit (AMD64)]",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "backend": "cpu",
+    "dtype": "complex128",
+    "actual_quantum_shots": 0
+  },
+  "created_at": "2026-10-15T08:52:54.398391+00:00",
+  "library": {
+    "1": {
+      "k": 1,
+      "params": [
+        [
+          0.08466252325518323,
+          -0.039242911109023546,
+          0.030882935284819304,
+          0.06491080919635685,
+          -0.08211688360561233,
+          0.0025773735624975425,
+          0.10250458409852675,
+          0.10315808356707468,
+          0.10314611571760883,
+          0.10316156628348437,
+          0.10249788312152797,
+          0.10173563397951096,
+          0.10103249242804452,
+          0.1021239736364007,
+          0.10075639354149117,
+          0.1018693356659144
+        ]
+      ],
+      "pqc_steps": 1,
+      "pqc_layers": 1,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k01_d01_jitter_0.json",
+      "selection_fidelity": 0.9999742911060855,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.9999742911060855,
+          "depth": 1,
+          "attempt": "attempts\\k01_d01_jitter_0.json"
+        }
+      ],
+      "validation_seed": 2540840915,
+      "test_seed": 1039556283,
+      "teacher_validation_hs_fidelity": 0.9999742911060856,
+      "exact_power_validation_hs_fidelity": 0.9999742911060856,
+      "teacher_computational_basis_fidelity": 0.9999807594777657,
+      "exact_computational_basis_fidelity": 0.9999807594777657,
+      "teacher_test_product_fidelity": 0.9999759864589939,
+      "exact_test_product_fidelity": 0.9999759864589939,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9999582679610654,
+      "gate_resources": {
+        "parameters": 16,
+        "cnot": 36,
+        "single_qubit": 54,
+        "xy_gates": 8,
+        "zz_gates": 10,
+        "z_gates": 12,
+        "symmetric_slices": 1,
+        "diagonal_layers_after_merge": 2,
+        "primitive_depth_upper_bound": 32,
+        "parameter_shift_gradient_settings": 76,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.01755260000000003,
+      "block_wall_seconds_this_session": 0.07498560000000004,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 603979776,
+          "estimated_single_qubit_gate_executions_upper_bound": 1107296256
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 688128,
+          "estimated_single_qubit_gate_executions_upper_bound": 983040
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 24,
+        "ry": 8,
+        "rz": 22,
+        "cx": 36,
+        "cnot": 36,
+        "single_qubit": 54,
+        "scheduled_primitive_depth": 27
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k01.json",
+        ".qasm": "circuits\\k01.qasm"
+      }
+    },
+    "2": {
+      "k": 2,
+      "params": [
+        [
+          0.17438534193832048,
+          -0.08626852668680474,
+          0.06317913984616032,
+          0.13670265515458938,
+          -0.17327679363770992,
+          0.008627234246853263,
+          0.208300738077554,
+          0.21230631265390115,
+          0.21201642512390037,
+          0.2124262284860324,
+          0.20809937228337294,
+          0.20240775087487173,
+          0.19697289786393649,
+          0.20508600098481444,
+          0.1947035728710096,
+          0.20342502299439827
+        ]
+      ],
+      "pqc_steps": 1,
+      "pqc_layers": 1,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k02_d01_k_warm.json",
+      "selection_fidelity": 0.9984691935196757,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.9984691935196757,
+          "depth": 1,
+          "attempt": "attempts\\k02_d01_k_warm.json"
+        }
+      ],
+      "validation_seed": 2802706018,
+      "test_seed": 3613551569,
+      "teacher_validation_hs_fidelity": 0.9984691935196756,
+      "exact_power_validation_hs_fidelity": 0.9984691935196756,
+      "teacher_computational_basis_fidelity": 0.9986896757672735,
+      "exact_computational_basis_fidelity": 0.9986896757672735,
+      "teacher_test_product_fidelity": 0.9985548393250582,
+      "exact_test_product_fidelity": 0.9985548393250582,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9998675998088453,
+      "gate_resources": {
+        "parameters": 16,
+        "cnot": 36,
+        "single_qubit": 54,
+        "xy_gates": 8,
+        "zz_gates": 10,
+        "z_gates": 12,
+        "symmetric_slices": 1,
+        "diagonal_layers_after_merge": 2,
+        "primitive_depth_upper_bound": 32,
+        "parameter_shift_gradient_settings": 76,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.016971300000000022,
+      "block_wall_seconds_this_session": 0.11826540000000002,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 822083584,
+          "estimated_single_qubit_gate_executions_upper_bound": 1468006400
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 901120,
+          "estimated_single_qubit_gate_executions_upper_bound": 1335296
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 24,
+        "ry": 8,
+        "rz": 22,
+        "cx": 36,
+        "cnot": 36,
+        "single_qubit": 54,
+        "scheduled_primitive_depth": 27
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k02.json",
+        ".qasm": "circuits\\k02.qasm"
+      }
+    },
+    "3": {
+      "k": 3,
+      "params": [
+        [
+          0.1284102146068108,
+          -0.06097370443785116,
+          0.046694933214154355,
+          0.09916699693178313,
+          -0.12556206708552226,
+          0.004774572941980143,
+          0.15455298053387878,
+          0.15596641888945884,
+          0.15590350287777954,
+          0.15601859852979266,
+          0.1544647228364084,
+          0.1528104616596986,
+          0.15075891031874247,
+          0.15415295670574206,
+          0.15022494509596837,
+          0.15314186449894243
+        ],
+        [
+          0.1284102146068108,
+          -0.060973704437851176,
+          0.046694933214154334,
+          0.09916699693178314,
+          -0.12556206708552223,
+          0.004774572941980143,
+          0.15455298053387884,
+          0.15596641888945884,
+          0.15590350287777957,
+          0.1560185985297927,
+          0.15446472283640847,
+          0.1528104616596986,
+          0.1507589103187425,
+          0.15415295670574203,
+          0.15022494509596834,
+          0.1531418644989425
+        ]
+      ],
+      "pqc_steps": 2,
+      "pqc_layers": 2,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k03_d02_analytic.json",
+      "selection_fidelity": 0.9993160949768828,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.9850173885981643,
+          "depth": 1,
+          "attempt": "attempts\\k03_d01_k_warm.json"
+        },
+        {
+          "fidelity": 0.9993160949768828,
+          "depth": 2,
+          "attempt": "attempts\\k03_d02_analytic.json"
+        }
+      ],
+      "validation_seed": 248932655,
+      "test_seed": 2891805939,
+      "teacher_validation_hs_fidelity": 0.9993160949768831,
+      "exact_power_validation_hs_fidelity": 0.9993160949768831,
+      "teacher_computational_basis_fidelity": 0.9993823902237415,
+      "exact_computational_basis_fidelity": 0.9993823902237415,
+      "teacher_test_product_fidelity": 0.99935645558411,
+      "exact_test_product_fidelity": 0.99935645558411,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9997937387154769,
+      "gate_resources": {
+        "parameters": 32,
+        "cnot": 62,
+        "single_qubit": 97,
+        "xy_gates": 16,
+        "zz_gates": 15,
+        "z_gates": 18,
+        "symmetric_slices": 2,
+        "diagonal_layers_after_merge": 3,
+        "primitive_depth_upper_bound": 57,
+        "parameter_shift_gradient_settings": 152,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.02748689999999998,
+      "block_wall_seconds_this_session": 1.6595510999999998,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 1258291200,
+          "estimated_single_qubit_gate_executions_upper_bound": 2189426688
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 1327104,
+          "estimated_single_qubit_gate_executions_upper_bound": 2039808
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 48,
+        "ry": 16,
+        "rz": 33,
+        "cx": 62,
+        "cnot": 62,
+        "single_qubit": 97,
+        "scheduled_primitive_depth": 47
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k03.json",
+        ".qasm": "circuits\\k03.qasm"
+      }
+    },
+    "4": {
+      "k": 4,
+      "params": [
+        [
+          0.17369142048495245,
+          -0.08491608309230742,
+          0.062865447120506,
+          0.13523580160474857,
+          -0.17141408964072835,
+          0.007886089955890869,
+          0.2072636912681609,
+          0.20949446716557793,
+          0.20963174151249753,
+          0.2096479785701351,
+          0.2070232182426361,
+          0.20452863487839426,
+          0.1999805280052858,
+          0.20766610356681867,
+          0.1993980345925681,
+          0.20510895110379707
+        ],
+        [
+          0.17369142048495245,
+          -0.08491608309230739,
+          0.06286544712050599,
+          0.13523580160474855,
+          -0.17141408964072835,
+          0.00788608995589078,
+          0.20726369126816097,
+          0.20949446716557799,
+          0.20963174151249753,
+          0.20964797857013506,
+          0.2070232182426361,
+          0.2045286348783942,
+          0.1999805280052858,
+          0.20766610356681864,
+          0.19939803459256805,
+          0.20510895110379704
+        ]
+      ],
+      "pqc_steps": 2,
+      "pqc_layers": 2,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k04_d02_analytic.json",
+      "selection_fidelity": 0.9974675786107849,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.9342778406357481,
+          "depth": 1,
+          "attempt": "attempts\\k04_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.9974675786107849,
+          "depth": 2,
+          "attempt": "attempts\\k04_d02_analytic.json"
+        }
+      ],
+      "validation_seed": 2938064430,
+      "test_seed": 1894460088,
+      "teacher_validation_hs_fidelity": 0.9974675786107848,
+      "exact_power_validation_hs_fidelity": 0.9974675786107848,
+      "teacher_computational_basis_fidelity": 0.9976896747263239,
+      "exact_computational_basis_fidelity": 0.9976896747263239,
+      "teacher_test_product_fidelity": 0.9975502239798816,
+      "exact_test_product_fidelity": 0.9975502239798816,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9997671520783994,
+      "gate_resources": {
+        "parameters": 32,
+        "cnot": 62,
+        "single_qubit": 97,
+        "xy_gates": 16,
+        "zz_gates": 15,
+        "z_gates": 18,
+        "symmetric_slices": 2,
+        "diagonal_layers_after_merge": 3,
+        "primitive_depth_upper_bound": 57,
+        "parameter_shift_gradient_settings": 152,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.027106600000000203,
+      "block_wall_seconds_this_session": 1.0986114999999996,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 1476395008,
+          "estimated_single_qubit_gate_executions_upper_bound": 2550136832
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 1540096,
+          "estimated_single_qubit_gate_executions_upper_bound": 2392064
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 48,
+        "ry": 16,
+        "rz": 33,
+        "cx": 62,
+        "cnot": 62,
+        "single_qubit": 97,
+        "scheduled_primitive_depth": 47
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k04.json",
+        ".qasm": "circuits\\k04.qasm"
+      }
+    },
+    "5": {
+      "k": 5,
+      "params": [
+        [
+          0.22062404919284026,
+          -0.11113417915173518,
+          0.0793416588453065,
+          0.17320453687061643,
+          -0.2196552772320324,
+          0.011806561203182256,
+          0.26054017712318545,
+          0.2630574111617094,
+          0.26423430704686324,
+          0.2632412865653644,
+          0.2601831665418155,
+          0.25798548514384445,
+          0.24914033083493417,
+          0.2637148425874549,
+          0.24933855551321754,
+          0.25868433070569197
+        ],
+        [
+          0.2206240491928403,
+          -0.11113417915173511,
+          0.07934165884530653,
+          0.1732045368706164,
+          -0.21965527723203243,
+          0.011806561203182152,
+          0.26054017712318556,
+          0.26305741116170944,
+          0.2642343070468632,
+          0.26324128656536444,
+          0.2601831665418155,
+          0.2579854851438444,
+          0.24914033083493417,
+          0.26371484258745487,
+          0.24933855551321754,
+          0.25868433070569197
+        ]
+      ],
+      "pqc_steps": 2,
+      "pqc_layers": 2,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k05_d02_k_warm.json",
+      "selection_fidelity": 0.9936605702361666,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.8214498407997167,
+          "depth": 1,
+          "attempt": "attempts\\k05_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.9936605702361666,
+          "depth": 2,
+          "attempt": "attempts\\k05_d02_k_warm.json"
+        }
+      ],
+      "validation_seed": 3649603110,
+      "test_seed": 1249398342,
+      "teacher_validation_hs_fidelity": 0.9936605702361667,
+      "exact_power_validation_hs_fidelity": 0.9936605702361667,
+      "teacher_computational_basis_fidelity": 0.9942379437491141,
+      "exact_computational_basis_fidelity": 0.9942379437491141,
+      "teacher_test_product_fidelity": 0.9940726884071345,
+      "exact_test_product_fidelity": 0.9940726884071345,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9997650635583456,
+      "gate_resources": {
+        "parameters": 32,
+        "cnot": 62,
+        "single_qubit": 97,
+        "xy_gates": 16,
+        "zz_gates": 15,
+        "z_gates": 18,
+        "symmetric_slices": 2,
+        "diagonal_layers_after_merge": 3,
+        "primitive_depth_upper_bound": 57,
+        "parameter_shift_gradient_settings": 152,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.02803880000000003,
+      "block_wall_seconds_this_session": 0.8140606999999997,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 1694498816,
+          "estimated_single_qubit_gate_executions_upper_bound": 2910846976
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 1753088,
+          "estimated_single_qubit_gate_executions_upper_bound": 2744320
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 48,
+        "ry": 16,
+        "rz": 33,
+        "cx": 62,
+        "cnot": 62,
+        "single_qubit": 97,
+        "scheduled_primitive_depth": 47
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k05.json",
+        ".qasm": "circuits\\k05.qasm"
+      }
+    },
+    "6": {
+      "k": 6,
+      "params": [
+        [
+          0.14802528627119152,
+          -0.05610924728731702,
+          0.0659589832026147,
+          0.11419387115167667,
+          -0.13728961271787446,
+          -0.011432295287556345,
+          0.17702888844514528,
+          0.13756742513359987,
+          0.16981570347990504,
+          0.12190440463937652,
+          0.17663084507330393,
+          0.19177533164780575,
+          0.19340972290269895,
+          0.18228628586796256,
+          0.19199652321396507,
+          0.18377476132243645
+        ],
+        [
+          0.21769761960119366,
+          -0.1314342951229605,
+          0.05496241764682191,
+          0.16825842152207648,
+          -0.2269596121223501,
+          0.04082243380795153,
+          0.26477182842579966,
+          0.33758211025326557,
+          0.2802601760996929,
+          0.3653894050216859,
+          0.2661964151727809,
+          0.24205903497943437,
+          0.22417156028459476,
+          0.2656759291604483,
+          0.22880856067736022,
+          0.25741312881095135
+        ],
+        [
+          0.14802528627118994,
+          -0.05610924728731795,
+          0.06595898320261372,
+          0.11419387115167491,
+          -0.13728961271787535,
+          -0.011432295287558127,
+          0.1770288884451451,
+          0.13756742513360043,
+          0.1698157034799056,
+          0.12190440463937727,
+          0.17663084507330357,
+          0.19177533164780566,
+          0.19340972290269864,
+          0.1822862858679623,
+          0.19199652321396496,
+          0.1837747613224362
+        ]
+      ],
+      "pqc_steps": 3,
+      "pqc_layers": 3,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k06_d03_analytic.json",
+      "selection_fidelity": 0.9987720213821326,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.65021410456444,
+          "depth": 1,
+          "attempt": "attempts\\k06_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.9848044250914044,
+          "depth": 2,
+          "attempt": "attempts\\k06_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.9987720213821326,
+          "depth": 3,
+          "attempt": "attempts\\k06_d03_analytic.json"
+        }
+      ],
+      "validation_seed": 1390433945,
+      "test_seed": 3266433965,
+      "teacher_validation_hs_fidelity": 0.9987720213821327,
+      "exact_power_validation_hs_fidelity": 0.9987720213821327,
+      "teacher_computational_basis_fidelity": 0.9988812879932158,
+      "exact_computational_basis_fidelity": 0.9988812879932158,
+      "teacher_test_product_fidelity": 0.9988114671906836,
+      "exact_test_product_fidelity": 0.9988114671906836,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.999750452019781,
+      "gate_resources": {
+        "parameters": 48,
+        "cnot": 88,
+        "single_qubit": 140,
+        "xy_gates": 24,
+        "zz_gates": 20,
+        "z_gates": 24,
+        "symmetric_slices": 3,
+        "diagonal_layers_after_merge": 4,
+        "primitive_depth_upper_bound": 82,
+        "parameter_shift_gradient_settings": 228,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.03800939999999997,
+      "block_wall_seconds_this_session": 3.8657291000000003,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 2130706432,
+          "estimated_single_qubit_gate_executions_upper_bound": 3632267264
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 2179072,
+          "estimated_single_qubit_gate_executions_upper_bound": 3448832
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 72,
+        "ry": 24,
+        "rz": 44,
+        "cx": 88,
+        "cnot": 88,
+        "single_qubit": 140,
+        "scheduled_primitive_depth": 67
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k06.json",
+        ".qasm": "circuits\\k06.qasm"
+      }
+    },
+    "7": {
+      "k": 7,
+      "params": [
+        [
+          0.1731170002721477,
+          -0.07010831637296921,
+          0.07748081572091095,
+          0.1382580934066709,
+          -0.16450192158051347,
+          -0.010342867960391189,
+          0.2080796643851617,
+          0.16728871802896747,
+          0.20302841632238428,
+          0.1497586646875368,
+          0.21225983327731138,
+          0.22620170025359485,
+          0.22451296468046056,
+          0.2181996302421595,
+          0.22388760671543467,
+          0.2192352000022171
+        ],
+        [
+          0.2572409407115616,
+          -0.1510058690031743,
+          0.06462913167892818,
+          0.19349424110675312,
+          -0.2640479142138251,
+          0.04359227320560367,
+          0.30858165419448064,
+          0.380920740189595,
+          0.32132978419684133,
+          0.4098246560251221,
+          0.30245174781125306,
+          0.2845723417602215,
+          0.2631815123397696,
+          0.3079823155883456,
+          0.26751323894780354,
+          0.29762208040943844
+        ],
+        [
+          0.17311700027214794,
+          -0.0701083163729686,
+          0.07748081572091045,
+          0.13825809340666945,
+          -0.1645019215805171,
+          -0.010342867960395088,
+          0.2080796643851612,
+          0.16728871802896741,
+          0.20302841632238414,
+          0.14975866468753685,
+          0.2122598332773125,
+          0.2262017002535948,
+          0.2245129646804602,
+          0.21819963024215938,
+          0.22388760671543517,
+          0.21923520000221702
+        ]
+      ],
+      "pqc_steps": 3,
+      "pqc_layers": 3,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k07_d03_k_warm.json",
+      "selection_fidelity": 0.9968724703355891,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.48719390655211764,
+          "depth": 1,
+          "attempt": "attempts\\k07_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.9599490453870256,
+          "depth": 2,
+          "attempt": "attempts\\k07_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.9968724703355891,
+          "depth": 3,
+          "attempt": "attempts\\k07_d03_k_warm.json"
+        }
+      ],
+      "validation_seed": 2881809041,
+      "test_seed": 590934997,
+      "teacher_validation_hs_fidelity": 0.996872470335589,
+      "exact_power_validation_hs_fidelity": 0.996872470335589,
+      "teacher_computational_basis_fidelity": 0.9971481830484675,
+      "exact_computational_basis_fidelity": 0.9971481830484675,
+      "teacher_test_product_fidelity": 0.99697527324513,
+      "exact_test_product_fidelity": 0.99697527324513,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9997103503389695,
+      "gate_resources": {
+        "parameters": 48,
+        "cnot": 88,
+        "single_qubit": 140,
+        "xy_gates": 24,
+        "zz_gates": 20,
+        "z_gates": 24,
+        "symmetric_slices": 3,
+        "diagonal_layers_after_merge": 4,
+        "primitive_depth_upper_bound": 82,
+        "parameter_shift_gradient_settings": 228,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.03843360000000118,
+      "block_wall_seconds_this_session": 3.9095782000000003,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 2348810240,
+          "estimated_single_qubit_gate_executions_upper_bound": 3992977408
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 2392064,
+          "estimated_single_qubit_gate_executions_upper_bound": 3801088
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 72,
+        "ry": 24,
+        "rz": 44,
+        "cx": 88,
+        "cnot": 88,
+        "single_qubit": 140,
+        "scheduled_primitive_depth": 67
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k07.json",
+        ".qasm": "circuits\\k07.qasm"
+      }
+    },
+    "8": {
+      "k": 8,
+      "params": [
+        [
+          0.2209552232783341,
+          -0.06776103199874497,
+          0.11092401750331442,
+          0.18711950832853563,
+          -0.1785186291935722,
+          0.009451770329539146,
+          0.2427583540928294,
+          0.20390683955253186,
+          0.2426917192730115,
+          0.1861278100527248,
+          0.2537990240310868,
+          0.26328513366428213,
+          0.2568368957997842,
+          0.2576532127524553,
+          0.2567676613631772,
+          0.2582063231811686
+        ],
+        [
+          0.30623333067102354,
+          -0.15327151600606545,
+          0.0852392341537471,
+          0.22717033852738325,
+          -0.2779399496363652,
+          0.06208250949975087,
+          0.34594788332095466,
+          0.41095872191301336,
+          0.35194130058598694,
+          0.43689817097810135,
+          0.3291473960469061,
+          0.3252914691559535,
+          0.299070313804935,
+          0.3469050527148168,
+          0.30331948260952657,
+          0.3344641860411456
+        ],
+        [
+          0.16754403460856218,
+          -0.12117644311787684,
+          0.0575093169884939,
+          0.13370509094082453,
+          -0.2319370425043892,
+          -0.04396483173964639,
+          0.2427598249275688,
+          0.203909564331242,
+          0.24269460025569822,
+          0.18613034799529982,
+          0.2538010974868573,
+          0.26328761796793,
+          0.2568383716087124,
+          0.2576551726203766,
+          0.25676940836027906,
+          0.2582081519427057
+        ]
+      ],
+      "pqc_steps": 3,
+      "pqc_layers": 3,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k08_d03_jitter_0.json",
+      "selection_fidelity": 0.9928012188260125,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.4017995868129216,
+          "depth": 1,
+          "attempt": "attempts\\k08_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.9004099436235771,
+          "depth": 2,
+          "attempt": "attempts\\k08_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.9928012188260125,
+          "depth": 3,
+          "attempt": "attempts\\k08_d03_jitter_0.json"
+        }
+      ],
+      "validation_seed": 2060267612,
+      "test_seed": 119668485,
+      "teacher_validation_hs_fidelity": 0.9928012188260126,
+      "exact_power_validation_hs_fidelity": 0.9928012188260126,
+      "teacher_computational_basis_fidelity": 0.9934212090444308,
+      "exact_computational_basis_fidelity": 0.9934212090444308,
+      "teacher_test_product_fidelity": 0.9931215844203993,
+      "exact_test_product_fidelity": 0.9931215844203993,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9996543677829165,
+      "gate_resources": {
+        "parameters": 48,
+        "cnot": 88,
+        "single_qubit": 140,
+        "xy_gates": 24,
+        "zz_gates": 20,
+        "z_gates": 24,
+        "symmetric_slices": 3,
+        "diagonal_layers_after_merge": 4,
+        "primitive_depth_upper_bound": 82,
+        "parameter_shift_gradient_settings": 228,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.03695899999999952,
+      "block_wall_seconds_this_session": 3.3416215000000005,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 2566914048,
+          "estimated_single_qubit_gate_executions_upper_bound": 4353687552
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 2605056,
+          "estimated_single_qubit_gate_executions_upper_bound": 4153344
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 72,
+        "ry": 24,
+        "rz": 44,
+        "cx": 88,
+        "cnot": 88,
+        "single_qubit": 140,
+        "scheduled_primitive_depth": 67
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k08.json",
+        ".qasm": "circuits\\k08.qasm"
+      }
+    },
+    "9": {
+      "k": 9,
+      "params": [
+        [
+          0.17333103113572457,
+          -0.07576933475228127,
+          0.07264920088982336,
+          0.13793744560241328,
+          -0.16504847189528782,
+          -0.004337566770033658,
+          0.20674527482657257,
+          0.19137601705357968,
+          0.2059633771200235,
+          0.18019608559656494,
+          0.2089201369389745,
+          0.21250256147417146,
+          0.20866180143530833,
+          0.20576867816588756,
+          0.2061442374749813,
+          0.20524821938717308
+        ],
+        [
+          0.21378465205209699,
+          -0.11065982295911067,
+          0.06906158353104151,
+          0.1640618113163988,
+          -0.21504193256620344,
+          0.017556012836133308,
+          0.2583794505467637,
+          0.26989393750075635,
+          0.2614431676649083,
+          0.27753172124646547,
+          0.2573801366638335,
+          0.2595727867312761,
+          0.24868060500902317,
+          0.2688512604206442,
+          0.2523121912318325,
+          0.2656474506246977
+        ],
+        [
+          0.21378465205209665,
+          -0.11065982295911062,
+          0.06906158353104065,
+          0.16406181131639863,
+          -0.21504193256620302,
+          0.017556012836134127,
+          0.25837945054676287,
+          0.2698939375007543,
+          0.26144316766490866,
+          0.2775317212464649,
+          0.2573801366638331,
+          0.25957278673127543,
+          0.24868060500902298,
+          0.26885126042064383,
+          0.2523121912318324,
+          0.26564745062469763
+        ],
+        [
+          0.1733310311357239,
+          -0.07576933475228147,
+          0.07264920088982324,
+          0.13793744560241264,
+          -0.1650484718952881,
+          -0.0043375667700344565,
+          0.2067452748265727,
+          0.19137601705358034,
+          0.2059633771200229,
+          0.18019608559656491,
+          0.20892013693897427,
+          0.21250256147417146,
+          0.20866180143530816,
+          0.20576867816588731,
+          0.20614423747498092,
+          0.2052482193871729
+        ]
+      ],
+      "pqc_steps": 4,
+      "pqc_layers": 4,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k09_d04_analytic.json",
+      "selection_fidelity": 0.9954286283418093,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.3240806633252575,
+          "depth": 1,
+          "attempt": "attempts\\k09_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.7929190940241017,
+          "depth": 2,
+          "attempt": "attempts\\k09_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.9842905892708557,
+          "depth": 3,
+          "attempt": "attempts\\k09_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.9954286283418093,
+          "depth": 4,
+          "attempt": "attempts\\k09_d04_analytic.json"
+        }
+      ],
+      "validation_seed": 3300362046,
+      "test_seed": 1962433499,
+      "teacher_validation_hs_fidelity": 0.9954286283418097,
+      "exact_power_validation_hs_fidelity": 0.9954286283418097,
+      "teacher_computational_basis_fidelity": 0.9957571185729515,
+      "exact_computational_basis_fidelity": 0.9957571185729515,
+      "teacher_test_product_fidelity": 0.99559031515793,
+      "exact_test_product_fidelity": 0.99559031515793,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9995927788805912,
+      "gate_resources": {
+        "parameters": 64,
+        "cnot": 114,
+        "single_qubit": 183,
+        "xy_gates": 32,
+        "zz_gates": 25,
+        "z_gates": 30,
+        "symmetric_slices": 4,
+        "diagonal_layers_after_merge": 5,
+        "primitive_depth_upper_bound": 107,
+        "parameter_shift_gradient_settings": 304,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.05133740000000131,
+      "block_wall_seconds_this_session": 6.6917781000000005,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 3003121664,
+          "estimated_single_qubit_gate_executions_upper_bound": 5075107840
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 3031040,
+          "estimated_single_qubit_gate_executions_upper_bound": 4857856
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 96,
+        "ry": 32,
+        "rz": 55,
+        "cx": 114,
+        "cnot": 114,
+        "single_qubit": 183,
+        "scheduled_primitive_depth": 87
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k09.json",
+        ".qasm": "circuits\\k09.qasm"
+      }
+    },
+    "10": {
+      "k": 10,
+      "params": [
+        [
+          0.19733982199498828,
+          -0.08957454581454925,
+          0.0831611579537347,
+          0.15919851005677688,
+          -0.19162074283147174,
+          -0.004326609195033822,
+          0.2344450756333591,
+          0.2189309136190524,
+          0.2347803825440176,
+          0.20695324683270216,
+          0.23907185252198632,
+          0.23998111180620074,
+          0.2338446481419861,
+          0.23439259273775007,
+          0.2317016325444043,
+          0.23275884868586647
+        ],
+        [
+          0.23535981485215166,
+          -0.12200161158398708,
+          0.0756767676892729,
+          0.18096630744545586,
+          -0.23564813646208663,
+          0.019824450223633553,
+          0.28376550427461555,
+          0.29355911726383127,
+          0.28665029997781755,
+          0.3005169956289899,
+          0.28131014994172643,
+          0.2887166185616064,
+          0.2741637656683087,
+          0.29778530344554566,
+          0.2779874202596446,
+          0.29427428712676407
+        ],
+        [
+          0.23535981485215082,
+          -0.12200161158398652,
+          0.07567676768927277,
+          0.18096630744545572,
+          -0.23564813646208643,
+          0.019824450223634493,
+          0.2837655042746135,
+          0.2935591172638301,
+          0.28665029997781666,
+          0.3005169956289894,
+          0.28131014994172693,
+          0.28871661856160596,
+          0.2741637656683083,
+          0.2977853034455454,
+          0.27798742025964457,
+          0.294274287126764
+        ],
+        [
+          0.19733982199498734,
+          -0.08957454581455024,
+          0.08316115795373365,
+          0.15919851005677585,
+          -0.19162074283147237,
+          -0.004326609195035251,
+          0.23444507563335967,
+          0.21893091361905256,
+          0.23478038254401765,
+          0.20695324683270208,
+          0.23907185252198582,
+          0.23998111180620058,
+          0.23384464814198594,
+          0.23439259273774976,
+          0.23170163254440396,
+          0.23275884868586608
+        ]
+      ],
+      "pqc_steps": 4,
+      "pqc_layers": 4,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k10_d04_k_warm.json",
+      "selection_fidelity": 0.9918501431036045,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.25067919494829083,
+          "depth": 1,
+          "attempt": "attempts\\k10_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.645570105780752,
+          "depth": 2,
+          "attempt": "attempts\\k10_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.9668687011487079,
+          "depth": 3,
+          "attempt": "attempts\\k10_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.9918501431036045,
+          "depth": 4,
+          "attempt": "attempts\\k10_d04_k_warm.json"
+        }
+      ],
+      "validation_seed": 477763840,
+      "test_seed": 1085856780,
+      "teacher_validation_hs_fidelity": 0.9918501431036044,
+      "exact_power_validation_hs_fidelity": 0.9918501431036044,
+      "teacher_computational_basis_fidelity": 0.9923933974269242,
+      "exact_computational_basis_fidelity": 0.9923933974269242,
+      "teacher_test_product_fidelity": 0.9921048294028024,
+      "exact_test_product_fidelity": 0.9921048294028024,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9995276702728129,
+      "gate_resources": {
+        "parameters": 64,
+        "cnot": 114,
+        "single_qubit": 183,
+        "xy_gates": 32,
+        "zz_gates": 25,
+        "z_gates": 30,
+        "symmetric_slices": 4,
+        "diagonal_layers_after_merge": 5,
+        "primitive_depth_upper_bound": 107,
+        "parameter_shift_gradient_settings": 304,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.048710199999998594,
+      "block_wall_seconds_this_session": 5.374578700000001,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 3221225472,
+          "estimated_single_qubit_gate_executions_upper_bound": 5435817984
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 3244032,
+          "estimated_single_qubit_gate_executions_upper_bound": 5210112
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 96,
+        "ry": 32,
+        "rz": 55,
+        "cx": 114,
+        "cnot": 114,
+        "single_qubit": 183,
+        "scheduled_primitive_depth": 87
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k10.json",
+        ".qasm": "circuits\\k10.qasm"
+      }
+    },
+    "11": {
+      "k": 11,
+      "params": [
+        [
+          0.1696896397579865,
+          -0.05668571200294068,
+          0.07446078743823006,
+          0.1288874753305518,
+          -0.1429550405981247,
+          -0.003797596648267138,
+          0.18063978978740744,
+          0.1655716652123657,
+          0.18537900754167197,
+          0.14322247716508746,
+          0.19672455938832661,
+          0.21923916460972054,
+          0.2095152779148688,
+          0.20212477878928875,
+          0.20849859259033005,
+          0.20719026193196075
+        ],
+        [
+          0.24565322821509888,
+          -0.13166807385281123,
+          0.07235325767035745,
+          0.1907969087060546,
+          -0.24127371956887836,
+          0.03373795210760791,
+          0.3115110396150024,
+          0.3329861054308492,
+          0.30337199543793236,
+          0.36785071660206414,
+          0.2736301192070742,
+          0.24177372217820292,
+          0.2374718412923722,
+          0.2709359415040091,
+          0.24064880336079233,
+          0.2514929362692065
+        ],
+        [
+          0.14089327589688413,
+          -0.044564884250061894,
+          0.0793185305819863,
+          0.12060063775183914,
+          -0.12475023498163987,
+          -0.0018977717215690022,
+          0.15144866042605343,
+          0.12706099580714306,
+          0.16073651443276443,
+          0.09079482329063603,
+          0.19874327973159078,
+          0.23868475401232567,
+          0.22925156169229216,
+          0.21473010878816032,
+          0.2309613777696529,
+          0.23638488006565164
+        ],
+        [
+          0.24480412136326463,
+          -0.13099688102162851,
+          0.07233777117411597,
+          0.19144168722555685,
+          -0.24155798898880498,
+          0.03357084352493553,
+          0.31159841639649977,
+          0.3320723810205323,
+          0.30387641309028557,
+          0.3675495463303777,
+          0.27487200649806376,
+          0.24072094305929673,
+          0.2370447085933014,
+          0.27060141130005333,
+          0.24073159352341014,
+          0.25115451552186396
+        ],
+        [
+          0.14081545750192537,
+          -0.08459312261281686,
+          0.04605148027088809,
+          0.09927436213279152,
+          -0.16958170400352296,
+          -0.03195814887037172,
+          0.17889834229919632,
+          0.16457388190397998,
+          0.18344453512429568,
+          0.14191406840136134,
+          0.19452498350988073,
+          0.21845227573301923,
+          0.20849603780130446,
+          0.2008291106489789,
+          0.2071489032467306,
+          0.20601216840131847
+        ]
+      ],
+      "pqc_steps": 5,
+      "pqc_layers": 5,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k11_d05_depth_warm.json",
+      "selection_fidelity": 0.9961331086701083,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.21417372809602425,
+          "depth": 1,
+          "attempt": "attempts\\k11_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.49145745838970484,
+          "depth": 2,
+          "attempt": "attempts\\k11_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.933246277841991,
+          "depth": 3,
+          "attempt": "attempts\\k11_d03_jitter_0.json"
+        },
+        {
+          "fidelity": 0.9862107501887811,
+          "depth": 4,
+          "attempt": "attempts\\k11_d04_k_warm.json"
+        },
+        {
+          "fidelity": 0.9961331086701083,
+          "depth": 5,
+          "attempt": "attempts\\k11_d05_depth_warm.json"
+        }
+      ],
+      "validation_seed": 1224354892,
+      "test_seed": 2510032330,
+      "teacher_validation_hs_fidelity": 0.9961331086701084,
+      "exact_power_validation_hs_fidelity": 0.9961331086701084,
+      "teacher_computational_basis_fidelity": 0.9964368313290921,
+      "exact_computational_basis_fidelity": 0.9964368313290921,
+      "teacher_test_product_fidelity": 0.996290246924024,
+      "exact_test_product_fidelity": 0.996290246924024,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9994591193793014,
+      "gate_resources": {
+        "parameters": 80,
+        "cnot": 140,
+        "single_qubit": 226,
+        "xy_gates": 40,
+        "zz_gates": 30,
+        "z_gates": 36,
+        "symmetric_slices": 5,
+        "diagonal_layers_after_merge": 6,
+        "primitive_depth_upper_bound": 132,
+        "parameter_shift_gradient_settings": 380,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.06267429999999763,
+      "block_wall_seconds_this_session": 10.5328309,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 3657433088,
+          "estimated_single_qubit_gate_executions_upper_bound": 6157238272
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 3670016,
+          "estimated_single_qubit_gate_executions_upper_bound": 5914624
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 120,
+        "ry": 40,
+        "rz": 66,
+        "cx": 140,
+        "cnot": 140,
+        "single_qubit": 226,
+        "scheduled_primitive_depth": 107
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k11.json",
+        ".qasm": "circuits\\k11.qasm"
+      }
+    },
+    "12": {
+      "k": 12,
+      "params": [
+        [
+          0.1755433245559336,
+          -0.05756939085363182,
+          0.0855082716181212,
+          0.14633131761683463,
+          -0.15472618643967173,
+          -0.01007301108594253,
+          0.2000238826564908,
+          0.18573764247646843,
+          0.20925341275100917,
+          0.16650484831741802,
+          0.21494601322252907,
+          0.23887995807862794,
+          0.22888842564780437,
+          0.223533390720702,
+          0.22619141584092553,
+          0.22789447832365162
+        ],
+        [
+          0.2998314933937902,
+          -0.15609021061165076,
+          0.06461556160824358,
+          0.1920493368291426,
+          -0.2675119069784036,
+          0.05212005117051253,
+          0.3329771603113218,
+          0.3510675875266713,
+          0.31360984915107176,
+          0.3728979793430615,
+          0.2989559698924599,
+          0.2748344615713872,
+          0.25663623229766147,
+          0.28849884902239836,
+          0.2625459365127723,
+          0.2746697586400979
+        ],
+        [
+          0.11046878893865213,
+          -0.035994163360827544,
+          0.10811629784040111,
+          0.15864333671284578,
+          -0.13398278253555745,
+          -0.022237152183872285,
+          0.17435108835505841,
+          0.15046662292285246,
+          0.19895732777831251,
+          0.13170413739823392,
+          0.21886560192331767,
+          0.2476952964265136,
+          0.25336239536821914,
+          0.2485731820167855,
+          0.2540647474293223,
+          0.2610403191542021
+        ],
+        [
+          0.29981102783677005,
+          -0.15626368092700965,
+          0.06482131796088053,
+          0.192226909700158,
+          -0.2677783468385438,
+          0.05219709767938325,
+          0.3328603486055376,
+          0.3509613915008053,
+          0.31351833037438165,
+          0.37283161854906655,
+          0.2985339558450395,
+          0.27486867347391936,
+          0.2566050719074533,
+          0.2883914074960518,
+          0.2625614344557938,
+          0.2748073041484409
+        ],
+        [
+          0.14455007716628565,
+          -0.08815604538390849,
+          0.054432417250050054,
+          0.11521577458069106,
+          -0.1850912277651342,
+          -0.0409452837365794,
+          0.19995213177923823,
+          0.18566620920223978,
+          0.20917438307560807,
+          0.16639284860371337,
+          0.2150408569047804,
+          0.23867610165627948,
+          0.22876911489890464,
+          0.22344592774705324,
+          0.22602853143555734,
+          0.2276274826407838
+        ]
+      ],
+      "pqc_steps": 5,
+      "pqc_layers": 5,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k12_d05_k_warm.json",
+      "selection_fidelity": 0.9934949420062109,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.2135083667378334,
+          "depth": 1,
+          "attempt": "attempts\\k12_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.3939263123753811,
+          "depth": 2,
+          "attempt": "attempts\\k12_d02_jitter_0.json"
+        },
+        {
+          "fidelity": 0.8749557796116822,
+          "depth": 3,
+          "attempt": "attempts\\k12_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.977355490603532,
+          "depth": 4,
+          "attempt": "attempts\\k12_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.9934949420062109,
+          "depth": 5,
+          "attempt": "attempts\\k12_d05_k_warm.json"
+        }
+      ],
+      "validation_seed": 3204922406,
+      "test_seed": 1707798424,
+      "teacher_validation_hs_fidelity": 0.9934949420062112,
+      "exact_power_validation_hs_fidelity": 0.9934949420062112,
+      "teacher_computational_basis_fidelity": 0.9940145744912368,
+      "exact_computational_basis_fidelity": 0.9940145744912368,
+      "teacher_test_product_fidelity": 0.9936629422478691,
+      "exact_test_product_fidelity": 0.9936629422478691,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9993890968646209,
+      "gate_resources": {
+        "parameters": 80,
+        "cnot": 140,
+        "single_qubit": 226,
+        "xy_gates": 40,
+        "zz_gates": 30,
+        "z_gates": 36,
+        "symmetric_slices": 5,
+        "diagonal_layers_after_merge": 6,
+        "primitive_depth_upper_bound": 132,
+        "parameter_shift_gradient_settings": 380,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.05428609999999878,
+      "block_wall_seconds_this_session": 9.579960800000002,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 3875536896,
+          "estimated_single_qubit_gate_executions_upper_bound": 6517948416
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 3883008,
+          "estimated_single_qubit_gate_executions_upper_bound": 6266880
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 120,
+        "ry": 40,
+        "rz": 66,
+        "cx": 140,
+        "cnot": 140,
+        "single_qubit": 226,
+        "scheduled_primitive_depth": 107
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k12.json",
+        ".qasm": "circuits\\k12.qasm"
+      }
+    },
+    "13": {
+      "k": 13,
+      "params": [
+        [
+          0.16626458947528008,
+          -0.061732242827572205,
+          0.06828905461912381,
+          0.12223176079114763,
+          -0.14892485649110732,
+          -0.012518277658568456,
+          0.19329564299050792,
+          0.1692717950878537,
+          0.1902700010560481,
+          0.15163048657784667,
+          0.1972767284711424,
+          0.21240935517527396,
+          0.20533398728685165,
+          0.19689755266923142,
+          0.20280940193064095,
+          0.2009058007046464
+        ],
+        [
+          0.22208650465360563,
+          -0.13165088265957078,
+          0.06496182543807968,
+          0.17885091137801712,
+          -0.23407429240908523,
+          0.03343596150725553,
+          0.2682527758658608,
+          0.3115700038908887,
+          0.28094876177566286,
+          0.3339703285310898,
+          0.2663607073959579,
+          0.2524267826403982,
+          0.2401406774549505,
+          0.2726281646174049,
+          0.24628204072884344,
+          0.26198673216345564
+        ],
+        [
+          0.1677935563728021,
+          -0.07058158448866457,
+          0.07005755000942958,
+          0.13028842210803612,
+          -0.1594811332360161,
+          -0.00446678285728277,
+          0.2086775476028251,
+          0.1820346712722218,
+          0.2004627986340441,
+          0.17160967546712178,
+          0.2088555374513962,
+          0.21990339325099734,
+          0.21727576066238222,
+          0.21410966121141398,
+          0.2170916335363378,
+          0.21783598015443165
+        ],
+        [
+          0.16779355637280471,
+          -0.07058158448866375,
+          0.07005755000943026,
+          0.13028842210803476,
+          -0.15948113323601856,
+          -0.0044667828572825564,
+          0.20867754760282733,
+          0.18203467127222392,
+          0.20046279863404406,
+          0.1716096754671208,
+          0.20885553745139834,
+          0.2199033932509983,
+          0.21727576066238208,
+          0.21410966121141314,
+          0.21709163353633848,
+          0.21783598015443156
+        ],
+        [
+          0.22208650465360322,
+          -0.13165088265957053,
+          0.06496182543807995,
+          0.17885091137801867,
+          -0.23407429240908298,
+          0.03343596150725595,
+          0.26825277586585944,
+          0.31157000389088646,
+          0.28094876177566236,
+          0.33397032853109093,
+          0.26636070739595646,
+          0.2524267826403967,
+          0.24014067745495063,
+          0.2726281646174055,
+          0.24628204072884333,
+          0.26198673216345647
+        ],
+        [
+          0.16626458947528105,
+          -0.061732242827572295,
+          0.06828905461912378,
+          0.12223176079114709,
+          -0.14892485649110793,
+          -0.01251827765856884,
+          0.1932956429905089,
+          0.16927179508785442,
+          0.19027000105604785,
+          0.1516304865778454,
+          0.19727672847114253,
+          0.2124093551752744,
+          0.2053339872868511,
+          0.19689755266923079,
+          0.20280940193064118,
+          0.20090580070464606
+        ]
+      ],
+      "pqc_steps": 6,
+      "pqc_layers": 6,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k13_d06_analytic.json",
+      "selection_fidelity": 0.9951916645197608,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.1968220958058822,
+          "depth": 1,
+          "attempt": "attempts\\k13_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.3207931738595888,
+          "depth": 2,
+          "attempt": "attempts\\k13_d02_jitter_0.json"
+        },
+        {
+          "fidelity": 0.7872289726957158,
+          "depth": 3,
+          "attempt": "attempts\\k13_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.9632181457475509,
+          "depth": 4,
+          "attempt": "attempts\\k13_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.9894243708739805,
+          "depth": 5,
+          "attempt": "attempts\\k13_d05_k_warm.json"
+        },
+        {
+          "fidelity": 0.9951916645197608,
+          "depth": 6,
+          "attempt": "attempts\\k13_d06_analytic.json"
+        }
+      ],
+      "validation_seed": 2873774330,
+      "test_seed": 3635280795,
+      "teacher_validation_hs_fidelity": 0.9951916645197609,
+      "exact_power_validation_hs_fidelity": 0.9951916645197609,
+      "teacher_computational_basis_fidelity": 0.9955664021811039,
+      "exact_computational_basis_fidelity": 0.9955664021811039,
+      "teacher_test_product_fidelity": 0.9953654755639999,
+      "exact_test_product_fidelity": 0.9953654755639999,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9993182886683564,
+      "gate_resources": {
+        "parameters": 96,
+        "cnot": 166,
+        "single_qubit": 269,
+        "xy_gates": 48,
+        "zz_gates": 35,
+        "z_gates": 42,
+        "symmetric_slices": 6,
+        "diagonal_layers_after_merge": 7,
+        "primitive_depth_upper_bound": 157,
+        "parameter_shift_gradient_settings": 456,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.06622060000000118,
+      "block_wall_seconds_this_session": 15.528086100000003,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 4311744512,
+          "estimated_single_qubit_gate_executions_upper_bound": 7239368704
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 4308992,
+          "estimated_single_qubit_gate_executions_upper_bound": 6971392
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 144,
+        "ry": 48,
+        "rz": 77,
+        "cx": 166,
+        "cnot": 166,
+        "single_qubit": 269,
+        "scheduled_primitive_depth": 127
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k13.json",
+        ".qasm": "circuits\\k13.qasm"
+      }
+    },
+    "14": {
+      "k": 14,
+      "params": [
+        [
+          0.17474305638013832,
+          -0.06944434936253978,
+          0.07552463619682812,
+          0.1389927021502035,
+          -0.16252935723277,
+          -0.013375872694441059,
+          0.21414689574520615,
+          0.19008797529308769,
+          0.21288268146473874,
+          0.17129887551767128,
+          0.21754375522690672,
+          0.2309200010670468,
+          0.22359028392096694,
+          0.2172288556533629,
+          0.22032368264659144,
+          0.21875953340248716
+        ],
+        [
+          0.2557433028969884,
+          -0.1380371846387575,
+          0.06559369884368436,
+          0.18142097083177958,
+          -0.25477058573806854,
+          0.03396061324178369,
+          0.2833378481872708,
+          0.32519498846819367,
+          0.2922593984089843,
+          0.34744298503869714,
+          0.28265238107023016,
+          0.2761450847968325,
+          0.2564414223409946,
+          0.28921217368018115,
+          0.26372338908142895,
+          0.28328259503563336
+        ],
+        [
+          0.17000403028088634,
+          -0.07914720691551086,
+          0.07833480447118095,
+          0.14763692985945692,
+          -0.16980651078783923,
+          -0.003111231470760691,
+          0.22581198076147904,
+          0.19851503572922521,
+          0.2200151655397235,
+          0.1880112384545066,
+          0.22603235717273334,
+          0.2351057139678217,
+          0.23407013895726672,
+          0.23350078093161963,
+          0.23405364555903355,
+          0.23480112133223915
+        ],
+        [
+          0.17000403028089292,
+          -0.07914720691550878,
+          0.0783348044711833,
+          0.14763692985945423,
+          -0.1698065107878398,
+          -0.003111231470761867,
+          0.2258119807614818,
+          0.19851503572922452,
+          0.22001516553972256,
+          0.18801123845450915,
+          0.2260323571727346,
+          0.23510571396782012,
+          0.23407013895726514,
+          0.2335007809316227,
+          0.23405364555903224,
+          0.2348011213322413
+        ],
+        [
+          0.25574330289698755,
+          -0.13803718463875655,
+          0.06559369884368324,
+          0.18142097083177983,
+          -0.2547705857380683,
+          0.03396061324178397,
+          0.28333784818727137,
+          0.3251949884681945,
+          0.2922593984089862,
+          0.3474429850386949,
+          0.2826523810702301,
+          0.2761450847968344,
+          0.2564414223409968,
+          0.2892121736801791,
+          0.2637233890814295,
+          0.2832825950356313
+        ],
+        [
+          0.17474305638013773,
+          -0.06944434936254087,
+          0.07552463619682948,
+          0.13899270215020482,
+          -0.16252935723277162,
+          -0.01337587269444186,
+          0.214146895745205,
+          0.19008797529308738,
+          0.21288268146473788,
+          0.17129887551767245,
+          0.2175437552269072,
+          0.23092000106704727,
+          0.22359028392096622,
+          0.21722885565336497,
+          0.22032368264659175,
+          0.21875953340248938
+        ]
+      ],
+      "pqc_steps": 6,
+      "pqc_layers": 6,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k14_d06_k_warm.json",
+      "selection_fidelity": 0.9926726085123748,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.16420677714547374,
+          "depth": 1,
+          "attempt": "attempts\\k14_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.24242648973323805,
+          "depth": 2,
+          "attempt": "attempts\\k14_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.6747336905318005,
+          "depth": 3,
+          "attempt": "attempts\\k14_d03_depth_warm.json"
+        },
+        {
+          "fidelity": 0.940068147693117,
+          "depth": 4,
+          "attempt": "attempts\\k14_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.9833162192040132,
+          "depth": 5,
+          "attempt": "attempts\\k14_d05_jitter_0.json"
+        },
+        {
+          "fidelity": 0.9926726085123748,
+          "depth": 6,
+          "attempt": "attempts\\k14_d06_k_warm.json"
+        }
+      ],
+      "validation_seed": 1042439698,
+      "test_seed": 211801428,
+      "teacher_validation_hs_fidelity": 0.9926726085123747,
+      "exact_power_validation_hs_fidelity": 0.9926726085123747,
+      "teacher_computational_basis_fidelity": 0.9932604364816039,
+      "exact_computational_basis_fidelity": 0.9932604364816039,
+      "teacher_test_product_fidelity": 0.992973730992438,
+      "exact_test_product_fidelity": 0.992973730992438,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9992441359153699,
+      "gate_resources": {
+        "parameters": 96,
+        "cnot": 166,
+        "single_qubit": 269,
+        "xy_gates": 48,
+        "zz_gates": 35,
+        "z_gates": 42,
+        "symmetric_slices": 6,
+        "diagonal_layers_after_merge": 7,
+        "primitive_depth_upper_bound": 157,
+        "parameter_shift_gradient_settings": 456,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.06337720000000502,
+      "block_wall_seconds_this_session": 14.1491696,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 4529848320,
+          "estimated_single_qubit_gate_executions_upper_bound": 7600078848
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 4521984,
+          "estimated_single_qubit_gate_executions_upper_bound": 7323648
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 144,
+        "ry": 48,
+        "rz": 77,
+        "cx": 166,
+        "cnot": 166,
+        "single_qubit": 269,
+        "scheduled_primitive_depth": 127
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k14.json",
+        ".qasm": "circuits\\k14.qasm"
+      }
+    },
+    "15": {
+      "k": 15,
+      "params": [
+        [
+          0.16444364521060253,
+          -0.06651467151477612,
+          0.06264308590102798,
+          0.12798679549587927,
+          -0.14442990701065153,
+          -0.011912289149402214,
+          0.1897787537275568,
+          0.1702908682189216,
+          0.17941445471396,
+          0.14918289101406507,
+          0.1928343920781196,
+          0.22020771826521435,
+          0.2067923006383387,
+          0.1999861616507528,
+          0.20420555318860495,
+          0.20127720868104168
+        ],
+        [
+          0.21363597707435827,
+          -0.1198182011743592,
+          0.07387561941792513,
+          0.16284851928438265,
+          -0.2306350365060798,
+          0.032309780836461695,
+          0.27589398780526997,
+          0.3094417006597243,
+          0.3078149745136771,
+          0.3396514485338756,
+          0.26546559923187496,
+          0.2188259374517801,
+          0.23015252147299778,
+          0.2572478852804317,
+          0.23204944401139352,
+          0.2449569851897984
+        ],
+        [
+          0.16791163102195722,
+          -0.051668019863164105,
+          0.05404196122926989,
+          0.1239746881447672,
+          -0.14770093333810475,
+          -0.014342668262030673,
+          0.15512171077265882,
+          0.1310705453842363,
+          0.11821865627981558,
+          0.11022979934681311,
+          0.19132013309349716,
+          0.2537984616970016,
+          0.21029663678799676,
+          0.20504199289840216,
+          0.2243675694214976,
+          0.2333704405458552
+        ],
+        [
+          0.18912103647319775,
+          -0.12972137438492648,
+          0.08587759708424056,
+          0.1647792188081017,
+          -0.20103421927373316,
+          0.02319440022580948,
+          0.3035919490713604,
+          0.3082313564756661,
+          0.3359827126488451,
+          0.31756631607680286,
+          0.25086416996739347,
+          0.19527770815399847,
+          0.2367468854309339,
+          0.25047586816043904,
+          0.21812089626406125,
+          0.20971848114909789
+        ],
+        [
+          0.1679116310219541,
+          -0.05166801986316545,
+          0.05404196122926803,
+          0.12397468814476564,
+          -0.147700933338108,
+          -0.014342668262032694,
+          0.1551217107726568,
+          0.1310705453842376,
+          0.11821865627981519,
+          0.11022979934681487,
+          0.19132013309349818,
+          0.25379846169700093,
+          0.21029663678799643,
+          0.20504199289840272,
+          0.2243675694214981,
+          0.23337044054585662
+        ],
+        [
+          0.2136359770743575,
+          -0.11981820117436234,
+          0.07387561941792185,
+          0.16284851928437924,
+          -0.2306350365060836,
+          0.03230978083645803,
+          0.2758939878052717,
+          0.30944170065972326,
+          0.3078149745136777,
+          0.33965144853387336,
+          0.26546559923187424,
+          0.21882593745178125,
+          0.23015252147299864,
+          0.2572478852804313,
+          0.23204944401139396,
+          0.24495698518979653
+        ],
+        [
+          0.16444364521060234,
+          -0.06651467151477669,
+          0.06264308590102816,
+          0.1279867954958795,
+          -0.14442990701065278,
+          -0.011912289149402296,
+          0.18977875372755643,
+          0.17029086821892295,
+          0.17941445471396072,
+          0.1491828910140665,
+          0.19283439207812011,
+          0.220207718265215,
+          0.20679230063833984,
+          0.19998616165075483,
+          0.20420555318860562,
+          0.20127720868104187
+        ]
+      ],
+      "pqc_steps": 7,
+      "pqc_layers": 7,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k15_d07_analytic.json",
+      "selection_fidelity": 0.9951595183323617,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.12814466695610022,
+          "depth": 1,
+          "attempt": "attempts\\k15_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.22005683749041716,
+          "depth": 2,
+          "attempt": "attempts\\k15_d02_depth_warm.json"
+        },
+        {
+          "fidelity": 0.5532856694605969,
+          "depth": 3,
+          "attempt": "attempts\\k15_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.902373083983743,
+          "depth": 4,
+          "attempt": "attempts\\k15_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.9743976609781695,
+          "depth": 5,
+          "attempt": "attempts\\k15_d05_depth_warm.json"
+        },
+        {
+          "fidelity": 0.9891673054915863,
+          "depth": 6,
+          "attempt": "attempts\\k15_d06_k_warm.json"
+        },
+        {
+          "fidelity": 0.9951595183323617,
+          "depth": 7,
+          "attempt": "attempts\\k15_d07_analytic.json"
+        }
+      ],
+      "validation_seed": 550727161,
+      "test_seed": 3072297888,
+      "teacher_validation_hs_fidelity": 0.995159518332362,
+      "exact_power_validation_hs_fidelity": 0.995159518332362,
+      "teacher_computational_basis_fidelity": 0.9956145653830395,
+      "exact_computational_basis_fidelity": 0.9956145653830395,
+      "teacher_test_product_fidelity": 0.9953008474199609,
+      "exact_test_product_fidelity": 0.9953008474199609,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9991632992302036,
+      "gate_resources": {
+        "parameters": 112,
+        "cnot": 192,
+        "single_qubit": 312,
+        "xy_gates": 56,
+        "zz_gates": 40,
+        "z_gates": 48,
+        "symmetric_slices": 7,
+        "diagonal_layers_after_merge": 8,
+        "primitive_depth_upper_bound": 182,
+        "parameter_shift_gradient_settings": 532,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.0898150999999956,
+      "block_wall_seconds_this_session": 21.495459600000004,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 4966055936,
+          "estimated_single_qubit_gate_executions_upper_bound": 8321499136
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 4947968,
+          "estimated_single_qubit_gate_executions_upper_bound": 8028160
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 168,
+        "ry": 56,
+        "rz": 88,
+        "cx": 192,
+        "cnot": 192,
+        "single_qubit": 312,
+        "scheduled_primitive_depth": 147
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k15.json",
+        ".qasm": "circuits\\k15.qasm"
+      }
+    },
+    "16": {
+      "k": 16,
+      "params": [
+        [
+          0.17149407753000384,
+          -0.07770004637552187,
+          0.0742813181749491,
+          0.13729750863087234,
+          -0.1507104177144626,
+          -0.013705127883743765,
+          0.19174367511178322,
+          0.18526585420477204,
+          0.1988674520989448,
+          0.1531333728913702,
+          0.20572176634682626,
+          0.23036148323632627,
+          0.22165009258213672,
+          0.21377629046144542,
+          0.21544823414979686,
+          0.2138812132370345
+        ],
+        [
+          0.2367494090384815,
+          -0.11329178382505456,
+          0.062386605672899643,
+          0.17033766495633523,
+          -0.255408051994431,
+          0.04018346851388801,
+          0.3327589973999862,
+          0.3234564183039704,
+          0.306150930615026,
+          0.3701173913687576,
+          0.28356793444349737,
+          0.25007712043512037,
+          0.24224621218413075,
+          0.2721477534956927,
+          0.24986058380989049,
+          0.2653299858547274
+        ],
+        [
+          0.1769247333846266,
+          -0.07430730007228811,
+          0.08034029209543606,
+          0.1406606949929546,
+          -0.14863932627363086,
+          -0.034021781764994805,
+          0.09985419229436852,
+          0.14681695494636018,
+          0.1651974930315157,
+          0.1113364613305467,
+          0.20528736247093407,
+          0.24904988129878355,
+          0.23187027645404246,
+          0.22855862532789023,
+          0.23932052767645717,
+          0.24650490307679257
+        ],
+        [
+          0.19780224124022144,
+          -0.12059629911409146,
+          0.06785253244697959,
+          0.16880134415215065,
+          -0.22506295827370437,
+          0.05216045191055484,
+          0.40183509529709177,
+          0.32064462281320744,
+          0.3134854243031628,
+          0.34288359499045656,
+          0.2684325668991433,
+          0.23674442386608208,
+          0.2436675430507008,
+          0.2576464698636964,
+          0.2338662219241932,
+          0.23020264794190243
+        ],
+        [
+          0.1769247333846209,
+          -0.07430730007228935,
+          0.08034029209543284,
+          0.14066069499295653,
+          -0.14863932627362578,
+          -0.03402178176499619,
+          0.09985419229436772,
+          0.1468169549463589,
+          0.16519749303151895,
+          0.11133646133054813,
+          0.20528736247093415,
+          0.24904988129878358,
+          0.23187027645404346,
+          0.2285586253278942,
+          0.23932052767645898,
+          0.24650490307679193
+        ],
+        [
+          0.23674940903847835,
+          -0.11329178382506366,
+          0.062386605672892594,
+          0.17033766495632421,
+          -0.25540805199443883,
+          0.04018346851388163,
+          0.33275899739999165,
+          0.323456418303972,
+          0.3061509306150251,
+          0.3701173913687574,
+          0.28356793444349654,
+          0.250077120435124,
+          0.2422462121841286,
+          0.2721477534956914,
+          0.24986058380989035,
+          0.2653299858547297
+        ],
+        [
+          0.1714940775299972,
+          -0.07770004637552638,
+          0.07428131817494775,
+          0.13729750863087223,
+          -0.15071041771445964,
+          -0.013705127883739938,
+          0.19174367511178225,
+          0.18526585420477173,
+          0.19886745209895082,
+          0.15313337289137263,
+          0.20572176634682637,
+          0.2303614832363284,
+          0.22165009258213528,
+          0.21377629046144178,
+          0.21544823414979572,
+          0.2138812132370364
+        ]
+      ],
+      "pqc_steps": 7,
+      "pqc_layers": 7,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k16_d07_k_warm.json",
+      "selection_fidelity": 0.9929714730260194,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.10224228584488126,
+          "depth": 1,
+          "attempt": "attempts\\k16_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.18860189510756767,
+          "depth": 2,
+          "attempt": "attempts\\k16_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.44344544182387857,
+          "depth": 3,
+          "attempt": "attempts\\k16_d03_depth_warm.json"
+        },
+        {
+          "fidelity": 0.8445184477524221,
+          "depth": 4,
+          "attempt": "attempts\\k16_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.9615430843445171,
+          "depth": 5,
+          "attempt": "attempts\\k16_d05_analytic.json"
+        },
+        {
+          "fidelity": 0.9842957536675008,
+          "depth": 6,
+          "attempt": "attempts\\k16_d06_analytic.json"
+        },
+        {
+          "fidelity": 0.9929714730260194,
+          "depth": 7,
+          "attempt": "attempts\\k16_d07_k_warm.json"
+        }
+      ],
+      "validation_seed": 2249604255,
+      "test_seed": 2145864914,
+      "teacher_validation_hs_fidelity": 0.9929714730260195,
+      "exact_power_validation_hs_fidelity": 0.9929714730260195,
+      "teacher_computational_basis_fidelity": 0.9936383176807795,
+      "exact_computational_basis_fidelity": 0.9936383176807795,
+      "teacher_test_product_fidelity": 0.9931782603084507,
+      "exact_test_product_fidelity": 0.9931782603084507,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9990739941457689,
+      "gate_resources": {
+        "parameters": 112,
+        "cnot": 192,
+        "single_qubit": 312,
+        "xy_gates": 56,
+        "zz_gates": 40,
+        "z_gates": 48,
+        "symmetric_slices": 7,
+        "diagonal_layers_after_merge": 8,
+        "primitive_depth_upper_bound": 182,
+        "parameter_shift_gradient_settings": 532,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.07376270000000318,
+      "block_wall_seconds_this_session": 19.241873400000003,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 5184159744,
+          "estimated_single_qubit_gate_executions_upper_bound": 8682209280
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 5160960,
+          "estimated_single_qubit_gate_executions_upper_bound": 8380416
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 168,
+        "ry": 56,
+        "rz": 88,
+        "cx": 192,
+        "cnot": 192,
+        "single_qubit": 312,
+        "scheduled_primitive_depth": 147
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k16.json",
+        ".qasm": "circuits\\k16.qasm"
+      }
+    },
+    "17": {
+      "k": 17,
+      "params": [
+        [
+          0.16514243171892928,
+          -0.07405303762358921,
+          0.0689706734596148,
+          0.12646138555436087,
+          -0.14397495635335325,
+          -0.011476161312534115,
+          0.18651900667636,
+          0.17398548455564225,
+          0.1727132595805485,
+          0.14561733130607193,
+          0.1915374450385684,
+          0.21682260875913467,
+          0.2009156369165944,
+          0.19165860780821692,
+          0.1969379631602857,
+          0.19768840130369514
+        ],
+        [
+          0.20694854084110847,
+          -0.10164899385756464,
+          0.0585543488573852,
+          0.1620043203384162,
+          -0.2250583038268138,
+          0.03027042309090255,
+          0.2783269995335735,
+          0.29216895857210384,
+          0.3088335253251734,
+          0.3327693581219757,
+          0.2580703981539531,
+          0.22258312452137335,
+          0.2378799059731107,
+          0.26803426843776806,
+          0.24043612444559276,
+          0.24463871533754905
+        ],
+        [
+          0.17299871908908965,
+          -0.07874135753390837,
+          0.07479694346621933,
+          0.13164633736474002,
+          -0.16058709380183733,
+          -0.009043213140874928,
+          0.1687219206559907,
+          0.17060533282745396,
+          0.14848100338892442,
+          0.14849122743532098,
+          0.21107237657792532,
+          0.24040802120739044,
+          0.20510507201957667,
+          0.19907886554364887,
+          0.21700934349686493,
+          0.2367795857228704
+        ],
+        [
+          0.1803343286677805,
+          -0.08919369094495837,
+          0.06368974406183482,
+          0.14326857019616826,
+          -0.17671750566739594,
+          0.00968888912999471,
+          0.24191792677757765,
+          0.2305171458842114,
+          0.24582037686142483,
+          0.231904530424367,
+          0.21732132155167927,
+          0.21632673146651332,
+          0.2239571926256711,
+          0.2323851881565249,
+          0.21758033027151766,
+          0.20991495279458483
+        ],
+        [
+          0.18033432866778315,
+          -0.08919369094495859,
+          0.06368974406183286,
+          0.14326857019617312,
+          -0.17671750566739594,
+          0.009688889129993923,
+          0.2419179267775787,
+          0.23051714588421254,
+          0.24582037686142716,
+          0.23190453042436732,
+          0.21732132155167827,
+          0.21632673146651088,
+          0.22395719262567226,
+          0.23238518815652556,
+          0.2175803302715179,
+          0.20991495279458441
+        ],
+        [
+          0.17299871908908918,
+          -0.0787413575339098,
+          0.07479694346622065,
+          0.131646337364738,
+          -0.1605870938018386,
+          -0.0090432131408759,
+          0.16872192065599165,
+          0.17060533282745358,
+          0.1484810033889231,
+          0.14849122743532303,
+          0.21107237657792777,
+          0.24040802120739332,
+          0.2051050720195764,
+          0.19907886554364917,
+          0.21700934349686568,
+          0.2367795857228722
+        ],
+        [
+          0.20694854084110353,
+          -0.10164899385756697,
+          0.058554348857380985,
+          0.16200432033841272,
+          -0.22505830382681713,
+          0.030270423090900923,
+          0.27832699953357304,
+          0.2921689585721053,
+          0.3088335253251755,
+          0.3327693581219746,
+          0.25807039815395183,
+          0.22258312452137202,
+          0.23787990597311168,
+          0.26803426843776856,
+          0.24043612444559292,
+          0.24463871533754827
+        ],
+        [
+          0.16514243171892778,
+          -0.07405303762359332,
+          0.06897067345961211,
+          0.12646138555435832,
+          -0.14397495635335644,
+          -0.01147616131253818,
+          0.18651900667636107,
+          0.17398548455564186,
+          0.17271325958054787,
+          0.14561733130607307,
+          0.19153744503856898,
+          0.216822608759136,
+          0.200915636916594,
+          0.19165860780821703,
+          0.19693796316028597,
+          0.19768840130369597
+        ]
+      ],
+      "pqc_steps": 8,
+      "pqc_layers": 8,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k17_d08_analytic.json",
+      "selection_fidelity": 0.9943908792335724,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.09694015241791401,
+          "depth": 1,
+          "attempt": "attempts\\k17_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.15844856138704175,
+          "depth": 2,
+          "attempt": "attempts\\k17_d02_analytic.json"
+        },
+        {
+          "fidelity": 0.37382186685975527,
+          "depth": 3,
+          "attempt": "attempts\\k17_d03_jitter_0.json"
+        },
+        {
+          "fidelity": 0.7645502938997893,
+          "depth": 4,
+          "attempt": "attempts\\k17_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.9428330407156604,
+          "depth": 5,
+          "attempt": "attempts\\k17_d05_analytic.json"
+        },
+        {
+          "fidelity": 0.9774982090981975,
+          "depth": 6,
+          "attempt": "attempts\\k17_d06_analytic.json"
+        },
+        {
+          "fidelity": 0.9899278477329083,
+          "depth": 7,
+          "attempt": "attempts\\k17_d07_k_warm.json"
+        },
+        {
+          "fidelity": 0.9943908792335724,
+          "depth": 8,
+          "attempt": "attempts\\k17_d08_analytic.json"
+        }
+      ],
+      "validation_seed": 2796102119,
+      "test_seed": 1070207388,
+      "teacher_validation_hs_fidelity": 0.9943908792335723,
+      "exact_power_validation_hs_fidelity": 0.9943908792335723,
+      "teacher_computational_basis_fidelity": 0.994933806765661,
+      "exact_computational_basis_fidelity": 0.994933806765661,
+      "teacher_test_product_fidelity": 0.9945903221285552,
+      "exact_test_product_fidelity": 0.9945903221285552,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9989761222924621,
+      "gate_resources": {
+        "parameters": 128,
+        "cnot": 218,
+        "single_qubit": 355,
+        "xy_gates": 64,
+        "zz_gates": 45,
+        "z_gates": 54,
+        "symmetric_slices": 8,
+        "diagonal_layers_after_merge": 9,
+        "primitive_depth_upper_bound": 207,
+        "parameter_shift_gradient_settings": 608,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.06734900000000721,
+      "block_wall_seconds_this_session": 27.31753649999999,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 5620367360,
+          "estimated_single_qubit_gate_executions_upper_bound": 9403629568
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 5586944,
+          "estimated_single_qubit_gate_executions_upper_bound": 9084928
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 192,
+        "ry": 64,
+        "rz": 99,
+        "cx": 218,
+        "cnot": 218,
+        "single_qubit": 355,
+        "scheduled_primitive_depth": 167
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k17.json",
+        ".qasm": "circuits\\k17.qasm"
+      }
+    },
+    "18": {
+      "k": 18,
+      "params": [
+        [
+          0.17423560985566386,
+          -0.08311767412412699,
+          0.07299373158842655,
+          0.13765360236528693,
+          -0.15430699933618466,
+          -0.008699114134567474,
+          0.19787259093372966,
+          0.1844054738101437,
+          0.19201454695199116,
+          0.1576850078370154,
+          0.20757907909913006,
+          0.22719241379753896,
+          0.2142688085021135,
+          0.20679058379748844,
+          0.2105194973960804,
+          0.2117807602735091
+        ],
+        [
+          0.22129753162204394,
+          -0.10520282450768496,
+          0.06648837377898188,
+          0.17177987896154065,
+          -0.24094335004790796,
+          0.025339546407534136,
+          0.2993400438749721,
+          0.3192118172274998,
+          0.31121367722809384,
+          0.3506453918032135,
+          0.27079992704739475,
+          0.2493969091683176,
+          0.25126432179735736,
+          0.28256613577797224,
+          0.2532701359627944,
+          0.2628769483750235
+        ],
+        [
+          0.19047122981826495,
+          -0.08401883588289982,
+          0.07075025709870716,
+          0.13604633834277557,
+          -0.16804494252741095,
+          -0.00644489063492576,
+          0.1772506347538967,
+          0.16718842253218927,
+          0.17508445066574577,
+          0.1545336247670999,
+          0.22337672505965042,
+          0.24421695372194982,
+          0.2198018331940464,
+          0.21336154376816568,
+          0.23068264597747917,
+          0.24445102885592565
+        ],
+        [
+          0.18327766686439773,
+          -0.09419921702510654,
+          0.07211095074922708,
+          0.15467241456949057,
+          -0.18694902920312306,
+          0.00984637025962647,
+          0.25357474882335185,
+          0.24743543734922602,
+          0.2506557921317597,
+          0.244964740615757,
+          0.23002040426882608,
+          0.23261362480497044,
+          0.23366589970690338,
+          0.2441727181938565,
+          0.22915895797280011,
+          0.22617991913258534
+        ],
+        [
+          0.18327766686440083,
+          -0.09419921702510449,
+          0.07211095074922812,
+          0.15467241456949707,
+          -0.18694902920312487,
+          0.009846370259628394,
+          0.25357474882334524,
+          0.24743543734923046,
+          0.250655792131749,
+          0.24496474061575552,
+          0.2300204042688255,
+          0.23261362480497189,
+          0.23366589970690158,
+          0.2441727181938547,
+          0.22915895797279967,
+          0.22617991913258306
+        ],
+        [
+          0.1904712298182642,
+          -0.08401883588289673,
+          0.07075025709871015,
+          0.13604633834277494,
+          -0.16804494252740895,
+          -0.006444890634924055,
+          0.17725063475389946,
+          0.1671884225321834,
+          0.17508445066575068,
+          0.15453362476709862,
+          0.22337672505965359,
+          0.24421695372194774,
+          0.2198018331940452,
+          0.21336154376816377,
+          0.23068264597747862,
+          0.2444510288559281
+        ],
+        [
+          0.22129753162204482,
+          -0.10520282450768284,
+          0.06648837377897823,
+          0.17177987896153982,
+          -0.24094335004790668,
+          0.025339546407534684,
+          0.29934004387497143,
+          0.31921181722750536,
+          0.3112136772280949,
+          0.3506453918032162,
+          0.2707999270473904,
+          0.24939690916831675,
+          0.251264321797358,
+          0.2825661357779725,
+          0.25327013596279396,
+          0.26287694837501885
+        ],
+        [
+          0.1742356098556624,
+          -0.08311767412412972,
+          0.07299373158842752,
+          0.13765360236528698,
+          -0.154306999336188,
+          -0.008699114134569376,
+          0.19787259093372989,
+          0.18440547381014147,
+          0.19201454695198883,
+          0.15768500783701503,
+          0.2075790790991317,
+          0.2271924137975403,
+          0.21426880850211283,
+          0.20679058379748844,
+          0.2105194973960803,
+          0.2117807602735113
+        ]
+      ],
+      "pqc_steps": 8,
+      "pqc_layers": 8,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k18_d08_k_warm.json",
+      "selection_fidelity": 0.9921603243752267,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.08932007695927809,
+          "depth": 1,
+          "attempt": "attempts\\k18_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.13439015227844112,
+          "depth": 2,
+          "attempt": "attempts\\k18_d02_jitter_0.json"
+        },
+        {
+          "fidelity": 0.30203691267325117,
+          "depth": 3,
+          "attempt": "attempts\\k18_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.6673128025491671,
+          "depth": 4,
+          "attempt": "attempts\\k18_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.915095044269216,
+          "depth": 5,
+          "attempt": "attempts\\k18_d05_analytic.json"
+        },
+        {
+          "fidelity": 0.9680988322314981,
+          "depth": 6,
+          "attempt": "attempts\\k18_d06_analytic.json"
+        },
+        {
+          "fidelity": 0.9857507309540491,
+          "depth": 7,
+          "attempt": "attempts\\k18_d07_analytic.json"
+        },
+        {
+          "fidelity": 0.9921603243752267,
+          "depth": 8,
+          "attempt": "attempts\\k18_d08_k_warm.json"
+        }
+      ],
+      "validation_seed": 1233955862,
+      "test_seed": 2795311684,
+      "teacher_validation_hs_fidelity": 0.9921603243752268,
+      "exact_power_validation_hs_fidelity": 0.9921603243752268,
+      "teacher_computational_basis_fidelity": 0.9929162621926005,
+      "exact_computational_basis_fidelity": 0.9929162621926005,
+      "teacher_test_product_fidelity": 0.9923590280142839,
+      "exact_test_product_fidelity": 0.9923590280142839,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9988712273030894,
+      "gate_resources": {
+        "parameters": 128,
+        "cnot": 218,
+        "single_qubit": 355,
+        "xy_gates": 64,
+        "zz_gates": 45,
+        "z_gates": 54,
+        "symmetric_slices": 8,
+        "diagonal_layers_after_merge": 9,
+        "primitive_depth_upper_bound": 207,
+        "parameter_shift_gradient_settings": 608,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.06544249999998897,
+      "block_wall_seconds_this_session": 26.2021589,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 5838471168,
+          "estimated_single_qubit_gate_executions_upper_bound": 9764339712
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 5799936,
+          "estimated_single_qubit_gate_executions_upper_bound": 9437184
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 192,
+        "ry": 64,
+        "rz": 99,
+        "cx": 218,
+        "cnot": 218,
+        "single_qubit": 355,
+        "scheduled_primitive_depth": 167
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k18.json",
+        ".qasm": "circuits\\k18.qasm"
+      }
+    },
+    "19": {
+      "k": 19,
+      "params": [
+        [
+          0.16677066673201657,
+          -0.07507934833407724,
+          0.06298629060757259,
+          0.12702891166627875,
+          -0.14745184036124237,
+          -0.004086455908621072,
+          0.1820475667881498,
+          0.1610750857276449,
+          0.18308629605734533,
+          0.15038734845291332,
+          0.19235841532776765,
+          0.21609623792231028,
+          0.20015339858657943,
+          0.19660592964149332,
+          0.2040518106220642,
+          0.1958656690652263
+        ],
+        [
+          0.20016886758222194,
+          -0.1130310247433911,
+          0.0746182930728119,
+          0.16460043509928418,
+          -0.21638957645386397,
+          0.020201229844858774,
+          0.2856095537322038,
+          0.3288969767205526,
+          0.28458289633239003,
+          0.32757989617030137,
+          0.2590013058463872,
+          0.21969770307173792,
+          0.2384912509872956,
+          0.25516656309766494,
+          0.22067896971230724,
+          0.25096349811182994
+        ],
+        [
+          0.17548390289881374,
+          -0.052357694464890456,
+          0.04971814532665034,
+          0.11765294441776983,
+          -0.15384253169260068,
+          -0.00648654208381645,
+          0.156167927551304,
+          0.10656494629764522,
+          0.15380330303209133,
+          0.13089275113462473,
+          0.1864110733528725,
+          0.2530771293929551,
+          0.19293081989887859,
+          0.2045470235674606,
+          0.2332523700717643,
+          0.2080746061600363
+        ],
+        [
+          0.18942630311227035,
+          -0.11615943646653079,
+          0.08505636318567797,
+          0.1563053996624916,
+          -0.19721027023513996,
+          0.012749865143142955,
+          0.25956219308462486,
+          0.30047367160269356,
+          0.2823632535282057,
+          0.26603392313813673,
+          0.25512308637454134,
+          0.16996610643918575,
+          0.24270090512311018,
+          0.2296842922227814,
+          0.1996836083665441,
+          0.23532062579023738
+        ],
+        [
+          0.16304982365211684,
+          -0.06243593515133386,
+          0.049916413868021973,
+          0.12863637037519673,
+          -0.1492980148462837,
+          0.00029956650419832727,
+          0.1887734041087139,
+          0.14416494139848335,
+          0.15163417411036959,
+          0.16919749299866368,
+          0.17628848570393973,
+          0.28562958944188954,
+          0.19011371977484157,
+          0.21890330901602484,
+          0.23502324388866808,
+          0.20396565387452187
+        ],
+        [
+          0.18942630311226566,
+          -0.1161594364665339,
+          0.08505636318567632,
+          0.1563053996624933,
+          -0.19721027023513832,
+          0.012749865143141479,
+          0.2595621930846268,
+          0.3004736716026963,
+          0.28236325352820546,
+          0.2660339231381346,
+          0.2551230863745392,
+          0.16996610643918758,
+          0.24270090512311152,
+          0.22968429222278192,
+          0.19968360836654342,
+          0.2353206257902358
+        ],
+        [
+          0.17548390289881144,
+          -0.05235769446489367,
+          0.04971814532664561,
+          0.11765294441776436,
+          -0.15384253169260537,
+          -0.00648654208381978,
+          0.15616792755130193,
+          0.10656494629764594,
+          0.15380330303209178,
+          0.13089275113462648,
+          0.18641107335287474,
+          0.2530771293929549,
+          0.19293081989887723,
+          0.20454702356746088,
+          0.23325237007176483,
+          0.20807460616003778
+        ],
+        [
+          0.2001688675822192,
+          -0.11303102474339358,
+          0.07461829307280893,
+          0.16460043509928177,
+          -0.21638957645386858,
+          0.020201229844854916,
+          0.285609553732206,
+          0.3288969767205518,
+          0.28458289633239015,
+          0.32757989617030103,
+          0.2590013058463868,
+          0.21969770307173664,
+          0.2384912509872948,
+          0.25516656309766433,
+          0.22067896971230724,
+          0.25096349811182955
+        ],
+        [
+          0.1667706667320112,
+          -0.07507934833408128,
+          0.06298629060756995,
+          0.1270289116662748,
+          -0.14745184036124617,
+          -0.004086455908624756,
+          0.1820475667881517,
+          0.16107508572764517,
+          0.18308629605734406,
+          0.15038734845291224,
+          0.19235841532776773,
+          0.21609623792231025,
+          0.20015339858657907,
+          0.19660592964149134,
+          0.20405181062206348,
+          0.195865669065226
+        ]
+      ],
+      "pqc_steps": 9,
+      "pqc_layers": 9,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k19_d09_analytic.json",
+      "selection_fidelity": 0.9939842980932063,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.07793086476905763,
+          "depth": 1,
+          "attempt": "attempts\\k19_d01_jitter_0.json"
+        },
+        {
+          "fidelity": 0.13862512576798197,
+          "depth": 2,
+          "attempt": "attempts\\k19_d02_jitter_0.json"
+        },
+        {
+          "fidelity": 0.2581787847404148,
+          "depth": 3,
+          "attempt": "attempts\\k19_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.5631117380640431,
+          "depth": 4,
+          "attempt": "attempts\\k19_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.8741930312517557,
+          "depth": 5,
+          "attempt": "attempts\\k19_d05_analytic.json"
+        },
+        {
+          "fidelity": 0.955419484314903,
+          "depth": 6,
+          "attempt": "attempts\\k19_d06_analytic.json"
+        },
+        {
+          "fidelity": 0.9802665270874505,
+          "depth": 7,
+          "attempt": "attempts\\k19_d07_analytic.json"
+        },
+        {
+          "fidelity": 0.9892259285360004,
+          "depth": 8,
+          "attempt": "attempts\\k19_d08_k_warm.json"
+        },
+        {
+          "fidelity": 0.9939842980932063,
+          "depth": 9,
+          "attempt": "attempts\\k19_d09_analytic.json"
+        }
+      ],
+      "validation_seed": 3339681534,
+      "test_seed": 4131130235,
+      "teacher_validation_hs_fidelity": 0.9939842980932067,
+      "exact_power_validation_hs_fidelity": 0.9939842980932067,
+      "teacher_computational_basis_fidelity": 0.9946350614453368,
+      "exact_computational_basis_fidelity": 0.9946350614453368,
+      "teacher_test_product_fidelity": 0.9942370574704664,
+      "exact_test_product_fidelity": 0.9942370574704664,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9987622136232845,
+      "gate_resources": {
+        "parameters": 144,
+        "cnot": 244,
+        "single_qubit": 398,
+        "xy_gates": 72,
+        "zz_gates": 50,
+        "z_gates": 60,
+        "symmetric_slices": 9,
+        "diagonal_layers_after_merge": 10,
+        "primitive_depth_upper_bound": 232,
+        "parameter_shift_gradient_settings": 684,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.07805910000001859,
+      "block_wall_seconds_this_session": 34.86122419999998,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 6274678784,
+          "estimated_single_qubit_gate_executions_upper_bound": 10485760000
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 6225920,
+          "estimated_single_qubit_gate_executions_upper_bound": 10141696
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 216,
+        "ry": 72,
+        "rz": 110,
+        "cx": 244,
+        "cnot": 244,
+        "single_qubit": 398,
+        "scheduled_primitive_depth": 187
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k19.json",
+        ".qasm": "circuits\\k19.qasm"
+      }
+    },
+    "20": {
+      "k": 20,
+      "params": [
+        [
+          0.18673646531622318,
+          -0.07849414480292626,
+          0.06079110139717756,
+          0.13537315092339602,
+          -0.16128850941236064,
+          -0.006077649882613434,
+          0.19046458076507006,
+          0.16934532347775613,
+          0.19330621233405804,
+          0.1559854630504822,
+          0.19848736224701113,
+          0.22791460756872747,
+          0.21230237423214693,
+          0.20618775802041697,
+          0.2109990996467964,
+          0.21025826008623288
+        ],
+        [
+          0.18356656798866008,
+          -0.12605067041954643,
+          0.09418337200725496,
+          0.17108538928305794,
+          -0.21139920357653758,
+          0.025654958256025224,
+          0.3071380068049967,
+          0.34259030387166395,
+          0.29761142382784755,
+          0.3476368981452143,
+          0.2782980574539623,
+          0.2287854866749009,
+          0.24404872930907665,
+          0.26778691400872795,
+          0.23588484127886125,
+          0.2534298365708715
+        ],
+        [
+          0.2026108858107978,
+          -0.03687630665361168,
+          0.031843166821624615,
+          0.13613823501704064,
+          -0.1828848411778578,
+          -0.013790726279079403,
+          0.1320547323977756,
+          0.11676151648783,
+          0.1610039291268547,
+          0.12073509126591077,
+          0.18799967181426733,
+          0.26251055870164897,
+          0.2116608728218618,
+          0.21779599261992422,
+          0.24058587874758486,
+          0.2313401660047415
+        ],
+        [
+          0.21647931858186056,
+          -0.1554241884388392,
+          0.10549886403890672,
+          0.13848810301340803,
+          -0.19067583854851514,
+          0.0226741548920643,
+          0.3417605282858016,
+          0.3138345665738872,
+          0.3017864932462317,
+          0.3188693323398991,
+          0.2882399645060741,
+          0.2029542368588688,
+          0.24940488802264085,
+          0.24223225173316112,
+          0.21825800638945625,
+          0.24767848168732753
+        ],
+        [
+          0.13318922529713714,
+          -0.0242772518392516,
+          0.04233587466263664,
+          0.17158338697505598,
+          -0.17368000034725944,
+          -0.012110821209412868,
+          0.11770536834407522,
+          0.1540616699228924,
+          0.157155950487491,
+          0.13137383227958352,
+          0.16217663900963833,
+          0.274035694989984,
+          0.20751037679820772,
+          0.2331265922769999,
+          0.2412492322993269,
+          0.21214678454788063
+        ],
+        [
+          0.21647931858185857,
+          -0.15542418843884,
+          0.10549886403890364,
+          0.13848810301340514,
+          -0.19067583854851322,
+          0.02267415489205972,
+          0.34176052828580095,
+          0.3138345665738885,
+          0.3017864932462264,
+          0.31886933233989884,
+          0.28823996450607464,
+          0.20295423685887046,
+          0.24940488802263946,
+          0.2422322517331584,
+          0.21825800638945514,
+          0.2476784816873273
+        ],
+        [
+          0.2026108858107895,
+          -0.03687630665362105,
+          0.03184316682161709,
+          0.13613823501703096,
+          -0.18288484117787168,
+          -0.01379072627908824,
+          0.13205473239777554,
+          0.11676151648782465,
+          0.16100392912686004,
+          0.12073509126590642,
+          0.18799967181426153,
+          0.2625105587016496,
+          0.21166087282186455,
+          0.21779599261992508,
+          0.24058587874758502,
+          0.2313401660047374
+        ],
+        [
+          0.1835665679886518,
+          -0.126050670419558,
+          0.09418337200724394,
+          0.1710853892830508,
+          -0.21139920357654557,
+          0.025654958256021057,
+          0.3071380068049988,
+          0.34259030387167355,
+          0.29761142382784583,
+          0.3476368981452216,
+          0.27829805745396824,
+          0.22878548667490675,
+          0.24404872930907703,
+          0.26778691400873117,
+          0.23588484127886195,
+          0.2534298365708756
+        ],
+        [
+          0.18673646531622032,
+          -0.0784941448029297,
+          0.06079110139717466,
+          0.1353731509233907,
+          -0.16128850941236683,
+          -0.006077649882621864,
+          0.19046458076507275,
+          0.16934532347775372,
+          0.19330621233405917,
+          0.1559854630504799,
+          0.19848736224700977,
+          0.22791460756872856,
+          0.21230237423214937,
+          0.20618775802041728,
+          0.21099909964679772,
+          0.21025826008623008
+        ]
+      ],
+      "pqc_steps": 9,
+      "pqc_layers": 9,
+      "layer_definition": "one D/2 E/2 O E/2 D/2 symmetric slice",
+      "selected_attempt": "attempts\\k20_d09_k_warm.json",
+      "selection_fidelity": 0.9919117885745086,
+      "target_fidelity": 0.99,
+      "threshold_reached": true,
+      "selection_reason": "minimum_depth_reaching_target",
+      "depth_candidates": [
+        {
+          "fidelity": 0.060323738849026115,
+          "depth": 1,
+          "attempt": "attempts\\k20_d01_analytic.json"
+        },
+        {
+          "fidelity": 0.13372464094064415,
+          "depth": 2,
+          "attempt": "attempts\\k20_d02_depth_warm.json"
+        },
+        {
+          "fidelity": 0.22307107414466834,
+          "depth": 3,
+          "attempt": "attempts\\k20_d03_analytic.json"
+        },
+        {
+          "fidelity": 0.4652166731913661,
+          "depth": 4,
+          "attempt": "attempts\\k20_d04_analytic.json"
+        },
+        {
+          "fidelity": 0.8169128419242376,
+          "depth": 5,
+          "attempt": "attempts\\k20_d05_analytic.json"
+        },
+        {
+          "fidelity": 0.9385813625924956,
+          "depth": 6,
+          "attempt": "attempts\\k20_d06_analytic.json"
+        },
+        {
+          "fidelity": 0.9730402870410565,
+          "depth": 7,
+          "attempt": "attempts\\k20_d07_analytic.json"
+        },
+        {
+          "fidelity": 0.9854271849883632,
+          "depth": 8,
+          "attempt": "attempts\\k20_d08_analytic.json"
+        },
+        {
+          "fidelity": 0.9919117885745086,
+          "depth": 9,
+          "attempt": "attempts\\k20_d09_k_warm.json"
+        }
+      ],
+      "validation_seed": 1539820925,
+      "test_seed": 3073294437,
+      "teacher_validation_hs_fidelity": 0.9919117885745087,
+      "exact_power_validation_hs_fidelity": 0.9919117885745087,
+      "teacher_computational_basis_fidelity": 0.9927753117953019,
+      "exact_computational_basis_fidelity": 0.9927753117953019,
+      "teacher_test_product_fidelity": 0.9920629516164368,
+      "exact_test_product_fidelity": 0.9920629516164368,
+      "target_proxy_hs_fidelity_to_actual_teacher": 0.9986510391136879,
+      "gate_resources": {
+        "parameters": 144,
+        "cnot": 244,
+        "single_qubit": 398,
+        "xy_gates": 72,
+        "zz_gates": 50,
+        "z_gates": 60,
+        "symmetric_slices": 9,
+        "diagonal_layers_after_merge": 10,
+        "primitive_depth_upper_bound": 232,
+        "parameter_shift_gradient_settings": 684,
+        "gradient_settings_convention": "gate-wise shifts on unmerged occurrences; shared-angle chain rule"
+      },
+      "audit_wall_seconds": 0.08121710000000348,
+      "block_wall_seconds_this_session": 33.462632499999984,
+      "audit_actual_counts": {
+        "ansatz_forward_state_vectors": 2112,
+        "target_state_vector_applications": 2048,
+        "selection_target_preparation_vectors": 0,
+        "full_trace_comparisons": 2,
+        "proxy_full_trace_comparisons": 1,
+        "actual_quantum_shots": 0
+      },
+      "diagnostic_resource_estimates": {
+        "held_out_product_test": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 2048,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 2048,
+          "estimated_circuit_settings": 2048,
+          "estimated_shots": 8388608,
+          "estimated_cnot_gate_executions": 6492782592,
+          "estimated_single_qubit_gate_executions_upper_bound": 10846470144
+        },
+        "full_hs_audit": {
+          "objective_evaluations": 2,
+          "gradient_evaluations": 0,
+          "forward_state_vectors": 128,
+          "adjoint_state_vectors": 0,
+          "target_state_vector_applications": 0,
+          "estimated_circuit_settings": 2,
+          "estimated_shots": 8192,
+          "estimated_cnot_gate_executions": 6438912,
+          "estimated_single_qubit_gate_executions_upper_bound": 10493952
+        }
+      },
+      "exported_primitive_counts": {
+        "rx": 216,
+        "ry": 72,
+        "rz": 110,
+        "cx": 244,
+        "cnot": 244,
+        "single_qubit": 398,
+        "scheduled_primitive_depth": 187
+      },
+      "primitive_circuit_files": {
+        ".json": "circuits\\k20.json",
+        ".qasm": "circuits\\k20.qasm"
+      }
+    }
+  },
+  "setup_sessions": [
+    {
+      "time": "2026-10-15T08:52:54.398391+00:00",
+      "u0_setup_seconds": 0.0012950999999999935,
+      "shared_across_seeds_in_invocation": true
+    }
+  ],
+  "target_definition": "exact U0=exp(-i H step); direct U0^k; iterative V_(k-1) @ U0",
+  "nc_reference": "https://doi.org/10.1038/s41467-023-39381-w",
+  "loss_definition": "1-abs(Tr(teacher^dagger V))/d",
+  "reported_hs_fidelity": "abs(Tr(target^dagger V))^2/d^2; all d basis states, never a B32 trace estimate",
+  "selection": "full HS fidelity",
+  "test_policy": "fresh independent product test set per k; diagnostics only, never depth/parameter selection",
+  "depth_policy": "scan 1..k+extra_depth; minimum passing selection threshold, otherwise best available",
+  "ansatz": "NC-inspired symmetric D/2 E/2 O E/2 D/2 XXZ slices; independent angles per slice",
+  "initialization_policy": "physical second-order Trotter angles, append-identity-slice depth warm start, scaled previous-k warm start, Gaussian jitter restarts",
+  "resource_notes": {
+    "actual": "classical exact statevector/matrix simulation with analytic adjoint gradients; zero quantum shots",
+    "estimates": "hypothetical gate-wise parameter-shift plus echo (B32) or 2n-qubit HST (full); not measured runtime or shots",
+    "target_caveat": "exact dense U0 targets have no specified hardware synthesis; gate costs use a separate symmetric-XXZ-Trotter proxy, whose fidelity is audited per selected block",
+    "parameter_shift": "2 settings per parameterized rotation occurrence; repeated half-angle contributions summed by chain rule; raw unmerged occurrence count is conservative",
+    "preparation": "B32 overhead <=4n single gates and depth<=4; conservative also for pauli6",
+    "excluded": "hardware mapping, error mitigation, readout/reset time, classical-to-quantum latency",
+    "resume": "complete attempts reused; incomplete attempts archived and counted, then restarted"
+  },
+  "completed_k": 20,
+  "training_and_selection_resources": {
+    "selection": {
+      "objective_evaluations": 292,
+      "gradient_evaluations": 0,
+      "forward_state_vectors": 18688,
+      "adjoint_state_vectors": 0,
+      "target_state_vector_applications": 0,
+      "estimated_circuit_settings": 292,
+      "estimated_shots": 1196032,
+      "estimated_cnot_gate_executions": 580550656,
+      "estimated_single_qubit_gate_executions_upper_bound": 937508864
+    },
+    "training": {
+      "objective_evaluations": 22836,
+      "gradient_evaluations": 22836,
+      "forward_state_vectors": 1461504,
+      "adjoint_state_vectors": 1461504,
+      "target_state_vector_applications": 0,
+      "estimated_circuit_settings": 7929648,
+      "estimated_shots": 32479838208,
+      "estimated_cnot_gate_executions": 18963581673472,
+      "estimated_single_qubit_gate_executions_upper_bound": 30748228136960
+    }
+  },
+  "diagnostic_resource_estimates": {
+    "held_out_product_test": {
+      "objective_evaluations": 40,
+      "gradient_evaluations": 0,
+      "forward_state_vectors": 40960,
+      "adjoint_state_vectors": 0,
+      "target_state_vector_applications": 40960,
+      "estimated_circuit_settings": 40960,
+      "estimated_shots": 167772160,
+      "estimated_cnot_gate_executions": 69877104640,
+      "estimated_single_qubit_gate_executions_upper_bound": 117734113280
+    },
+    "full_hs_audit": {
+      "objective_evaluations": 40,
+      "gradient_evaluations": 0,
+      "forward_state_vectors": 2560,
+      "adjoint_state_vectors": 0,
+      "target_state_vector_applications": 0,
+      "estimated_circuit_settings": 40,
+      "estimated_shots": 163840,
+      "estimated_cnot_gate_executions": 70205440,
+      "estimated_single_qubit_gate_executions_upper_bound": 113008640
+    }
+  },
+  "actual_optimizer_iterations_all_attempts": 21198,
+  "actual_objective_evaluations_all_attempts": 22836,
+  "attempt_wall_seconds_including_interrupted": 237.92730949999978,
+  "attempt_count_including_interrupted": 292,
+  "completed_at": "2026-10-15T08:56:55.691311+00:00"
+}

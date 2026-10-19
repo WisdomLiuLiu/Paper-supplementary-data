@@ -1,0 +1,44 @@
+{
+  "model": {
+    "n": 10,
+    "dt": 0.1,
+    "gamma": 0.06,
+    "total_time": 10.0
+  },
+  "sampling": {
+    "m_values": [
+      32,
+      64,
+      128,
+      256,
+      512
+    ],
+    "repeats": 100,
+    "master_seed": 202506,
+    "trajectory_m": 128,
+    "stream_seed": 1225499654,
+    "iterative_cutoffs": [
+      10,
+      15,
+      20
+    ]
+  },
+  "files": {
+    "branches.npz": {
+      "source": "test_xy_r1/data/baseline/branches.npz",
+      "sha256": "b50d2c1c0222d6b10361a03b62f970ca16442a21632983845a28ec4e97040ed6"
+    },
+    "baseline.npz": {
+      "source": "test_xy_r1/data/baseline/baseline.npz",
+      "sha256": "cdedcd1cbfd107e35958990f7e27b4daf74bc151aaf5abbb22022a78b93a4099"
+    },
+    "original_resources.csv": {
+      "source": "test_xy_r1/data/baseline/resources.csv",
+      "sha256": "2e8d4ba7dedc36c83d47825aae209ea3dc9629350dc09f97faee8d44ca6c6241"
+    },
+    "reference.npz": {
+      "source": "test_xy_r1/data/reference/reference.npz",
+      "sha256": "6aa3a027cfd20a43b24cda58ab5b064e3674784e4d79ecb13686267dbca9dacb"
+    }
+  }
+}

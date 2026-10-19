@@ -1,15 +1,19 @@
-"""Reproduce the eleven numerical figures.
+"""Reproduce the thirteen numerical figures.
 
 Default (no training):
     python reproduce.py
     python reproduce.py --example xy
     python reproduce.py --example xxz
     python reproduce.py --example shots
+    python reproduce.py --example algebraic
+    python reproduce.py --example scaling
 
 Recompute data in a NEW directory (potentially long; prints progress):
     python reproduce.py --mode recompute --example xy --output /path/to/new_xy
     python reproduce.py --mode recompute --example xxz --output /path/to/new_xxz
     python reproduce.py --mode recompute --example shots --output /path/to/new_shots
+    python reproduce.py --mode recompute --example algebraic --output /path/to/new_algebraic
+    python reproduce.py --mode recompute --example scaling --output /path/to/new_scaling
 
 Recompute trains only seed 202506. For shots, insertion uses the distributed
 XXZ paired trajectories. The original data are never overwritten in this mode.
@@ -21,7 +25,8 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parent
-FOLDERS = dict(xy='test_xy_r1', xxz='test_xxz_r1', shots='test_xxz_full_shots')
+FOLDERS = dict(xy='test_xy_r1', xxz='test_xxz_r1', shots='test_xxz_full_shots',
+               algebraic='test_xy_algebraic', scaling='test_xxz_n_scaling')
 
 
 def run(folder, script, *args):
@@ -57,6 +62,12 @@ def main():
                 run(folder, '02_train.py', '--output', data)
                 run(folder, '06_insert_pqc.py', '--training-data', data,
                     '--source-data', ROOT/'test_xxz_r1/data', '--output', data/'insert')
+            elif example == 'algebraic':
+                run(folder, '01_prepare.py', '--output', data)
+                run(folder, '02_simulate.py', '--output', data)
+            elif example == 'scaling':
+                run(folder, '01_train_dense.py', '--output', data, '--sizes', 6, 8, 10)
+                run(folder, '02_train_sector.py', '--output', data, '--sizes', 12)
             else:
                 run(folder, '01_prepare_reference.py', '--output', data, '--recompute')
                 run(folder, '02_original_circuit.py', '--output', data, '--recompute')
@@ -65,6 +76,8 @@ def main():
                     run(folder, stage, '--output', data, '--seeds', '202506')
         if example == 'shots':
             run(folder, '07_plot_insert.py', '--output', data/'insert')
+        elif example in ('algebraic', 'scaling'):
+            run(folder, '03_plot.py', '--output', data)
         else:
             run(folder, '08_plot.py', '--output', data)
     print('Requested figures complete.', flush=True)
