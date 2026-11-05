@@ -1,0 +1,28 @@
+{
+  "unitary_lchs_g1u1.txt": {
+    "source_sha256": "0f3388c683097a44cf4841b7221e62a54ee1cf5ce865e0d4cd25f8163ee50e09",
+    "uploaded_sha256": "0f3388c683097a44cf4841b7221e62a54ee1cf5ce865e0d4cd25f8163ee50e09",
+    "shape": [
+      1024,
+      1024
+    ],
+    "K": 100,
+    "delta_k": 0.5,
+    "delta_t": 0.2,
+    "sector_verified": 2,
+    "max_abs_difference": 1.885349955209826e-16
+  },
+  "unitary_lchs_switch.txt": {
+    "source_sha256": "2cd0ca2428e56774799ee927b0598fa2e5755cc65128d87e2e9e2a36a10c8e12",
+    "uploaded_sha256": "2cd0ca2428e56774799ee927b0598fa2e5755cc65128d87e2e9e2a36a10c8e12",
+    "shape": [
+      1024,
+      1024
+    ],
+    "K": 100,
+    "delta_k": 0.5,
+    "delta_t": 0.2,
+    "sector_verified": 8,
+    "max_abs_difference": 2.37549462997806e-16
+  }
+}

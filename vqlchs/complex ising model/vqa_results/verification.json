@@ -1,0 +1,29 @@
+{
+  "05": {
+    "archived_vqs_shape": [
+      50
+    ],
+    "parameter_reconstruction_difference": 0.0010990329899309217,
+    "exact_solver_difference": 5.622100314101042e-06,
+    "max_observable_error": 0.02976712783984295,
+    "rms_observable_error": 0.012417782021114786
+  },
+  "1": {
+    "archived_vqs_shape": [
+      50
+    ],
+    "parameter_reconstruction_difference": 0.0009204073543676583,
+    "exact_solver_difference": 2.8801208475648377e-06,
+    "max_observable_error": 0.01355893893219301,
+    "rms_observable_error": 0.004473706893218296
+  },
+  "2": {
+    "archived_vqs_shape": [
+      50
+    ],
+    "parameter_reconstruction_difference": 0.0012014543082359951,
+    "exact_solver_difference": 7.591229058134807e-07,
+    "max_observable_error": 0.008800754714299891,
+    "rms_observable_error": 0.0025294832340701854
+  }
+}
