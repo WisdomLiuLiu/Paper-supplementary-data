@@ -1,0 +1,732 @@
+{
+  "config": {
+    "qiskit": "2.2.3",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "layers": 5,
+    "dt": 0.2,
+    "g": 1.0,
+    "interaction": 1.0,
+    "k": 1.0,
+    "trotter_steps": 1,
+    "trotter_order": 1,
+    "basis": [
+      "u",
+      "cx"
+    ],
+    "optimization_level": 1,
+    "seed_transpiler": 20261117,
+    "connectivity": "bidirectional line, ancilla initially at endpoint 0",
+    "scope": "one real overlap, ancilla H gates included; no shots, penalties, or state-preparation X gates"
+  },
+  "checks": [
+    {
+      "n": 2,
+      "jw_matrix_error": 0.0
+    },
+    {
+      "n": 2,
+      "full_operator_error": 7.850462293418876e-16
+    },
+    {
+      "n": 2,
+      "overlap_component_max_error": 1.7763568394002505e-15,
+      "paper_reverse_overlap_component_max_difference": 0.0581727320480151
+    },
+    {
+      "n": 4,
+      "jw_matrix_error": 0.0
+    },
+    {
+      "n": 4,
+      "full_operator_error": 1.6919522065759386e-15
+    },
+    {
+      "n": 4,
+      "overlap_component_max_error": 1.8318679906315083e-15,
+      "paper_reverse_overlap_component_max_difference": 0.07798414754659755
+    },
+    {
+      "n": 6,
+      "overlap_component_max_error": 1.887379141862766e-15,
+      "paper_reverse_overlap_component_max_difference": 0.02474940111096202
+    },
+    {
+      "n": 8,
+      "overlap_component_max_error": 7.216449660063518e-16,
+      "paper_reverse_overlap_component_max_difference": 0.016795844258173653
+    },
+    {
+      "n": 10,
+      "overlap_component_max_error": 3.3306690738754696e-16,
+      "paper_reverse_overlap_component_max_difference": 0.010594450765058439
+    }
+  ],
+  "counts": [
+    {
+      "n": 2,
+      "variant": "original",
+      "logical": {
+        "single": 5,
+        "double": 91,
+        "triple": 20,
+        "depth": 116,
+        "ops": {
+          "crx": 40,
+          "crz": 27,
+          "ch": 16,
+          "ccz": 10,
+          "ccx": 10,
+          "csdg": 4,
+          "cs": 4,
+          "h": 2,
+          "x": 2,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 350,
+        "double": 406,
+        "triple": 0,
+        "depth": 666,
+        "ops": {
+          "cx": 406,
+          "u": 350
+        }
+      },
+      "physical_ancilla": 1
+    },
+    {
+      "n": 2,
+      "variant": "pqc_only",
+      "logical": {
+        "single": 33,
+        "double": 66,
+        "triple": 10,
+        "depth": 103,
+        "ops": {
+          "rx": 20,
+          "crx": 20,
+          "crz": 17,
+          "ch": 16,
+          "rz": 10,
+          "ccx": 10,
+          "cz": 5,
+          "csdg": 4,
+          "cs": 4,
+          "h": 2,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 219,
+        "double": 261,
+        "triple": 0,
+        "depth": 415,
+        "ops": {
+          "cx": 261,
+          "u": 219
+        }
+      },
+      "physical_ancilla": 1
+    },
+    {
+      "n": 2,
+      "variant": "simplified_exact",
+      "logical": {
+        "single": 57,
+        "double": 52,
+        "triple": 0,
+        "depth": 92,
+        "ops": {
+          "rx": 20,
+          "crx": 20,
+          "h": 18,
+          "crz": 17,
+          "rz": 10,
+          "cx": 10,
+          "cz": 5,
+          "sdg": 4,
+          "s": 4,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 105,
+        "double": 119,
+        "triple": 0,
+        "depth": 203,
+        "ops": {
+          "cx": 119,
+          "u": 105
+        }
+      },
+      "physical_ancilla": 1
+    },
+    {
+      "n": 2,
+      "variant": "paper_reverse",
+      "logical": {
+        "single": 64,
+        "double": 52,
+        "triple": 0,
+        "depth": 98,
+        "ops": {
+          "rx": 20,
+          "crx": 20,
+          "h": 18,
+          "rz": 17,
+          "crz": 17,
+          "cx": 10,
+          "cz": 5,
+          "sdg": 4,
+          "s": 4,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 106,
+        "double": 119,
+        "triple": 0,
+        "depth": 204,
+        "ops": {
+          "cx": 119,
+          "u": 106
+        }
+      },
+      "physical_ancilla": 1
+    },
+    {
+      "n": 4,
+      "variant": "original",
+      "logical": {
+        "single": 5,
+        "double": 211,
+        "triple": 60,
+        "depth": 276,
+        "ops": {
+          "crx": 80,
+          "crz": 59,
+          "ch": 48,
+          "ccz": 30,
+          "ccx": 30,
+          "csdg": 12,
+          "cs": 12,
+          "h": 2,
+          "x": 2,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 910,
+        "double": 1173,
+        "triple": 0,
+        "depth": 1767,
+        "ops": {
+          "cx": 1173,
+          "u": 910
+        }
+      },
+      "physical_ancilla": 3
+    },
+    {
+      "n": 4,
+      "variant": "pqc_only",
+      "logical": {
+        "single": 63,
+        "double": 166,
+        "triple": 30,
+        "depth": 225,
+        "ops": {
+          "ch": 48,
+          "rx": 40,
+          "crx": 40,
+          "crz": 39,
+          "ccx": 30,
+          "rz": 20,
+          "cz": 15,
+          "csdg": 12,
+          "cs": 12,
+          "h": 2,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 570,
+        "double": 702,
+        "triple": 0,
+        "depth": 1052,
+        "ops": {
+          "cx": 702,
+          "u": 570
+        }
+      },
+      "physical_ancilla": 3
+    },
+    {
+      "n": 4,
+      "variant": "simplified_exact",
+      "logical": {
+        "single": 135,
+        "double": 124,
+        "triple": 0,
+        "depth": 192,
+        "ops": {
+          "h": 50,
+          "rx": 40,
+          "crx": 40,
+          "crz": 39,
+          "cx": 30,
+          "rz": 20,
+          "cz": 15,
+          "sdg": 12,
+          "s": 12,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 229,
+        "double": 290,
+        "triple": 0,
+        "depth": 427,
+        "ops": {
+          "cx": 290,
+          "u": 229
+        }
+      },
+      "physical_ancilla": 2
+    },
+    {
+      "n": 4,
+      "variant": "paper_reverse",
+      "logical": {
+        "single": 154,
+        "double": 124,
+        "triple": 0,
+        "depth": 207,
+        "ops": {
+          "h": 50,
+          "rx": 40,
+          "crx": 40,
+          "rz": 39,
+          "crz": 39,
+          "cx": 30,
+          "cz": 15,
+          "sdg": 12,
+          "s": 12,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 233,
+        "double": 290,
+        "triple": 0,
+        "depth": 428,
+        "ops": {
+          "cx": 290,
+          "u": 233
+        }
+      },
+      "physical_ancilla": 2
+    },
+    {
+      "n": 6,
+      "variant": "original",
+      "logical": {
+        "single": 5,
+        "double": 331,
+        "triple": 100,
+        "depth": 436,
+        "ops": {
+          "crx": 120,
+          "crz": 91,
+          "ch": 80,
+          "ccz": 50,
+          "ccx": 50,
+          "csdg": 20,
+          "cs": 20,
+          "h": 2,
+          "x": 2,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 1470,
+        "double": 2271,
+        "triple": 0,
+        "depth": 2900,
+        "ops": {
+          "cx": 2271,
+          "u": 1470
+        }
+      },
+      "physical_ancilla": 5
+    },
+    {
+      "n": 6,
+      "variant": "pqc_only",
+      "logical": {
+        "single": 93,
+        "double": 266,
+        "triple": 50,
+        "depth": 354,
+        "ops": {
+          "ch": 80,
+          "crz": 61,
+          "rx": 60,
+          "crx": 60,
+          "ccx": 50,
+          "rz": 30,
+          "cz": 25,
+          "csdg": 20,
+          "cs": 20,
+          "h": 2,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 936,
+        "double": 1192,
+        "triple": 0,
+        "depth": 1748,
+        "ops": {
+          "cx": 1192,
+          "u": 936
+        }
+      },
+      "physical_ancilla": 4
+    },
+    {
+      "n": 6,
+      "variant": "simplified_exact",
+      "logical": {
+        "single": 213,
+        "double": 196,
+        "triple": 0,
+        "depth": 296,
+        "ops": {
+          "h": 82,
+          "crz": 61,
+          "rx": 60,
+          "crx": 60,
+          "cx": 50,
+          "rz": 30,
+          "cz": 25,
+          "sdg": 20,
+          "s": 20,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 367,
+        "double": 477,
+        "triple": 0,
+        "depth": 668,
+        "ops": {
+          "cx": 477,
+          "u": 367
+        }
+      },
+      "physical_ancilla": 5
+    },
+    {
+      "n": 6,
+      "variant": "paper_reverse",
+      "logical": {
+        "single": 244,
+        "double": 196,
+        "triple": 0,
+        "depth": 320,
+        "ops": {
+          "h": 82,
+          "rz": 61,
+          "crz": 61,
+          "rx": 60,
+          "crx": 60,
+          "cx": 50,
+          "cz": 25,
+          "sdg": 20,
+          "s": 20,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 373,
+        "double": 479,
+        "triple": 0,
+        "depth": 671,
+        "ops": {
+          "cx": 479,
+          "u": 373
+        }
+      },
+      "physical_ancilla": 5
+    },
+    {
+      "n": 8,
+      "variant": "original",
+      "logical": {
+        "single": 5,
+        "double": 451,
+        "triple": 140,
+        "depth": 596,
+        "ops": {
+          "crx": 160,
+          "crz": 123,
+          "ch": 112,
+          "ccz": 70,
+          "ccx": 70,
+          "csdg": 28,
+          "cs": 28,
+          "h": 2,
+          "x": 2,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 2030,
+        "double": 3468,
+        "triple": 0,
+        "depth": 4281,
+        "ops": {
+          "cx": 3468,
+          "u": 2030
+        }
+      },
+      "physical_ancilla": 6
+    },
+    {
+      "n": 8,
+      "variant": "pqc_only",
+      "logical": {
+        "single": 123,
+        "double": 366,
+        "triple": 70,
+        "depth": 484,
+        "ops": {
+          "ch": 112,
+          "crz": 83,
+          "rx": 80,
+          "crx": 80,
+          "ccx": 70,
+          "rz": 40,
+          "cz": 35,
+          "csdg": 28,
+          "cs": 28,
+          "h": 2,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 1299,
+        "double": 1700,
+        "triple": 0,
+        "depth": 2443,
+        "ops": {
+          "cx": 1700,
+          "u": 1299
+        }
+      },
+      "physical_ancilla": 6
+    },
+    {
+      "n": 8,
+      "variant": "simplified_exact",
+      "logical": {
+        "single": 291,
+        "double": 268,
+        "triple": 0,
+        "depth": 404,
+        "ops": {
+          "h": 114,
+          "crz": 83,
+          "rx": 80,
+          "crx": 80,
+          "cx": 70,
+          "rz": 40,
+          "cz": 35,
+          "sdg": 28,
+          "s": 28,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 505,
+        "double": 681,
+        "triple": 0,
+        "depth": 942,
+        "ops": {
+          "cx": 681,
+          "u": 505
+        }
+      },
+      "physical_ancilla": 7
+    },
+    {
+      "n": 8,
+      "variant": "paper_reverse",
+      "logical": {
+        "single": 334,
+        "double": 268,
+        "triple": 0,
+        "depth": 438,
+        "ops": {
+          "h": 114,
+          "rz": 83,
+          "crz": 83,
+          "rx": 80,
+          "crx": 80,
+          "cx": 70,
+          "cz": 35,
+          "sdg": 28,
+          "s": 28,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 513,
+        "double": 683,
+        "triple": 0,
+        "depth": 945,
+        "ops": {
+          "cx": 683,
+          "u": 513
+        }
+      },
+      "physical_ancilla": 7
+    },
+    {
+      "n": 10,
+      "variant": "original",
+      "logical": {
+        "single": 5,
+        "double": 571,
+        "triple": 180,
+        "depth": 756,
+        "ops": {
+          "crx": 200,
+          "crz": 155,
+          "ch": 144,
+          "ccz": 90,
+          "ccx": 90,
+          "csdg": 36,
+          "cs": 36,
+          "h": 2,
+          "x": 2,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 2590,
+        "double": 4668,
+        "triple": 0,
+        "depth": 5707,
+        "ops": {
+          "cx": 4668,
+          "u": 2590
+        }
+      },
+      "physical_ancilla": 8
+    },
+    {
+      "n": 10,
+      "variant": "pqc_only",
+      "logical": {
+        "single": 153,
+        "double": 466,
+        "triple": 90,
+        "depth": 614,
+        "ops": {
+          "ch": 144,
+          "crz": 105,
+          "rx": 100,
+          "crx": 100,
+          "ccx": 90,
+          "rz": 50,
+          "cz": 45,
+          "csdg": 36,
+          "cs": 36,
+          "h": 2,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 1667,
+        "double": 2256,
+        "triple": 0,
+        "depth": 3161,
+        "ops": {
+          "cx": 2256,
+          "u": 1667
+        }
+      },
+      "physical_ancilla": 9
+    },
+    {
+      "n": 10,
+      "variant": "simplified_exact",
+      "logical": {
+        "single": 369,
+        "double": 340,
+        "triple": 0,
+        "depth": 512,
+        "ops": {
+          "h": 146,
+          "crz": 105,
+          "rx": 100,
+          "crx": 100,
+          "cx": 90,
+          "rz": 50,
+          "cz": 45,
+          "sdg": 36,
+          "s": 36,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 646,
+        "double": 957,
+        "triple": 0,
+        "depth": 1238,
+        "ops": {
+          "cx": 957,
+          "u": 646
+        }
+      },
+      "physical_ancilla": 9
+    },
+    {
+      "n": 10,
+      "variant": "paper_reverse",
+      "logical": {
+        "single": 424,
+        "double": 340,
+        "triple": 0,
+        "depth": 556,
+        "ops": {
+          "h": 146,
+          "rz": 105,
+          "crz": 105,
+          "rx": 100,
+          "crx": 100,
+          "cx": 90,
+          "cz": 45,
+          "sdg": 36,
+          "s": 36,
+          "p": 1
+        }
+      },
+      "compiled": {
+        "single": 656,
+        "double": 959,
+        "triple": 0,
+        "depth": 1241,
+        "ops": {
+          "cx": 959,
+          "u": 656
+        }
+      },
+      "physical_ancilla": 9
+    }
+  ]
+}

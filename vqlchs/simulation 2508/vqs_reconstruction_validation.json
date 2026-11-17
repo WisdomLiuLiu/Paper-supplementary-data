@@ -1,0 +1,20 @@
+{
+  "g1u1": {
+    "shape": [
+      10,
+      21
+    ],
+    "parameters_sha256": "17841ce4c1170f8d4b9826d6dff1515b7f091be1a3f2d5fe1ac796982f7b086e",
+    "max_occupation_difference": 1.9984014443252818e-15,
+    "max_norm_error": 2.220446049250313e-15
+  },
+  "LR_switch": {
+    "shape": [
+      10,
+      21
+    ],
+    "parameters_sha256": "ebe014ae2ffcbe9cc6899bd3aab605292c207ca12fe50f9adf8b708affa15437",
+    "max_occupation_difference": 9.992007221626409e-16,
+    "max_norm_error": 1.9984014443252818e-15
+  }
+}

@@ -1,4 +1,4 @@
-Noiseless Ising reconstruction for Supplementary Figure 4
+Noiseless Ising reconstruction from saved VQA parameters
 
 Run: python reproduce.py
 Dependencies: numpy, scipy, matplotlib.
@@ -13,4 +13,4 @@ Archived sampled results: archived_sampled_vqa_*.txt preserve the previous simul
 
 The results and original saved parameters are supplied for reproducibility. The local optimization scripts use K=100, delta k=1, and delta t=0.1. The authors confirmed these settings and corrected K=80 in the manuscript to K=100. The statevector reconstruction does not rerun LCHS training. Newly generated LCHS matrices for both K=100 and K=80 are included, with K=80 provided as a comparison.
 
-Independent validation against the original QuTiP HEA implementation at rows 0, 20, and 49 for all three fields agrees to machine precision. These data are also included in the revised manuscript source package.
+Independent validation against the original QuTiP HEA implementation at rows 0, 20, and 49 for all three fields agrees to machine precision.

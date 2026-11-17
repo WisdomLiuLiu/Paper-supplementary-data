@@ -1,0 +1,17 @@
+\textbf{Gate-count reduction and overlap accuracy across system sizes.}
+(a) Single-qubit (1q) and two-qubit (2q) gate counts before (solid lines)
+and after (dashed lines) the shared-structure simplification with the reverse
+construction for the propagation block. The circuits are compiled into
+single-qubit $U$ gates and two-qubit CX gates on a linear chain of $n$ system
+qubits and one ancillary qubit, including routing overhead.
+(b) Absolute complex-overlap deviation
+$\epsilon_X=\max_{s\in\mathcal S}|X_{\mathrm{after}}(s)-X_{\mathrm{before}}(s)|$
+versus $n$, where $\mathcal S$ contains the two tested computational-basis
+input states before PQC preparation.
+Both panels use one second-order Trotter step for the open-boundary HN model
+with $g=U=1$, $k=1$, $\delta t=0.2$, and two five-layer PQCs with fixed random
+parameters. The original and simplified circuits use the same ordered
+symmetric product formula. These benchmarks show substantial gate-count
+reductions while retaining small overlap deviations across the tested sizes.
+The deviations characterize these tested state pairs rather than a
+worst-case operator error.

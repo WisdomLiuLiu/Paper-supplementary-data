@@ -1,0 +1,12 @@
+{
+  "terms": "same ordered individual Pauli strings as benchmark.py",
+  "second_order_chronological": "P1 half,...,P(L-1) half, PL full, P(L-1) half,...,P1 half",
+  "dt": 0.2,
+  "k": 1.0,
+  "g": 1.0,
+  "interaction": 1.0,
+  "consistent": "same order and repetition count for S(dt) and S(2dt)",
+  "error": "max of real/imag overlap difference over the same two tested input states",
+  "reference": "sparse matrix exponential of full Hermitian branch generator",
+  "gate_counts": "r=1 only, same linear routing/basis/compiler settings as original benchmark"
+}

@@ -1,5 +1,17 @@
 # Minimal reproduction files
 
+## Hadamard-test circuit benchmark
+
+`hadamard_test_benchmark/` contains the gate-count/overlap tests, saved PQC parameters, first/second-order product-formula data, compiled circuits, and the final two-panel figure. See its README for settings and reproduction commands. The final figure uses second-order Trotter with one step for both circuits.
+
+## Classical VQS sources and saved-state reconstruction
+
+`classical_vqs_sources/` contains numerical Ising and HN optimization source files. The saved HN particle/hole parameters are supplied beside their result curves. Run `python "simulation 2508/reproduce_vqs.py"` to reconstruct both HN occupation arrays and compare them with the archived results without training. The Ising equivalent is `python "complex ising model/vqa_results/reproduce.py"`.
+
+Only numerical calculations, plotting, and saved experimental measurements are distributed here; hardware submission scripts and credentials are excluded.
+
+`data_inventory.json` lists the data files and SHA-256 hashes, the eight supplied LCHS matrices, and the Ising/HN saved-parameter reconstruction checks.
+
 Run each notebook from its own directory so that the relative data paths resolve correctly. The plotting notebooks require Python with NumPy, Matplotlib, QuTiP, SciPy, `scienceplots`, and a LaTeX installation. The HN numerical test scripts additionally require OpenFermion.
 
 ## SSH model
